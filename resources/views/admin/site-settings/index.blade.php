@@ -80,12 +80,18 @@
         {{-- Social Links --}}
         <div class="bg-gray-900 rounded-2xl border border-white/5 p-6 mb-6">
             <h2 class="text-white font-semibold mb-5">Social Links</h2>
-            @php $social = $settings->social_links ?? []; @endphp
+            @php
+                $social = $settings->social_links ?? [];
+                $socialString = function ($key) use ($social) {
+                    $v = $social[$key] ?? '';
+                    return is_string($v) ? $v : (is_array($v) ? ($v['url'] ?? $v[0] ?? '') : '');
+                };
+            @endphp
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 @foreach(['facebook'=>'Facebook','twitter'=>'Twitter / X','instagram'=>'Instagram','youtube'=>'YouTube','tiktok'=>'TikTok'] as $key => $label)
                 <div>
                     <label class="text-sm text-gray-400 mb-1.5 block">{{ $label }}</label>
-                    <input type="url" name="social_{{ $key }}" value="{{ old('social_'.$key, $social[$key] ?? '') }}"
+                    <input type="url" name="social_{{ $key }}" value="{{ old('social_'.$key, $socialString($key)) }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500" placeholder="https://">
                 </div>
                 @endforeach

@@ -305,11 +305,14 @@
                     @if(isset($settings) && $settings->social_links)
                         <div class="flex space-x-3">
                             @foreach($settings->social_links as $platform => $url)
-                                @if($url)
+                                @php
+                                    $linkUrl = is_string($url) ? $url : (is_array($url) ? ($url['url'] ?? $url[0] ?? '') : '');
+                                @endphp
+                                @if(!empty($linkUrl))
                                     @php
                                         $key = strtolower($platform);
                                     @endphp
-                                    <a href="{{ $url }}" target="_blank"
+                                    <a href="{{ $linkUrl }}" target="_blank"
                                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-800/50 text-slate-400 hover:text-cyan-400 hover:bg-slate-800 transition-all duration-200"
                                        aria-label="{{ ucfirst($key) }}">
                                         @switch($key)
