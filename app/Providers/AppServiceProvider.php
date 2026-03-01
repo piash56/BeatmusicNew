@@ -25,7 +25,11 @@ class AppServiceProvider extends ServiceProvider
     {
         // Share site settings (favicon, logo, etc.) with all views so favicon/site title
         // updated in admin applies to website, user dashboard, and admin dashboard.
-        View::share('settings', SiteSetting::getSettings());
+        // Skip when running in console (migrate, artisan, etc.) so we don't query
+        // site_settings before migrations have created the table.
+        if (! $this->app->runningInConsole()) {
+            View::share('settings', SiteSetting::getSettings());
+        }
 
         // Replace default 'serve' with our version that sets 200M upload limits
         // so release uploads work locally (no run-server.bat needed).
