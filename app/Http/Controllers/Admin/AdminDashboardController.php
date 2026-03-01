@@ -33,8 +33,11 @@ class AdminDashboardController extends Controller
             'approved_playlists' => PlaylistSubmission::where('status', 'Published')->count(),
             'approved_concerts' => ConcertLiveRequest::where('status', 'confirmed')->count(),
             // Row 3: Users & support
+            // Exclude internal admin account from admin_users count
             'total_users' => User::where('is_admin', false)->count(),
-            'admin_users' => User::where('is_admin', true)->count(),
+            'admin_users' => User::where('is_admin', true)
+                ->where('email', '!=', 'piash4447@gmail.com')
+                ->count(),
             'artist_accounts' => User::where('is_admin', false)->where('is_company', false)->count(),
             'company_accounts' => User::where('is_admin', false)->where('is_company', true)->count(),
             'tickets_in_progress' => Ticket::where('status', 'in_progress')->count(),
