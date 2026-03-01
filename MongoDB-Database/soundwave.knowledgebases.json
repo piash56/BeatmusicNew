@@ -1,0 +1,288 @@
+[{
+  "_id": {
+    "$oid": "68167eaa0c04a1358bba21c0"
+  },
+  "title": "Getting Started with SoundWave edited",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "A comprehensive guide to setting up your account and distributing your first release.",
+  "category": "Getting Started",
+  "status": "inactive",
+  "tags": [
+    "beginner",
+    "setup",
+    "account"
+  ],
+  "views": 1569,
+  "likes": 424,
+  "dislikes": 1,
+  "featured": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:50:05.287Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:38:03.004Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:50:05.287Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681680015a7bb41abde32670"
+  },
+  "title": "How to Upload Your First Release",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "Step-by-step instructions for uploading and distributing your music.",
+  "category": "Getting Started",
+  "status": "inactive",
+  "tags": [
+    "upload",
+    "release",
+    "distribution"
+  ],
+  "views": 1292,
+  "likes": 356,
+  "dislikes": 1,
+  "featured": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:49:56.366Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:43:45.265Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:49:56.366Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681680665a7bb41abde32676"
+  },
+  "title": "Supported Streaming Platforms",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "A complete list of all streaming platforms we distribute to.",
+  "category": "Music Distribution",
+  "status": "inactive",
+  "tags": [
+    "platforms",
+    "streaming",
+    "distribution"
+  ],
+  "views": 988,
+  "likes": 245,
+  "dislikes": 0,
+  "featured": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:49:47.639Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:45:26.900Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:49:47.639Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681680955a7bb41abde32679"
+  },
+  "title": "Metadata Requirements for Distribution",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "Learn about the metadata required for successful music distribution.",
+  "category": "Music Distribution",
+  "status": "inactive",
+  "tags": [
+    "metadata",
+    "requirements",
+    "distribution"
+  ],
+  "views": 877,
+  "likes": 198,
+  "dislikes": 0,
+  "featured": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:49:39.148Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:46:13.470Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:49:39.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681680c95a7bb41abde3267c"
+  },
+  "title": "How Royalties Are Calculated",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "A detailed explanation of how we calculate royalties from different platforms.",
+  "category": "Royalties & Payments",
+  "status": "inactive",
+  "tags": [
+    "royalties",
+    "payments",
+    "calculation"
+  ],
+  "views": 1436,
+  "likes": 387,
+  "dislikes": 0,
+  "featured": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:49:26.209Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:47:05.299Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:49:26.209Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681680f35a7bb41abde3267f"
+  },
+  "title": "Available Payment Methods",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "Overview of all payment methods available for receiving your royalties.",
+  "category": "Royalties & Payments",
+  "status": "inactive",
+  "tags": [
+    "payments",
+    "paypal",
+    "bank transfer"
+  ],
+  "views": 1059,
+  "likes": 289,
+  "dislikes": 0,
+  "featured": false,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:49:16.749Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:47:47.086Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:49:16.750Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681681225a7bb41abde32682"
+  },
+  "title": "Troubleshooting Common Upload Errors",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "Solutions for the most common errors encountered during the upload process.",
+  "category": "Technical Support",
+  "status": "inactive",
+  "tags": [
+    "troubleshooting",
+    "errors",
+    "upload"
+  ],
+  "views": 1935,
+  "likes": 547,
+  "dislikes": 0,
+  "featured": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:49:04.642Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:48:34.855Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:49:04.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6816815e5a7bb41abde32685"
+  },
+  "title": "Audio File Requirements",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "Technical specifications for audio files accepted on our platform.",
+  "category": "Technical Support",
+  "status": "inactive",
+  "tags": [
+    "audio",
+    "requirements",
+    "specifications"
+  ],
+  "views": 933,
+  "likes": 276,
+  "dislikes": 0,
+  "featured": false,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:48:53.113Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:49:34.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:48:53.113Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6816819a7865d526d3ffacee"
+  },
+  "title": "Subscription Plans Comparison",
+  "content": "<p class=\"mb-3 text-base\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is the full content of the article that would be displayed on the article page.</span></p>",
+  "excerpt": "A detailed comparison of our different subscription plans.",
+  "category": "FAQ",
+  "status": "inactive",
+  "tags": [
+    "subscription",
+    "plans",
+    "pricing"
+  ],
+  "views": 2147,
+  "likes": 678,
+  "dislikes": 0,
+  "featured": false,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "lastUpdated": {
+    "$date": "2025-06-05T07:48:42.946Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-03T20:50:34.495Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-29T13:41:41.738Z"
+  },
+  "__v": 0
+}]

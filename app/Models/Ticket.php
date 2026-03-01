@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Ticket extends Model
+{
+    protected $fillable = [
+        'user_id', 'subject', 'category', 'priority', 'status', 'message', 'attachments',
+    ];
+
+    protected $casts = [
+        'attachments' => 'array',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(TicketReply::class)->orderBy('created_at');
+    }
+}

@@ -1,0 +1,374 @@
+[{
+  "_id": {
+    "$oid": "684c97635352c50e51cc6419"
+  },
+  "user": {
+    "$oid": "684bf08122ad8a043434d809"
+  },
+  "subject": "Ciao",
+  "category": "billing",
+  "priority": "medium",
+  "status": "closed",
+  "message": "Fiao",
+  "attachments": [],
+  "replies": [
+    {
+      "user": {
+        "$oid": "67fe4a5ce4cb47e4ff98a492"
+      },
+      "message": "I am admin",
+      "attachments": [],
+      "isAdminReply": true,
+      "_id": {
+        "$oid": "684ddd78f979c88ea1edf94a"
+      },
+      "createdAt": {
+        "$date": "2025-06-14T20:37:12.372Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-06-13T21:25:55.740Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T18:19:55.669Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "685ae950b28ea71b08203b40"
+  },
+  "user": {
+    "$oid": "684b35d673f61210cf77de94"
+  },
+  "subject": "Test 1",
+  "category": "technical",
+  "priority": "medium",
+  "status": "closed",
+  "message": "Check mail for ticket",
+  "attachments": [],
+  "replies": [],
+  "createdAt": {
+    "$date": "2025-06-24T18:07:12.913Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T17:21:48.661Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685aecc167e37dd0e55f5288"
+  },
+  "user": {
+    "$oid": "684b35d673f61210cf77de94"
+  },
+  "subject": "test from domain ",
+  "category": "technical",
+  "priority": "high",
+  "status": "closed",
+  "message": "check ticket mail",
+  "attachments": [],
+  "replies": [
+    {
+      "user": {
+        "$oid": "68455ab11790a83d240a6273"
+      },
+      "message": "got your ticket",
+      "attachments": [],
+      "isAdminReply": true,
+      "_id": {
+        "$oid": "685aed1367e37dd0e55f529d"
+      },
+      "createdAt": {
+        "$date": "2025-06-24T18:23:15.954Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-06-24T18:21:53.988Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T18:48:13.546Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "686257a44f01e8b31b357567"
+  },
+  "user": {
+    "$oid": "684bf08122ad8a043434d809"
+  },
+  "subject": "Test",
+  "category": "technical",
+  "priority": "medium",
+  "status": "closed",
+  "message": "Test",
+  "attachments": [],
+  "replies": [],
+  "createdAt": {
+    "$date": "2025-06-30T09:23:48.583Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-30T13:25:50.342Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68667596a00508ed7d81265c"
+  },
+  "user": {
+    "$oid": "684bf08122ad8a043434d809"
+  },
+  "subject": "Prova",
+  "category": "technical",
+  "priority": "medium",
+  "status": "closed",
+  "message": "Test",
+  "attachments": [],
+  "replies": [],
+  "createdAt": {
+    "$date": "2025-07-03T12:20:38.944Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-03T13:34:57.643Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686d1960ff3e3db7c04323b6"
+  },
+  "user": {
+    "$oid": "6862a6f64f01e8b31b357941"
+  },
+  "subject": "vorrei cancellare la traccia side by side",
+  "category": "technical",
+  "priority": "high",
+  "status": "closed",
+  "message": "Salve in quanto non voglio più pubblicare la traccia che ho inserito su beatmusic vorrei cancellarla, se gentilmente potete farlo, grazie",
+  "attachments": [],
+  "replies": [
+    {
+      "user": {
+        "$oid": "67fe4a5ce4cb47e4ff98a492"
+      },
+      "message": "Ciao Ginevra, \r\nvuoi sostituirlo con un altro brano?",
+      "attachments": [],
+      "isAdminReply": true,
+      "_id": {
+        "$oid": "686d3dbbff3e3db7c043292c"
+      },
+      "createdAt": {
+        "$date": "2025-07-08T15:48:11.305Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6862a6f64f01e8b31b357941"
+      },
+      "message": "Si in futuro",
+      "attachments": [],
+      "isAdminReply": false,
+      "_id": {
+        "$oid": "686d3e56ff3e3db7c0432a04"
+      },
+      "createdAt": {
+        "$date": "2025-07-08T15:50:46.287Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6862a6f64f01e8b31b357941"
+      },
+      "message": "Si in futuro",
+      "attachments": [],
+      "isAdminReply": false,
+      "_id": {
+        "$oid": "686d3e57ff3e3db7c0432a10"
+      },
+      "createdAt": {
+        "$date": "2025-07-08T15:50:47.195Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "67fe4a5ce4cb47e4ff98a492"
+      },
+      "message": "Ginevra, in realtà questa piattaforma è utile anche per ritirare le tue royalties dei brani che abbiamo distribuito in passato",
+      "attachments": [],
+      "isAdminReply": true,
+      "_id": {
+        "$oid": "686d40f6ff3e3db7c0432baa"
+      },
+      "createdAt": {
+        "$date": "2025-07-08T16:01:58.961Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-07-08T13:13:04.925Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-09T20:32:03.662Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "686e3e864c2f25d419ce9662"
+  },
+  "user": {
+    "$oid": "68655a92a00508ed7d811891"
+  },
+  "subject": "Richiesta del Pre - Save e del codice ISRC del brano \"Side Eye\" di Genvilla",
+  "category": "other",
+  "priority": "medium",
+  "status": "closed",
+  "message": "L'artista richiede il pre-save del brano, e per questioni relative ai diritti connessi abbiamo bisogno del codice ISRC",
+  "attachments": [],
+  "replies": [
+    {
+      "user": {
+        "$oid": "67fe4a5ce4cb47e4ff98a492"
+      },
+      "message": "Pre-save: https://orcd.co/ajz8g7m\r\nCodice ISRC: QMDA62529844",
+      "attachments": [],
+      "isAdminReply": true,
+      "_id": {
+        "$oid": "686fccc84c2f25d419ceb710"
+      },
+      "createdAt": {
+        "$date": "2025-07-10T14:23:04.819Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-07-09T10:03:50.816Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-10T14:23:25.656Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68937529c60e9ca730c6a664"
+  },
+  "user": {
+    "$oid": "68655a92a00508ed7d811891"
+  },
+  "subject": "RICHIESTA ISRC RITMO DA CUBANA",
+  "category": "other",
+  "priority": "high",
+  "status": "closed",
+  "message": "ci serve sapere il codice isrc di \"ritmo da cubana\" di mb",
+  "attachments": [],
+  "replies": [
+    {
+      "user": {
+        "$oid": "67fe4a5ce4cb47e4ff98a492"
+      },
+      "message": "ISRC di RITMO DA CUBANA: CH6542539563",
+      "attachments": [],
+      "isAdminReply": true,
+      "_id": {
+        "$oid": "6894944bc60e9ca730c6aa17"
+      },
+      "createdAt": {
+        "$date": "2025-08-07T11:55:55.742Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-08-06T15:30:49.865Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-07T11:55:58.401Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68a47157c60e9ca730c71ebe"
+  },
+  "user": {
+    "$oid": "68655a92a00508ed7d811891"
+  },
+  "subject": "Link pre - save Chrystal-“Fragilità Riflesse”",
+  "category": "other",
+  "priority": "high",
+  "status": "closed",
+  "message": "L’artista mi richiede il link del pre-save del brano “fragilità riflesse”",
+  "attachments": [],
+  "replies": [],
+  "createdAt": {
+    "$date": "2025-08-19T12:43:03.858Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-09T07:51:35.833Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906402a81435f88e30b924e"
+  },
+  "user": {
+    "$oid": "68655a92a00508ed7d811891"
+  },
+  "subject": "Richiesta del Pre - Save di Donna Kelly dei Moribiondi",
+  "category": "other",
+  "priority": "medium",
+  "status": "closed",
+  "message": "abbiamo bisogno del pre save di the orchard, non quello di beatmusic",
+  "attachments": [],
+  "replies": [],
+  "createdAt": {
+    "$date": "2025-11-01T17:15:22.756Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T08:26:01.621Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6929a61081435f88e30e4188"
+  },
+  "user": {
+    "$oid": "68bc4fa950dba33d4c4cd1ec"
+  },
+  "subject": "Royalties",
+  "category": "billing",
+  "priority": "high",
+  "status": "closed",
+  "message": "Salve, vorrei capire per quale motivo non sono ancora visibili le mie royalties dopo 8 mesi dalla prima traccia rilasciata.\r\n\r\nGrazie",
+  "attachments": [],
+  "replies": [
+    {
+      "user": {
+        "$oid": "67fe4a5ce4cb47e4ff98a492"
+      },
+      "message": "Purtroppo non si aggiornano velocemente sulla piattaform BEat Music in quanto le piattaforme di distribuzione hanno tempistiche diverse, ma ti sarà inviato come è stato fatto il riepilogo delle royalties maturate",
+      "attachments": [],
+      "isAdminReply": true,
+      "_id": {
+        "$oid": "69305d2081435f88e30e7ad7"
+      },
+      "createdAt": {
+        "$date": "2025-12-03T15:54:08.082Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-28T13:39:28.610Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T15:54:11.313Z"
+  },
+  "__v": 1
+}]

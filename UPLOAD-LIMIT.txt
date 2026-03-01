@@ -1,0 +1,20 @@
+If you get "POST data is too large" or "413 Payload Too Large" when submitting a release:
+
+1. LOCAL (php artisan serve):
+   This project overrides "php artisan serve" to use 200M upload limits automatically.
+   Just run:   php artisan serve
+   Then open http://127.0.0.1:8000. No run-server.bat needed.
+
+   If you still see 413, restart the server (stop with Ctrl+C, then run "php artisan serve" again).
+   As a fallback you can use run-server.bat (Windows) or ./run-server.sh (Mac/Linux).
+
+2. CPANEL / SHARED HOSTING:
+   public/.user.ini is already set (post_max_size, upload_max_filesize = 200M).
+   If it still fails, increase these in cPanel → MultiPHP INI Editor or .htaccess:
+   php_value post_max_size 200M
+   php_value upload_max_filesize 200M
+
+3. APACHE (.htaccess):
+   Add to public/.htaccess if allowed:
+   php_value post_max_size 200M
+   php_value upload_max_filesize 200M

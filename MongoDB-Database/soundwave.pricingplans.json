@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "68021950f1c5e5bc5f447b94"
+  },
+  "name": "Free",
+  "description": "Perfect for solo artists just starting out",
+  "features": [
+    "2 releases per month",
+    "Basic analytics",
+    "Standard distribution",
+    "45 days release time",
+    "Email suppor"
+  ],
+  "priceMonthly": 0,
+  "priceYearly": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-04-18T09:20:16.110Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-18T09:20:16.110Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68021a7df1c5e5bc5f447b97"
+  },
+  "name": "Pro",
+  "description": "For serious artists ready to grow",
+  "features": [
+    "Unlimited releases",
+    "Advanced analytics",
+    "Priority distribution",
+    "15 days release time",
+    "Priority support",
+    "Custom profile page",
+    "Pre-save links"
+  ],
+  "priceMonthly": 5.99,
+  "priceYearly": 59.99,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-04-18T09:25:17.014Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-18T17:15:52.809Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "68021ad0f1c5e5bc5f447b9a"
+  },
+  "name": "Premium",
+  "description": "For labels and artist managers",
+  "features": [
+    "Multiple artist profiles",
+    "Revenue splitting",
+    "Label analytics dashboard",
+    "48-hour release time",
+    "Dedicated account manager",
+    "API access",
+    "Custom branding"
+  ],
+  "priceMonthly": 9.99,
+  "priceYearly": 99.99,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-04-18T09:26:40.810Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T12:38:35.380Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680220a6f1c5e5bc5f447bb6"
+  },
+  "name": "test plan",
+  "description": "plan description",
+  "features": [
+    "fe 1",
+    "add another",
+    "testing toast message",
+    "do another fe"
+  ],
+  "priceMonthly": 10,
+  "priceYearly": 100,
+  "isActive": false,
+  "createdAt": {
+    "$date": "2025-04-18T09:51:34.003Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-18T10:03:33.783Z"
+  },
+  "__v": 3
+}]

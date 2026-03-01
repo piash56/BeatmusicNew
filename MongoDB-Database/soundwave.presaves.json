@@ -1,0 +1,1326 @@
+[{
+  "_id": {
+    "$oid": "68cc5921df365340e589278a"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68b4996f7a85ac2c01d0e809"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31readv2koxab2gxqg5vek7zbvxi",
+  "accessToken": "BQBY4z2a1k230JA9VM2LpdCrxSPLXgvSS9fX8TJ5djanv3asQ8-UB_RELkjMDr8dEKCXlJscmU39bGnX6r_PRgdNCXv9OS-DLVx2EZlLcId_I85wbStA_bCqEl2fZhffTi9LY4b_wM-zN51115EKYN9OT9YmkKqE4qH7N8LLE4Dq6RDnEoGZ6jyeA89gSss5pMaNaE4CN2gmfpCjPkU-yi5QF7Jcw_nOrk9FYcWijSSgE_eCKsNpQ5tr7laXGpprl26iGmku",
+  "refreshToken": "AQBCAA6cw22rbgy9SO-d4k89dNqP6beF45Vzpa5bT3WpKRMKysKUjjp_YI5pIhU7Pm1FN_s2107TaRz5n0Lwb37ievPXrq3vM_ppLrHQDYnF4MPlE1uezQuskvSkYcQg3RQ",
+  "tokenExpiresAt": {
+    "$date": "2025-09-28T10:00:00.671Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Piash",
+  "userEmail": "outrageoustan@tiffincrane.com",
+  "trackTitle": "Pre Save Link 2",
+  "artistName": "test",
+  "releaseDate": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-18T19:10:25.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-28T09:00:00.775Z"
+  },
+  "__v": 0,
+  "errorMessage": "Track not found on Spotify"
+},
+{
+  "_id": {
+    "$oid": "68cc5985df365340e58927be"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68b4996f7a85ac2c01d0e809"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "316ajpberslsnlnd4ujx5f2nnzgi",
+  "accessToken": "BQD1q6RXvuwshe0hc2n3klSHvm3ar6RqtL58u1epYPXST_Hi7-dNxhSAV74X62iYApYS1hm0CxZYKDmpUNro9KnN3iGRKioLEO7JI2pFhlVd65Lucx05J6dV_ruG6ivvKJ-YWW4CPYMi5jZJDJfpKpd0mY7TF6VahjkaQ2ALnOcbluHytug-8BCk0o13S5e4IGqdLjIpIhZcX_2zT4Yw1d8nMCvQjPgZNUkeZqZidIBkm3dPeRgFCYLTb8gMF2nlhRyW7iMm",
+  "refreshToken": "AQDd05WuQVgF6rJLjzzaKT6_jTXgJRIMiyLLDSZW24DL1ia9WfMi7PzZ7GQoN7A8bY-5H-StA5ic-LaNElDOl4_5Y3aiuyzXcwZFmREtWYkKTubD87DtorlUFkNH53zv_9U",
+  "tokenExpiresAt": {
+    "$date": "2025-09-28T10:00:01.043Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Piash",
+  "userEmail": "moccasinloretta@tiffincrane.com",
+  "trackTitle": "Pre Save Link 2",
+  "artistName": "test",
+  "releaseDate": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-18T19:12:05.546Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-28T09:00:01.076Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "68cd8d19eb3fedd4426f8813"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c945183664701e529a973f"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31fat7prvyqfrjydrymsbjprqj2i",
+  "accessToken": "BQDuAe0jltWIVEJcWBDlYSh6GGTjPRDvU-wv_nLZH5L1iIQ9EJth3GrfyaLnMU_36qhLgOMLqk-vpaXl0cNHUTgwEYnObyw5jYdNenMrdwr1yDrkXL6_1c9TZrIwr4zEmRR0hCxfcrIvZt0DvrRxMeIIJflp_hIGvFQmN98EcSz_-9YaKh9hgcEE15dseEV-f6EnYF9KjCt2hx3khFprlywQNxUhHcPpapblL16jAHqhdJvqmK7YTSvY33Y5lgXBNOn8b4xF",
+  "refreshToken": "AQB3U6WQiFNOk9wC19ArWcxnCd2JP-NJ6X21u6eR8nZChevlURI4aOzOTeQ8vcOeLUCLZpmDR2fpjNTZ42JkXiMiy_2BIu_xvY_NQtySQMpvOTjCkchRLGD7rOllFLIU5ng",
+  "tokenExpiresAt": {
+    "$date": "2025-09-30T10:00:00.673Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Piash",
+  "userEmail": "jaymeelight@tiffincrane.com",
+  "trackTitle": "pre save album",
+  "artistName": "test",
+  "releaseDate": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-19T17:04:25.798Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-30T09:00:00.785Z"
+  },
+  "__v": 0,
+  "errorMessage": "Track not found on Spotify"
+},
+{
+  "_id": {
+    "$oid": "68cd8dbeeb3fedd4426f88ff"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c945183664701e529a973f"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31readv2koxab2gxqg5vek7zbvxi",
+  "accessToken": "BQB2YrtoXCElgKK83r63rZsbF2Zslp_S4BvEEQrjNCXKcewaS2pZK3u_X8MQSgPur3uxFiNRbu_Py7MKsW4s8bmztuk3_uewmKDzqTwyUCAweIhevp5Go0JCZwyJ0lbTSl1DH2M_s_DZ-0OtO9khypgi6verHji74ANh7tKAjgvqbGNWnMaTLXzzyqJNs4uAiz2B56wjxk4ZtKMjEs_PiHMEmBTxMyXI76jwHXL2cgh2YNwiIAI7WCyOjZTmDoPzpthnCuiw",
+  "refreshToken": "AQB1V0_aacmWcj1UkKjvFUdBSl20ZBDoGqJgcFuyF9EZ0DoqYYemTVBv7g86Z7g6fCX8GRkHfRvoKdxDdiQ_J1Oi9rldCEsFVOEBRhMRjDXjSH-3JFLBug4alkAUEROK6MA",
+  "tokenExpiresAt": {
+    "$date": "2025-09-30T10:00:01.023Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Piash",
+  "userEmail": "outrageoustan@tiffincrane.com",
+  "trackTitle": "pre save album",
+  "artistName": "test",
+  "releaseDate": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-19T17:07:10.290Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-30T09:00:01.162Z"
+  },
+  "__v": 0,
+  "errorMessage": "Track not found on Spotify"
+},
+{
+  "_id": {
+    "$oid": "68cd9825ac0806a59d504f46"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c945083664701e529a9737"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31readv2koxab2gxqg5vek7zbvxi",
+  "accessToken": "BQDYUfUY77RNPfAJwA1pEXZtyHYsCJskBW81bKGFQ7heNoR5Fj52hAnL1mZY_aXLETVZDM2KDAZauAr-_Vn3Z0WclRa09Z8E9YDppUv0gX2UIxlyHnaajXsdFi14uCJd1aHWdDHBQXy6Agsr_GboNait1KMcWFGZO6GsFm8lWZD5GVgC1GiEHEmfhFNWYzXWODCf6xm_E9-Rmky4mc9tkwPpL12rWVNO6eDEOoG762hQApesJjMjyK0VykWkh2q5otE4phBI",
+  "refreshToken": "AQCAP1BOHfBtQpSrcTBnZ9YpUfX877bQKyNUzVjJrogkg03bV6iYT0jTLC1Trdt59TN_gY2d31Slq7GiqbW6IPU0pTMv7U4HjbRuoKi8Av53JQUyM65Q1uX2mr_Mi00G_18",
+  "tokenExpiresAt": {
+    "$date": "2025-09-30T10:00:01.387Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Piash",
+  "userEmail": "outrageoustan@tiffincrane.com",
+  "trackTitle": "pre save album",
+  "artistName": "test",
+  "releaseDate": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-19T17:51:33.479Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-30T09:00:01.494Z"
+  },
+  "__v": 0,
+  "errorMessage": "Track not found on Spotify"
+},
+{
+  "_id": {
+    "$oid": "68cd9f126728dc3c0df0c77a"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c9ce2fc171d842e72441fa"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31readv2koxab2gxqg5vek7zbvxi",
+  "accessToken": "BQAPXP727UAkdS00YT6dSMrAVKDxxs7KvNGiZ6QdF3WTjxZfABYV2DO7xGj08FXUPg09rL7htWFRayptIiiB-pI9eSCPIHp8eF0JxUgvWrPqftY-Rrs7iTCd1AfPh6WkneB5FXg8l-aWBvnqSASIq18e1-QB9HY_Xkx_C1XdHUII2d0Gz6ECI9gOyh1Nebdb0SM4K6UeVjmPXVImR_YJ9J_kvoavy4v0OwVL1LIwsnKVEsfFMgVzYL90EJ0fsWGg8RewIbXz",
+  "refreshToken": "AQAWBHDLNQ6AHosKzQjTdz7LsaDkAJK2wNB4eu0IU8yaj2gPtcbihVG3_ojIvsabkUYCKi2kaTPupxw6ygPDyFQSFytcSvS5dRMBo5Bmlzy4KvVKKw_9mmvHM73h3rjs9FY",
+  "tokenExpiresAt": {
+    "$date": "2025-09-30T10:00:01.753Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Piash",
+  "userEmail": "outrageoustan@tiffincrane.com",
+  "trackTitle": "test pre save live",
+  "artistName": "test",
+  "releaseDate": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-19T18:21:06.548Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-30T09:00:01.852Z"
+  },
+  "__v": 0,
+  "errorMessage": "Track not found on Spotify"
+},
+{
+  "_id": {
+    "$oid": "68d0fd7a6728dc3c0df0e792"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c976b250dba33d4c4da7a0"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31oyribdbq2hjmgx4j7m36pqlypq",
+  "accessToken": "BQA-vgLxLDMAc0eYoT1Fmyx-POfFZryXlUN2oe3fu-TMxgs-ax_sccIHntCtu3tZpzQjZCM7pH_Mvd6J7TF0w5ieUAIOZBUrXM8bJG-JkqpP2FJjBdd38vau1LwTH3J1u8XnIc7hV9sTVTe0hCzWM4zCBVEYtLjUK_T7yPwim2VemJCUNpPWPdJ-eAY-NiU4kQVDSMlzP9V-5sSjSDh58dDFq2NXfvrZNEbbE7UQmDivcZo2WjS-kjYVkMXQ8-vbZWvNsPB5",
+  "refreshToken": "AQDRU8pvktztTNPYyQSHAluFwgfHy1LtbA4ykt7oXZHA3ZDtag9WC70brfpQ3XwtwSnuoYtUPLp8nzIUxsb_8-2I4HcsNZHTvjAYkt6Ew82vy7lUzEH_Zr7XyXAYpXbRnXM",
+  "tokenExpiresAt": {
+    "$date": "2025-09-22T08:40:42.068Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Caronte Music Group",
+  "userEmail": "info@carontemusicgroup.com",
+  "trackTitle": "LIFE  IS NOT ONLY A DIRTY GAME",
+  "artistName": "Mary’n’ The Holy Spirit",
+  "releaseDate": {
+    "$date": "2025-10-17T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-22T07:40:42.242Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-17T09:00:00.489Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d154946728dc3c0df0f596"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c976b250dba33d4c4da7a0"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "ku207ujtv449uhnbyaf599ypt",
+  "accessToken": "BQCmWWKyzG3924HgwXpEJmXoi60DZTpng0IRXLAb8-ZeKSEAQhMJAqV4qlLbbiv6u6CSmnNLUwBO05M5FlP76HD-Bcbi7lr1_lqyPW9IZan8M9IVNVQMlSBSS5bNWs2TFwvZqEBb5E4DglKVYf-A2mgg7bmoKrnkAE9ApjicaxP6uPT0fB1KZ3P6CzKVPzVdQ1_NxDEkjuudoLZRbzu46p8-0W8t5lVrfLRQDAD_leZW-6Gyx5Wcl9BXiMbgBQb1NFHJ",
+  "refreshToken": "AQCGFe5Rzj0uLC4amIchba34pIg67qrkQJLrkB_4akcQULA77klVMEY5LlmN4HC0E3in0QVOfFXXuZJ3YfP6rMoSZU2JGYGOk__Uo1eU212a3fIO_D5hlU0M8QARMM_AOok",
+  "tokenExpiresAt": {
+    "$date": "2025-09-22T14:52:20.096Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Duetoni",
+  "userEmail": "outsidestudio2020@gmail.com",
+  "trackTitle": "LIFE  IS NOT ONLY A DIRTY GAME",
+  "artistName": "Mary’n’ The Holy Spirit",
+  "releaseDate": {
+    "$date": "2025-10-17T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-22T13:52:20.269Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-17T09:00:00.655Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d188116728dc3c0df1060c"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c292b850dba33d4c4d2408"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "11165897815",
+  "accessToken": "BQCZ88J2_g-SMf2G0nXhpdnd87GEltCGVRr-p59C3XZNcqBuE42LUNXVwGyNHblH6uHLhj0yXUNtLZIMyvOSUwV02ZLWSehDkl_zObjQ8QpS6XgSf8y6jlj1qArno3p9Q5WXKGVYMIz4v-WXq51FIz4EVluc8cfpLN3LsMRuFwtUCRvd2HsulvbWiU-fRySH93psevDj6B5EQxX2CJForDj9ogRqz76QOjXEYH50CoWH-RODv4EC3Q",
+  "refreshToken": "AQCos_yNGIWYWYfCHEWl83aY7ZNQ6zA4Iqs7NHDJeDIQmml-jDiZRHi3M76t0Nc0bJZV472m1dDRH3-o-cPEZmhQjljdt_OonmEDwvqkPEkVIA1DOTB0qKGmRLgsxV_2e54",
+  "tokenExpiresAt": {
+    "$date": "2025-09-22T18:32:01.773Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Alessandro Viera",
+  "userEmail": "viera.alessandro@gmail.com",
+  "trackTitle": "Antidoti",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-10-10T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-22T17:32:01.952Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-10T09:00:00.498Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d2c0ee6728dc3c0df11420"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c292b850dba33d4c4d2408"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "mone1293",
+  "accessToken": "BQDpv78i8NcNxjOzS0yFcV1hHRqdn1E65I4f5JgN4yuBq6PrV7WsdlWsk_aDBTA0ydzxbSWzliPJLujopG9iOM2pgRsoKb_1PqiQUlbgdBNZ7eYiwdjpPrrdoH8W3QMUBJ3UM2yEmdA7DARTLRsoM-sIUWhDbZxbr9x61kYiQ4-SsQiK74vP3IautjZoOzchrMWy9jKRzqs0KWi6aY6WPYOQipdOisFYJvsI6G_nO4gkLg",
+  "refreshToken": "AQCEFFePN3sQ1whFCHWGG0mpv3eWvh9M_Gfkag2LOSQtFfit2HSdk8_cYAp6iRiuROi-84l8CmUwarxfBsQd4fwdb6e2yo8H0G7tHJ40PEkP7T0FyvxvugIuEJHcsmq93Mw",
+  "tokenExpiresAt": {
+    "$date": "2025-10-02T15:48:09.702Z"
+  },
+  "status": "failed",
+  "userDisplayName": "mone1293",
+  "userEmail": "boselli.simone@gmail.com",
+  "trackTitle": "Antidoti",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-10-10T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-23T15:46:54.835Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-10T09:00:00.664Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d3a9e36728dc3c0df12157"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c292b850dba33d4c4d2408"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "216xje4cjskoq3dvobnb45uvi",
+  "accessToken": "BQAPqwxlkfnfThS2WrmDkKz9x1jk1BCLBKMJj6qPmOYStx8R61YtLBz8pDuxaqaTsqyTqjW0YdJM2AoExd_qPLRSehSedY-0MqZ5AC8JbLUz7HYYSsm31Lu1Q9nCjLIMmfJsBNYwaVbBlaquV_N-9VkgLGM5dO-N_Lb5KqIEzI4THFlm_DQLsDAYQmOjB_V-9G3UESx7_3qNNUJWVCm7fZoAGYgM0KfrWFPQStETadZ3rC1vNfKvpfUDm1c8A9b9VxWN",
+  "refreshToken": "AQBcsYIuyGJnSY16N9mDpmCgd7jR2JWMrTaGWfImpgbXZ1KACKC5Hr7tAC4HFvguwNbVThccu8d3JvFJM1KsIBmqWOeblcDufzIFsHuQ3i-67hFUu97pqXFunZ5B9_pNcw8",
+  "tokenExpiresAt": {
+    "$date": "2025-09-24T09:20:51.695Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Pierpaolo Vardelli",
+  "userEmail": null,
+  "trackTitle": "Antidoti",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-10-10T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-24T08:20:51.881Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-10T09:00:00.816Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d3c7ef6728dc3c0df12e2a"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c292b850dba33d4c4d2408"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "11139142537",
+  "accessToken": "BQCu7qSe9JfL6gt3cooCBzbkR3YEUaL-ntgcWwNQGVijQfvp_6qYFemZfuoBpo6BvjUc_7B3-OWkIUdQYJiDQQ_t_Muz3ugwpoBXJnPGrlatI_alMV5efatB0lZKGcX3SucPCibJ_M1n-tu-p6cYA-Quw17aK6VaZsnttx1bf8DbOB4f5zlNpdXYFKxcSx4dgi0yh8fzKMsoR2sEAZSs8vhQM1OCZuONHpSkdidhBHdbPr2_lVcRTQ",
+  "refreshToken": "AQBiFL5ncdhUexbxrprMAzSkfYl8LfTzb1UIA_TQtnE79yo5AmZvMTEKluuML9GFISlYysYuZSJh2laf1wQstgZPrC-32gRHYY2siwb6NAsL_TOzKLT1ZcikRGaEWasdYzo",
+  "tokenExpiresAt": {
+    "$date": "2025-09-24T11:29:03.538Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Izmir Ulqinaku",
+  "userEmail": "izmir.ulqinaku@yahoo.com",
+  "trackTitle": "Antidoti",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-10-10T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-24T10:29:03.727Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-10T09:00:00.973Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d3dbdb6728dc3c0df1321a"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c292b850dba33d4c4d2408"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "11180515406",
+  "accessToken": "BQBNs2MkwylRzFX8M0y3-PvCwMmYQAn1sr2D4kzCHqd4zvMjtmyKkkUkyapu33CYKRtGKpRIuJgqe4KZvVjOWmyBwf8C07kPCtF0lLxy1UaMdiU_BilLNE3nXUimx9SFm4nRNXiGRQp_Qc72kc9NSVPp-9Pge0AmLMDgwhL8vMC0lqUb0BD0sr5yFktiyD_-WXTpflq3dr8MJYEm2FzkPgdhn56GkeOhJ2YIteB73-C0pBnlTyWLVg",
+  "refreshToken": "AQAWikeR4nipBe0X8vDvYruGnKie_Mn0Wj-JNu2ghevs8okzXIXn5vTytowfHowZfce6kKt7_6s63Zqf2b_g9cZxpSkxsbG8xJBQ--w1gGVM3vKPtA_AB9fUoNKEMldN5ns",
+  "tokenExpiresAt": {
+    "$date": "2025-09-24T12:54:03.754Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Angelica Polignano",
+  "userEmail": "polignanoa@gmail.com",
+  "trackTitle": "Antidoti",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-10-10T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-24T11:54:03.937Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-10T09:00:01.124Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d410cd6728dc3c0df13ade"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c292b850dba33d4c4d2408"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "d08q0rcwgy7gomrsf60r8dhve",
+  "accessToken": "BQBInI-jaOU4CGpGMBoQn1-waOBuMkovhiLrHfxSe2gXert3s5gZi3qS6_YgauXLxlVYJQc2LMmcW8ZBCTz7JbqcUqEkHDzBM824Xme4zEBcgiQqGuDAOICi-Qh7tDIoake8D1ESKYrunSpJBTBi2nTK6zFdFMrA-tQ5kHY9VCaB9taHgEe04M85lTlMi-WMSLeDM_NRD_LRbW6xOFo-2xFqZMmczpaok2GMEPvSixnadsm6kOuu5YtjrFF64edlm_cMMLFY",
+  "refreshToken": "AQA9TYdM7E0X1agTYWX7WoOMXQ4Ir0R8Rd1GpBDNogiCXfSoLmKk2lOqAqQ-sdfDO9xJcRk8R4qdzSbMSasEsaj-U7GeAh-5j5d-mwJiEk2nZihTo7zl4W5oN61q7iYX0vE",
+  "tokenExpiresAt": {
+    "$date": "2025-09-24T16:39:57.497Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Spain",
+  "userEmail": "spagno.simone99@gmail.com",
+  "trackTitle": "Antidoti",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-10-10T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-24T15:39:57.680Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-10T09:00:01.270Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d4fdc66728dc3c0df149ea"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c292b850dba33d4c4d2408"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "dmaserati11",
+  "accessToken": "BQCFwUStyffbgHV3rgDvxjcJfwIQmpRla2FAbCnoFJLxAtd-nQ1zYCbxtzWPrODvZFTkKTeV2ZQ3ECZ6OPKgkuuwe2iKq5yDqpzuXPxu5LUgl_UN_3HWDrFzvL7E7kIK8_lvjlb9PnNe95Td07_1lLal0JOTUVoVuHAnwDMDHe2g4-XphlCgK3td5eojUOiuRYxq15FzOqYvS3-qT9BluFdj_S3J_XeqpE4Ls9l0IjDFA0Tryf4ASw",
+  "refreshToken": "AQA83s52A-JqTXAgwPevUAAAq3vU4pJqZqAtSUSNFUBNEAERyE6LWAcX5Hqyx4nwHbauxtK43baYwIDXQIqMMcNA3_Tzfd4c5FwbLyb36HJ-7y9xRM6YbhcKnQJQ4r4TM9s",
+  "tokenExpiresAt": {
+    "$date": "2025-09-25T09:31:02.264Z"
+  },
+  "status": "failed",
+  "userDisplayName": "dmaserati11",
+  "userEmail": "dmaserati11@gmail.com",
+  "trackTitle": "Antidoti",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-10-10T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-25T08:31:02.494Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-10T09:00:01.426Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68d5228b6728dc3c0df153f9"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c136f550dba33d4c4d08b2"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31rcfzl6b5sksp4duudwmykyyoai",
+  "accessToken": "BQArsvpiZ0X6wDXqwX0l_vM77mXZ4AA6Wj3q2rAuPeDOpDGmGmDC2qt7tHrm2ee2vfht9s12By3yqRzDgxpnB0lRq5jyW5jXz4J_3oHxKw991cRWh22CfhcJR0FXJaFI720lxCkMBzyWlXtcpuNKr7o7RRtHwo1c0ZGLI0zm0e8Q43HORnr1xkbZQ1QdPbZjpC0H-FMUgGAwHOC9z2JjOE92VNT2R8EkGyJc-HLYXUp_v-Em_adRHs7D8pwoVdY1rHy8N8r8",
+  "refreshToken": "AQDunTtL3p-qMjRsElCdZJ1QGc27izEr29hw_ERoY_Bw8rgwr8KQLAedoQjM14k8gKdXKlwDish-GFDz94nfP3ixe7sWdoHpjgrYf_wlVfEcTVbdWyza8QPWrsyRrS44j80",
+  "tokenExpiresAt": {
+    "$date": "2025-10-03T10:00:00.480Z"
+  },
+  "status": "processed",
+  "userDisplayName": "daniele scardina",
+  "userEmail": "dascarlithio@gmail.com",
+  "trackTitle": "Unseen",
+  "artistName": "Dascar",
+  "releaseDate": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-25T11:07:55.948Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-03T09:00:00.915Z"
+  },
+  "__v": 0,
+  "processedAt": {
+    "$date": "2025-10-03T09:00:00.914Z"
+  },
+  "spotifyTrackId": "4PNJKxfbMdy8ecH9IfHlm9"
+},
+{
+  "_id": {
+    "$oid": "68d5363e6728dc3c0df154bf"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c136f550dba33d4c4d08b2"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31dmmskrje7wjtolfcajxqqmh7o4",
+  "accessToken": "BQD-gjEWFE4rdClwnsbz0OpR0EMpKfauS07arkFg9x_OYDF_oRyMpVUk7TbomDAGuFKsAvVItDP6SBbnip0So5fR6L6JsYZwX-jfIlb_7tiV_CUHNsRbySkWNCKziFOqWlNI6JtaRCW8glXHVzkQwEkpe4gZ843r_Mgm1_z0-cERRIqjSXDJFsg1nYHXTOR8zv8Q4uqGKvh1L5eK73eKPfvwZLZfPFtYQpgvYD62JEm29DSCYIUc9Dboc928fut4iAUDL8TaZLN3",
+  "refreshToken": "AQDKiL9NeYKIa9P1sLGz6LN4sxZz0Zvt4LZkEUNW9Pr2T_ghkG9kVpCHmn_WEd3J6KmfQllKtzFGDPYvvbbZDOfA03tGGTCCiR_r0yCnK_0rhKEuVWL8MFXm8bC6xh7f9UI",
+  "tokenExpiresAt": {
+    "$date": "2025-10-03T10:00:01.100Z"
+  },
+  "status": "failed",
+  "userDisplayName": "monvalue",
+  "userEmail": "monvalue@icloud.com",
+  "trackTitle": "Unseen",
+  "artistName": "Dascar",
+  "releaseDate": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-25T12:31:58.796Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-03T09:00:01.126Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "68d8874d6728dc3c0df173a1"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c18cb150dba33d4c4d1169"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31qlbdljjh2lwcujufq77zki2ugy",
+  "accessToken": "BQBGcAlsCJ8iPjrgLs5Sn18OS7Q4JeprqAUg6KJ4SdT2b3D5Vilcba8xar5xD5ahuVpJweyuDp7l4St8Kvt4iWJ1yUFdCtfS2d-3_NDNI_E7aIVmbIW2yZMgj5t-WhqlXhS5vso13yQTcj7bizgdmejBT_6M5OPyajciSYLa66M4D-W0TYqifBDbXGH5obzrH_a1E7NfI4EPNi6Fwj85sa2fBa85UeH-DB50_sg-qf_tjUSSrwFJcFQlf2l5NH1JRUrF5zBc",
+  "refreshToken": "AQBkgnfOQFwseKGrDA0HK3nf-cVnhsxW4W7QXoFT9PKViDbRg_Lqbto6vkEWeasvkR1hezC8WSNq1OkrCJK-RNgbKFMKn2ZoWhBtU4iwTBA83JxYmL9I5-RcUC-srqzmxUU",
+  "tokenExpiresAt": {
+    "$date": "2025-10-03T10:00:01.312Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Antoniodechiara",
+  "userEmail": "antoniodechiara004@gmail.com",
+  "trackTitle": "Avellino a Napoli",
+  "artistName": "Tonino",
+  "releaseDate": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-28T00:54:37.637Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-03T09:00:01.337Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "68d95d8d6728dc3c0df1775e"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c068a450dba33d4c4d000c"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "21obchxgoofpqa5j4jexchivq",
+  "accessToken": "BQChSNE2vXdVlMs34eGB4kfj6Cr5_dSMOcXE_MlhWqapJtFDJc2bwcKpuU6Ow7LXXblTTpXWS_L0OYATbIiW2r12H4ma_AbwyxSZvZp-SWb8BzkybTXVGE1Lxy9z44YnvxAiWyS-RWWa18IWafkbCysqQVNj3Mrp0M7X7WeIGknKIywi1u1QTVCif15u_9t3ZMEwiytXwjDgV_2PjzDAqRt25AyJcIP4UEvdDN0zkUdeGNKgIJ4grm88inYeLaUUR7X2",
+  "refreshToken": "AQDegcZvj3uiICzBAWnMXgzFr80IxkUU9yrDLEfjB1KVWxxQlbO95jfJTDsr5FPPbi5d2eIHHB4ADCUS9C0eYuPkwv9MT2LBDiq-4okwalf0gcwcgogNOOlfGZ9FODMaHk8",
+  "tokenExpiresAt": {
+    "$date": "2025-10-03T10:00:01.507Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Gabriele Giannini",
+  "userEmail": "pierpallescroti93@gmail.com",
+  "trackTitle": "Amori DM",
+  "artistName": "FR4NGIØ, Dreg",
+  "releaseDate": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-09-28T16:08:45.919Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-03T09:00:01.535Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "68e5193e6728dc3c0df1f439"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c87c8650dba33d4c4d9b06"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31oyribdbq2hjmgx4j7m36pqlypq",
+  "accessToken": "BQAVBmacX5_V12EDWL1aUdFswo-8FMndEB7CQAEKDKenQFAPACV9pCIVYVgqubQ8YJwUWg_4_rOOm_ZDK2i83gQXv4Vm4ZI42BmFgC6wpLsFTWdk1SKDDN7CiKI3bVHm8HC5DNfJj3jA6Ieb6d5rVZJFA11gcTwHB7M0hE-2KhZ62QIPEYEwOVpgzopKi2jFrO7meONHYUTG9SGhFQkxOCb7ItmJV6puQ2-dfQ69C_CPxKyCxn6oooukI6p-qHEs-eFxr1WY",
+  "refreshToken": "AQDqelgMrWSX6GytEi2XuyVeMWhifFc_CeZZMWuzvdqrHYNkuwu9nXxzDb9PutDiANQAETMn5sEXt8QxJT-muUhT3UdzyEQeeyTDbRXZZW84J6HUhQ01BwTTueJJJUL_fUo",
+  "tokenExpiresAt": {
+    "$date": "2025-10-07T14:44:30.070Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Caronte Music Group",
+  "userEmail": "info@carontemusicgroup.com",
+  "trackTitle": "Frammento",
+  "artistName": "Genvilla",
+  "releaseDate": {
+    "$date": "2025-10-10T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-10-07T13:44:30.193Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-10T09:00:01.582Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 400"
+},
+{
+  "_id": {
+    "$oid": "68e51ccd81435f88e30a29a2"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68c9ce2fc171d842e72441fa"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31vnooyf56ug4jw7f3fp5vy4eb24",
+  "accessToken": "BQCs6HfGW7scVSTgxtOI3UJlXq1aZZTCHyiPSLViblVmSzd_sRuuNTS3KOexeZt49sq2pFheSS9AZ4cTxIAc7uudzpsuxHxkHhB41xXeWhGye5vAywJQ5SWY3LGvxHlLk5rlWEa9qaVR06Rxte7g0yNMqV6LusH_jxSfReUnOcrLXcW--TDBqCvnpD4-ACfkTolSSniQVLLI2U-PEyjitA_mVjiROHp7Wbu8OwnU5zaLaJm9uxsb3VoWHvMkPFt5GIbeJfm1jWjn",
+  "refreshToken": "AQC9UucL2bcEibXVYih7kImEdrO-R7wtM37tOOQfK5Y3OPDewL28qP0UyyqY4EAt3ZFMtYlgYss1-gvW9X8bZV36AoADKAHpaZ8KMAkYQ2xDLBVD8TbOV-W6CyZSquyNd08",
+  "tokenExpiresAt": {
+    "$date": "2025-10-30T10:00:00.602Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Piash",
+  "userEmail": "sapphirenew@tiffincrane.com",
+  "trackTitle": "test pre save live",
+  "artistName": "test",
+  "releaseDate": {
+    "$date": "2025-10-30T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-10-07T13:59:41.806Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-30T09:00:00.848Z"
+  },
+  "__v": 0,
+  "errorMessage": "Track not found on Spotify"
+},
+{
+  "_id": {
+    "$oid": "68fb270c81435f88e30b20b0"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68efa4c681435f88e30ab6f6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "11165897815",
+  "accessToken": "BQAPMb9KwRhl20ICy2e-slN8GvQt2WNEzv-NnR-SiUi4EwAi_6fEUY69XH3QWQjNVtWqgj4peD7NNrhzGp27ij278463Gt4V0hYo6RpwC8d3Eq8bJaIkfxioNQRt5MSHTuVFPh0u_9WcRy11Fo7tCOa9Izqqwlio8_E99FRWcJDVOSBFp0a5-jwrqZSf-T64OGRN_PGu1E_RSwt1el6A5108e_Vz3VCv_zMXXLJMglEoWM_R_b3SSq2-mnGSjC0",
+  "refreshToken": "AQB1Mx3FJ7T7qXX9XzeNov-nUuyjY9MWKaAJijdRKi7LLnXKOKEfNmVUM8RjGosjhkxSwwlYaLhBSHZZSm34BbxPeKeQTp9rzcCSAnEVULH-umVFPUk4hm-i8yie7efYjyA",
+  "tokenExpiresAt": {
+    "$date": "2025-11-14T10:00:00.805Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Alessandro Viera",
+  "userEmail": "viera.alessandro@gmail.com",
+  "trackTitle": "Golden Hell",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-11-14T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-10-24T07:13:16.584Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-14T09:00:00.999Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "6903461781435f88e30b78cb"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68e5521a81435f88e30a36ce"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31b7st5byccasflqphjpfb4a57du",
+  "accessToken": "BQDy0kT2Xp2oXnImkQY69CCaUYYYA3fER2hqRgyP_SlIxEfr9GZXyPANKWxPOI567MPT25z74LdG8UI66dd8WUvtQohU_RFXaAlAEaA82jwd_rmxSl2sS9YGEotU5efZpziCaO2WdGxQntk97EXwwiUKrPL4J1PbUzKSZdawGlVrYrOvwTEJtDNVRydOJtRn2WoBbSl6uZnrlYDG5N7G05Xnx1YjqJZBogIGZYAKqkDDAA--4R9RZv7ApMyWDSFMqqjm_ekQKFUXPtTK4w",
+  "refreshToken": "AQDAY5JW_nnJBiQPQLx7NVlNowGWG6Q_s6YfQnKQIn5c_vroHek3qBuZ7m7PSvVwQtfzvxz0Pvr5nGfO4XyYr_35Pb-coS3F-qX5JJR9iMFUHQBsovSWAgUSRqza66VXmqw",
+  "tokenExpiresAt": {
+    "$date": "2025-11-07T10:00:00.598Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Life Of π",
+  "userEmail": "itslifeofpi@gmail.com",
+  "trackTitle": "Time Is Up!",
+  "artistName": "Life Of π",
+  "releaseDate": {
+    "$date": "2025-11-07T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-10-30T11:03:51.254Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-07T09:00:00.978Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "6906401c81435f88e30b9246"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68fbd99c81435f88e30b2fbb"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31oyribdbq2hjmgx4j7m36pqlypq",
+  "accessToken": "BQCvIqzXq3YSmQsJEzO4nWhFMOjW14M_du_E9N6Zv-a0zSp5_RgEKX3KLnnI2vl4axYN_EscXgpPyUYvXM4-VsJ7KcXK5SJbTUa0LQ9yUHLsohfbWerUymTsYZ4p-jMa13ngRYzzpugWfYpDzYca4SJVUMVDEd33Z6m3eITd7V5gTuXkfjFvWbziNMf2Qgyu-D1JrsecByJTO7u9dmDGTBkGct_MnwO5SbzAODsrFozj0QGYtgMVJuFvgl8cRF_fKFtjWsIYJ6O-5iabrg",
+  "refreshToken": "AQDJaXX1Yrd6_OpFy4faAF6vUOYFvXxCvTHtjgtHoN_HzGwE_5n3Ivz5D0nGfkFgxu3nuwsVdIYWtWx5_uLcy2C-Ote-NtapcSXFNYk77msSZx2x0Q7zGGsFovBft3xIPdY",
+  "tokenExpiresAt": {
+    "$date": "2025-11-14T10:00:01.189Z"
+  },
+  "status": "processed",
+  "userDisplayName": "Caronte Music Group",
+  "userEmail": "info@carontemusicgroup.com",
+  "trackTitle": "Donna Kelly",
+  "artistName": "Moribiondi Crew",
+  "releaseDate": {
+    "$date": "2025-11-14T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-01T17:15:08.771Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-14T09:00:01.887Z"
+  },
+  "__v": 0,
+  "processedAt": {
+    "$date": "2025-11-14T09:00:01.886Z"
+  },
+  "spotifyTrackId": "0kiXixavPAUw3E4LQEuwAo"
+},
+{
+  "_id": {
+    "$oid": "6906f42f81435f88e30b97fb"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68f2514d81435f88e30ad1a6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31ttqrw4dibw7d2x6a6tmba6ksx4",
+  "accessToken": "BQCwRmpeoBnKbODAlRi3Hoj4FTGzeuowgVRgmx0eKJesPUWCQJiJgLqq6e3c7RY-_J7YikDExm9vC5oGpf5z6z25BhEFT6jgBIQ_z7AsBaMu6Idl9ok0I8NuobGkQlZwgW8ZZ3g7-Vhzv4m0l2Hn4FP9V3eB2_b0w9cN5te8QVR9aEE1JMBEu9Jg2fQcVSiVpflqaP0oVUsqMaAohxFpUXGCEl2Mswi6WylJUqy15gLA8xSUI2GOro-TNSs55MswuHWKNT-vx82sfrsiLw",
+  "refreshToken": "AQCxErxQbrnWRyEd7U-_cI-RWZvZuVjAO7zKPKsAlhLG9tzoZPG7CunNHwN0UtEXCwq-sikWhnA06B-cnSQlH1EaLTeYTE0qEdVA7G8tS3F28CMFfUtqs5GVtFDQls208_Y",
+  "tokenExpiresAt": {
+    "$date": "2025-11-21T10:00:00.569Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Christian Antonio Cerminara",
+  "userEmail": "chrystalmusic18@gmail.com",
+  "trackTitle": "Chi sono io?",
+  "artistName": "Chrystal",
+  "releaseDate": {
+    "$date": "2025-11-21T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:03:27.350Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-21T09:00:00.705Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "6907158e81435f88e30b98ec"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68f2514d81435f88e30ad1a6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "v5245su1cwz8ac6tk0iph8l10",
+  "accessToken": "BQBHCadRSAAXt_6KnnHC6P9gH3W7GB86uHru03SnuL0OkxW-d5TYVazXOjUSH_11zhfeNzZFsoh2hLMzTRE2-Zi-SxSDIN32kTLRXt8HfzbljujyYIoR_S9kaBjNvkwTLiJ6dNRTkBq2rY3d-lTSaWx4NOej4HDMjXyDJrXHmq54bW5TnbUljbHKY2DNlfL8yJ7wHSml8s0_mJSQeaJwTi1vUleC4mmzc3qu_SwvqXNwsD_CSO3yYmc6zMv5oSI0d5GiE5XZgALVJp7Zcw",
+  "refreshToken": "AQCPB2-BlLAZLwz2BfjJav2pZZ9-lD0gu_h49DtmBaao1ovttHuyCA73BCzwghpjOYHmOD-37Zts1KDhXY7tkwnw0x4apQ_wtKCApu_es5h-2Xftfs4idWRqkAt7PIWBoKU",
+  "tokenExpiresAt": {
+    "$date": "2025-11-21T10:00:00.896Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Dario🧘🍃",
+  "userEmail": "dariomeoni70@gmail.com",
+  "trackTitle": "Chi sono io?",
+  "artistName": "Chrystal",
+  "releaseDate": {
+    "$date": "2025-11-21T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:25:50.860Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-21T09:00:00.919Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "6907365f81435f88e30b9ec0"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68f2514d81435f88e30ad1a6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "996axu4evbihvstgxnf9yv1b0",
+  "accessToken": "BQBrK-r1LdPND_E_5w7kyaVdNMBtAH-35WO6WupHsxx-7QU_SqZlzo2HTjKlIWJokFiTC2duIs4Akn-sCL3CTGsLsktsqTaPozsnd2_jNgsPkc5Cdq3Nt8BqOx5fOKWWDQbbwItQvTAQs5ZnvfjV0FpfHl6GG32032sxYRW34CfNrgxXf3oeBMhqv3A4ncxdMFp-95419jmZQdRILNoQih6tL6EbQ-Wkqn5jHQvvqdBLscoCukY9QeEVWHx9PPvOaPHEJx6HsWnLhA",
+  "refreshToken": "AQCu5ggQYvvPuUC0cGcq0m6BnX8dxOPc1xCUKpfqU6icDSaqIXr1GUGdcLfgGE7Mr17uj7bZTjZnI8zfG3X16KOl8K-XDnSHuQKbOhu1zZ_oQJuLuRO8mobwM7BWS8DZeS0",
+  "tokenExpiresAt": {
+    "$date": "2025-11-21T10:00:01.081Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Elpi",
+  "userEmail": "elpiscapasso@gmail.com",
+  "trackTitle": "Chi sono io?",
+  "artistName": "Chrystal",
+  "releaseDate": {
+    "$date": "2025-11-21T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:45:51.545Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-21T09:00:01.124Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "690752ca81435f88e30b9f7a"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68f2514d81435f88e30ad1a6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31zgt6zw2hw5btmfhh7lylcwjk4i",
+  "accessToken": "BQBOItDgXSmCjkuR2eqSq4od-s0xZ5t5nUH2JrL8MQ2Fgtl6j5DqyDxwE0YWoWOJ_RB6pbS9_LH1Mf9fxtHMD9ldM7MlTkJNF4NfrA-4TM-RwXlK_TZhU2m6LpEGsoMw_VoTV2wH1uTfRaoKZikR1OfVYivc3y2riPpS56K15s7zRX6snvJ4rqGc938gGk0n9BzkETgJuI5bYtukwol7JQons0ZICZcZhj9dbw2BgpwEev3DwXQNv3ZpiVBy8ZKx6NwScan_FDsraZRSUg",
+  "refreshToken": "AQA6JX8LV6YLJUZqwxUHGWeR9jaTzjgQU3I7obekeXOhpPhEQXHNFDLsRV67F820iYvJmu3JY7EkI0O00pQ2uE-hvvOnw6saryAsnsbibDibEB0q8zIh6PsXbDSZxJaT7Ps",
+  "tokenExpiresAt": {
+    "$date": "2025-11-21T10:00:01.315Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Rabha",
+  "userEmail": "zspgzfdvg9@privaterelay.appleid.com",
+  "trackTitle": "Chi sono io?",
+  "artistName": "Chrystal",
+  "releaseDate": {
+    "$date": "2025-11-21T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-02T12:47:06.497Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-21T09:00:01.359Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "690b824481435f88e30c183b"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68efa4c681435f88e30ab6f6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "31spmyuv3di543gyqnjpgtge3uzq",
+  "accessToken": "BQB5tXDppaCe5dlVil2kfcIWwgVusl3v8o5V-bFTYI1y1KUk7zfp-2cV4-ixo5sZ2l4uG2ATFnhVHB_HOO__3YSRTQ76oudlX0mkQMWcWR2fE2h87U9P95BljcfwcyweCIzvLG9wcYYC1gFIiya1CWuc4rim3GFomRmMQZynerF-JsRwRPgX6XWFQZMAgCdKEjwQC6PsnU1WzlxqoSS-fzlv3brTTqwYY_haZ_GmCk9d_WwPqWK91B3IdiD7g__CMMy2trhxCJyduvk_vA",
+  "refreshToken": "AQB2J1fpbA6nye2hvCzrDlaTQvJSyCmELnRH3KYD21hyHQpUOiVF3SjhhqZefdYeciPdw39ON_v4_atizid6fUVBrJNBzO2fpt33jEPCi070_ObeSZ2r9r5CaMkCQvX2mgQ",
+  "tokenExpiresAt": {
+    "$date": "2025-11-14T10:00:02.120Z"
+  },
+  "status": "failed",
+  "userDisplayName": "pamela netti",
+  "userEmail": "pameladanza1245@gmail.com",
+  "trackTitle": "Golden Hell",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-11-14T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-05T16:58:44.397Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-14T09:00:02.152Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "690de75e81435f88e30c47b5"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68efa4c681435f88e30ab6f6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "11123131480",
+  "accessToken": "BQAITJWxxQk8OrEQLH8aoIr-wnFO7SmAlkL4wuMvVLITssyCp1WYGS_CPosfhR6n2Oc1kxxNt3lCoUvf9wVF6EeJbREn6hx3nm7Dyn96YfNtsX8yLx8PbDbaQLeMFxi7Y3KtCbnucrBGVXYY7oLoVaAepXZ6_vL_VXLppCwbn2UjB2O1dmVUsdb_RFa_xxuHU0BPzBgPkrzUfYNGg53VsnX-K-1OXtw_tQpjOEswQkSw75a9jYeuh9uD4JmIt18",
+  "refreshToken": "AQAYdTlJdbskUtMQ0i7TzDGBg7_U81mnTtqHl9LIl8s2K3Pb7FwnvKUM21_0gsU05luxhG4f3j5r1iv8I78JMTxcdi34Ro-JXhBa8MAMJbuaWyFPvWFhSDLYzZldOCkLS_c",
+  "tokenExpiresAt": {
+    "$date": "2025-11-14T10:00:02.348Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Silvia Granelli",
+  "userEmail": "silvia.gr@live.it",
+  "trackTitle": "Golden Hell",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-11-14T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-07T12:34:38.877Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-14T09:00:02.378Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "690dfa9881435f88e30c4b08"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68efa4c681435f88e30ab6f6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "11139142537",
+  "accessToken": "BQA04OxphzMsJfmwoNU9QGFIkrwvdMrF3VafmZpjRcZHpwk5ggyy1xuLXR4vmLks2ww_6v-M3TY8nvy93WeRZ0anUpNL6P3qKYiCKnKoUUqiyiBkL6-VMGGnrEOMcjCoCL6EsCsVLVj-its0FLoD2TKFssq3qOSIqWsKM-gqPEPmiUUBhIxlr7Zv_apDEPJlPQh63u1miKGpgOVSXovklTIHuixesH5dnh27mK76ME_lm6yh_VA48e8JKQrfNJs",
+  "refreshToken": "AQAtI777m8cqu5TclCrJA-qR6CtMMzm09V2UGWX5Tnn8zhBPZJtyPftHowMKdQJTo5d7bOByPjQtR4I0tCZf3RFCGT5P9lAs-M5N1q1b7aCFkML9vxh8CG5aZvxGnOh-bu0",
+  "tokenExpiresAt": {
+    "$date": "2025-11-14T10:00:02.585Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Izmir Ulqinaku",
+  "userEmail": "izmir.ulqinaku@yahoo.com",
+  "trackTitle": "Golden Hell",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-11-14T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-07T13:56:40.680Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-14T09:00:02.617Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "690e7c1481435f88e30c4fd7"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "68efa4c681435f88e30ab6f6"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "mone1293",
+  "accessToken": "BQDM4ZlJGHroEnl2jEyCPunL2Bl-9EG-oPzE5XCTJhoZtDLBpgZG6pTW-mnX8zNTc2eIKdZ2e8bmC7E1jqZ8mPrvxsp6mkdxdV6q1yeLYeGOKNSTn9BAbZFNnYi55Imc6J2SeccXdcaDAQleoh0ybqINAZss2N1I8m--pvX-BTGeJEmZQJY7wnY35VOHYSe999EQwAsaAsf0hrGA3FPpQ2--HQwRgkKFqh_Z8JsXYsPKIn6Fqt0G9-o",
+  "refreshToken": "AQDVlfvJ1m7Sp8jCgJLNbeiLw954_O76Vmv8YsRKxXHLm9RhlIGaruGxMSJqvkmk-QMumExY6JNg88g5D86eaREYeYRZ4mBOz6Siusw4g5sJS3VSJT_wK6ty3TdQTSQj8nw",
+  "tokenExpiresAt": {
+    "$date": "2025-11-14T10:00:02.840Z"
+  },
+  "status": "failed",
+  "userDisplayName": "mone1293",
+  "userEmail": "boselli.simone@gmail.com",
+  "trackTitle": "Golden Hell",
+  "artistName": "Golden Ale",
+  "releaseDate": {
+    "$date": "2025-11-14T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-07T23:09:08.312Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-14T09:00:02.876Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "691c4edd81435f88e30d2dfc"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "69090fb581435f88e30bcf77"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "1194159751",
+  "accessToken": "BQCT6wOmwdfs9MWFjMAjVbYhbeEeNrbZe9jaDXsY6xhYCOrTKRXhnEAA0fYI-o85e4tlme4hxxmwxa2f04TQY3IGAwq2JnQRtROcElVRO7iGxC9Ij5bDVV2BUcLoaIpNm-TgPpFWO3FHP7UelU_blQ5Nfa_0_45A64uYXMdhw9G0n4DbpWKBk6kniL6znGqCYjSHXkGBSpM22mnulwz9y-gNcZaZwCtJSTD0D59AzwhUOuhPNppQmMzXBD99jA",
+  "refreshToken": "AQC9UnpqU7mqKpkMqxsB2xrjU9K4WTJDYDKkKInsHDbpAecJY0AIpI2ToOEdtiSnn0GwoUfzenmNt-ZYX7wTz-FCALrySJb36tjryeo9sw9A0h0gCeI0CLf8kfo9UQvVOb0",
+  "tokenExpiresAt": {
+    "$date": "2025-12-05T10:00:00.600Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Gianluca Lovreglio",
+  "userEmail": "gianlucalovreglio@live.it",
+  "trackTitle": "Miele",
+  "artistName": "Chinò e il mare",
+  "releaseDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-18T10:47:57.890Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:00:00.965Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "692c1dac81435f88e30e4e6f"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "69090fb581435f88e30bcf77"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "314vrjx5j7pvfuaugee3uy3t3kny",
+  "accessToken": "BQDgLRKPDWyh0UbQqKoM--71MQmxzowciv8-HG5VffiV1JTsFDIiP3Ii9SaBwUADaQUxCXtDqBb8HAiyn99oiLlyX9MzhIIF_bEUAf3mvzq5FzXmsfdrFP2ec76yTxeFydoKp0PL6k7jnToE6Aw4RUrNbwq3pRrCSBNKp1WN5RywoM08mZ6HjbyNd3qB3p7Uj17C0Rubsc3RJsgAIhg9Tsdn2jXdxPwABdy__lWt35pJ14rtx5ecng_bEA0-CsVJ536ioEsnMBxmkm5A7g",
+  "refreshToken": "AQDTNKT_tFSuGSI4DfoMisx3-OCspz5bJrdohmK8Pb8tjVpdTFZ0x79dVzykSFjXqVYz-JZVQK02qyhaJr9PQG3QkQg4D_ePx-JUd8ognU_mDUaVHS4TMkM7HDxoIvpSmD0",
+  "tokenExpiresAt": {
+    "$date": "2025-12-05T10:00:01.153Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Ludwig Becker",
+  "userEmail": "ludwigvanbecker.3@gmail.com",
+  "trackTitle": "Miele",
+  "artistName": "Chinò e il mare",
+  "releaseDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-30T10:34:20.796Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:00:01.181Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "692c3a4c81435f88e30e4f71"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "69090fb581435f88e30bcf77"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "danilo.cariati",
+  "accessToken": "BQA-s8u5D3FQC0719XC3bNpGsx6wcDjPoxHb5THKMacotssLHTn2qkA8MBPuBuqgSm-MR21y5Fi5oop3Wi8l8FXNM0UeHzZXFgn8rU7vi3qZc43EkDnm3vqjKe83BAsFc4CcR25Vhx-ZxosnXjxxc6qn3bydmke5MPv6rojathXlShr3ayGto9ueCn1qmnXgjLSlx8pAp5w71_o0gjKzRf44z3TQlE6OgwZM7Zb9YuduYuKDAhrXsMIxDvTjGIvfAUc",
+  "refreshToken": "AQCka5oCyB-mqmtpLQlAxVCEgKS1LY19oAXMjm9sW8xnT6hThuHdC1zEZ2i5ir3ozTb2GrIR8yMO7EHfhphAwqiv-bqu6lupBy-m6FWfgTcnGtWfJptLgJbilith7gCMkvI",
+  "tokenExpiresAt": {
+    "$date": "2025-12-05T10:00:01.393Z"
+  },
+  "status": "failed",
+  "userDisplayName": "danilo.cariati",
+  "userEmail": "danilo.cariati@gmail.com",
+  "trackTitle": "Miele",
+  "artistName": "Chinò e il mare",
+  "releaseDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-11-30T12:36:28.456Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:00:01.430Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "692dd1b581435f88e30e5fc3"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "69090fb581435f88e30bcf77"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "6l5drxacvbz7p41nerjvytm57",
+  "accessToken": "BQD-JS8LiIMBwRck_YKoiyM_pGAWiB6M5nftSXWGcAik4h_EbNOUbJZIQGdxaJFdchiTooso1kEFBsv_gsxbQ6GSYj9e4m7-wPYSWNA_23Z7dK0SEfIaTg8-5xZxSQedo8AyXvilnhd7g3-tzq0xsg33Khjb-Tg7nRDHqz_89gpMtcwyOlByw1EMtt1gvSqKUmKh_3G1OvVgVzIMIP2RoPCNYnYmBy7vYPO-02fIMcrazqGrCspKiWU_ADmSqlXaxHhNXetYYX0xlA",
+  "refreshToken": "AQDOjd2lHDBp7VioqlB6XO9mLGg3gidio5K_-Jbi4D99mqB9EfSlR5Q1F9GNzpyyM_9gCYWr99BOHC4sd8W2MVTbGEbkoMORBn9kqkCP_x79q562N0U88oY1ZeHsOWdSl-k",
+  "tokenExpiresAt": {
+    "$date": "2025-12-05T10:00:01.603Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Ivano Minutella",
+  "userEmail": "ivanominutella@gmail.com",
+  "trackTitle": "Miele",
+  "artistName": "Chinò e il mare",
+  "releaseDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-12-01T17:34:45.401Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:00:01.636Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "692de46181435f88e30e61db"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "69090fb581435f88e30bcf77"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "gianluca.cariati93",
+  "accessToken": "BQBgt5T_vpSTscfHYGqg2kQPlg9KWqWeib5U01tZIf9_wjvaQaIrBq2YezM8ZH5X5oxzGtYVDwEdH6TANB-L1AnXTKbqmsfRImdFbWc7uSUR9W9RNmF6X8aTFtFImXz_855JTCqXdzyRWFx15TW_9P-6QHifH2BwJRex4N3YU1r3mnuqpRtQg-QN8adBRae4A8-M3GsIW-RaXVEvIRXD9OAD0Kxjk67d8CwJ09SwwcW3ULv9fRNDP_4BmhyEur_SLcSBZ2IA",
+  "refreshToken": "AQCPzaNngJyNSRFNxMNHj_k9Fz1MPCkqjSRKpE-ZAnVjFKxjbDjonQWvNoXIdQsx7i1ywZRnNwyZp9NctL65w0_q8ybru6ie7xev1o7e8G0zAvz787o43HDNuLq-0FLJZo4",
+  "tokenExpiresAt": {
+    "$date": "2025-12-05T10:00:01.826Z"
+  },
+  "status": "failed",
+  "userDisplayName": "gianluca.cariati93",
+  "userEmail": "gianluca.cariati93@gmail.com",
+  "trackTitle": "Miele",
+  "artistName": "Chinò e il mare",
+  "releaseDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-12-01T18:54:25.941Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:00:01.912Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "692e0fcc81435f88e30e6308"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "69090fb581435f88e30bcf77"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "21ey5uncrx2r4all6tkzgjzyi",
+  "accessToken": "BQA0F0yFe_Z5xQjEd1Gzn0mfKeKwEyUtovOIgva977HNImMSHizN69fFLh1drOHkYuEI7F7lsgUwHFqSdrxe2RT4d2NX2vDZJcdGBA3TGUvMBH0vFm5XnP7LYJ47i0fyd-Glw7UQkNfkWq6OHTV3WVGjmQuVBwBXUhqWptPz7oBFRsTru3M2a85c3XC6SFBe-0KBgYf91N9gc9sIeMqXZJeYYGdMIrIAxN34DO7xXKO_ZCUgIUeA_lSaq7-o4Z98lj8qJ5sWh0Q6hQ",
+  "refreshToken": "AQCIIEv5uRH-mkl0KY7BENv_Uijxn-EtgGXiE_dcvJ6ozI_VWnkp-vYd8jlAp7hqQhPou3n4LlsdCAqYZeG3mLEpEyOzEr0sY5vVKEgAGd_SWheR9DN-GgbS2sqC_LZ_i2Q",
+  "tokenExpiresAt": {
+    "$date": "2025-12-05T10:00:02.167Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Martina Rangoni",
+  "userEmail": "martina.rangoni93@libero.it",
+  "trackTitle": "Miele",
+  "artistName": "Chinò e il mare",
+  "releaseDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-12-01T21:59:40.777Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:00:02.203Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "692e9f8a81435f88e30e64e9"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "69090fb581435f88e30bcf77"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "xerathblue",
+  "accessToken": "BQAmWzQgKg9QtKiwBKiMDeYzFcF3wP5HmKZO_ZA6_evhMteg3cK0o49nh-mi-kSgCNYgXRPZRNPlS-n1rb5jmJHvSe_z7IZLD7eYUGhksy6prnIhm0zZsgqouC3AsI89SrnswFknHk1ThPMkMCC6_0IR-I6zxzpYzNwcurIVcCclT9TqpFxIU4MN1jMSTGhR6XiZd3HwkZ1BiFzxYvC1X6IqfCDxbPxHQtVpP-N_O679an8lPWHn6XvpEfRsGA",
+  "refreshToken": "AQC0wJAYUplVq1gBPl2oRRbKktty_w5peVLoUd4W2960AE36rQ4jeb_M1284nM21ywyP1QIRv9uq_FDrxB7mH0eIlASzLnIzp7q5gJxmGUNxu9LX6S9uu9lJVDGrcg3D6lI",
+  "tokenExpiresAt": {
+    "$date": "2025-12-05T10:00:02.371Z"
+  },
+  "status": "failed",
+  "userDisplayName": "medalee",
+  "userEmail": "namikoi@hotmail.com",
+  "trackTitle": "Miele",
+  "artistName": "Chinò e il mare",
+  "releaseDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-12-02T08:12:58.540Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:00:02.411Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+},
+{
+  "_id": {
+    "$oid": "692f196581435f88e30e702a"
+  },
+  "userId": null,
+  "trackId": {
+    "$oid": "69090fb581435f88e30bcf77"
+  },
+  "platform": "spotify",
+  "spotifyUserId": "21crynklsvb7trh6xfy6ddobi",
+  "accessToken": "BQAE8pvZIMBLW5jVZUFV6QBHtWBp4GToZfenXb9q-c_fSU6PNPAc2hphkW5N8UydNmKx6lhjYXHRlSHN2J8TT47xb4vdBe70J7mS5Hyb5Kis3uHqtL3V0OVZegRHR_zb-Qge5jU96h1W8l4hU-AGC1d3mKFJUxiVUj01zjPxdvG8jhg1_V6z_9UW66pzAWe0NFQThWHxHbTJg-39xkAtTlBpgfLCcgm1ViFRnA1-0nNxL1JwtsBer1XqMheAuGJhxMTwKUX3nXarethazQ",
+  "refreshToken": "AQAGQESiktQ6YngxIpQmDZNVDbbi6o6NYgUmShMTIeZeoYp2TZnvMFF8M5y48zRfCUL86TOoOmaIZuECR5MiCLFm4C1YEC5DnT3YGTl-kHX4CfbOg7o3_Sv2w-oSz6M9yR0",
+  "tokenExpiresAt": {
+    "$date": "2025-12-05T10:00:02.596Z"
+  },
+  "status": "failed",
+  "userDisplayName": "Michela Monterastelli",
+  "userEmail": "michela.mo-94@hotmail.it",
+  "trackTitle": "Miele",
+  "artistName": "Chinò e il mare",
+  "releaseDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "isPublicPreSave": true,
+  "createdAt": {
+    "$date": "2025-12-02T16:52:53.263Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:00:02.629Z"
+  },
+  "__v": 0,
+  "errorMessage": "Request failed with status code 403"
+}]

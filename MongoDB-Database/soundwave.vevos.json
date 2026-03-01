@@ -1,0 +1,554 @@
+[{
+  "_id": {
+    "$oid": "68651a8da00508ed7d811556"
+  },
+  "userId": {
+    "$oid": "686509bba00508ed7d81146c"
+  },
+  "artistName": "Domenico Cuccarese",
+  "contactEmail": "mimmo_cu@hotmail.it",
+  "telephone": "3395848406",
+  "releaseName": "Domenico Cuccarese",
+  "biography": "Cantautore dall’anima cruda e autentica, Domenico Cuccarese dà voce a chi sente troppo e parla poco.\nOriginario della Campania, classe [inserire anno di nascita], Domenico è un artista che racconta l’emozione nella sua forma più pura, senza compromessi. Le sue canzoni sono istantanee emotive, poesie moderne che nascono da vissuti profondi e si trasformano in musica che accarezza e colpisce.\n\nCon uno stile che fonde il cantautorato italiano con sonorità pop contemporanee, la sua voce calda e graffiata è il filo conduttore di un racconto fatto di verità, fragilità e desiderio. Ogni brano è un viaggio tra brividi, silenzi e sguardi non detti — come il suo ultimo singolo PELLE D’OCA, che esplora la potenza dei sentimenti che si manifestano “senza fare rumore, ma lasciando il segno”.\n\nArtista sensibile e coerente, Cuccarese si distingue per l’intensità interpretativa e la capacità di creare connessioni autentiche con chi ascolta. Nei suoi testi non cerca la perfezione, ma la sincerità: canta ciò che spesso si teme di dire, e lo fa con una delicatezza disarmante.\n\nDomenico Cuccarese è una voce nuova, ma con un’anima antica: quella che non ha paura di sentire.\n\n",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-07-16T10:22:51.990Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-07-02T11:39:57.817Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-16T10:22:51.991Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68696d45ff3e3db7c042fea2"
+  },
+  "userId": {
+    "$oid": "685a809380992a56e8e222cb"
+  },
+  "artistName": "Nicolaj",
+  "contactEmail": "nicolabarsottelli2803@gmail.com",
+  "telephone": "+393337774945",
+  "releaseName": "Nicolaj: prima scena",
+  "biography": "🎬🎶 Sono Nicolaj, nato il 28/01/2003 in Russia. Dopo anni dedicati al cinema, ho pubblicato il mio primo singolo Voce Fragile, dando inizio a un percorso artistico fatto di emozioni, immagini e musica.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-07-14T17:31:43.319Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-07-05T18:21:57.497Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-14T17:31:43.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "687647064a880177c69a812c"
+  },
+  "userId": {
+    "$oid": "685a811c80992a56e8e222f2"
+  },
+  "artistName": "Golden Ale",
+  "contactEmail": "viera.alessandro@gmail.com",
+  "telephone": "3345444996",
+  "releaseName": "Official Artist Channel",
+  "biography": "Golden Ale è un cantautore che mescola melodie indie pop e barre rap, con testi che\nspaziano dall'amore al racconto di storie personali, sempre con uno sguardo attento al mondo contemporaneo. La sua carriera musicale inizia nel febbraio 2024, quando pubblica il suo primo singolo da indipendente, quasi per gioco. Il brano ottiene un buon riscontro e lo spinge a continuare a produrre nuovi singoli.\nIl suo percorso culmina nel 2024 con l'uscita di \"Cronico\", il suo primo album, che segue la strada da indipendente. Recentemente ha rilasciato il suo nuovo singolo “Il peggio è passato”, che apre a nuovi progetti e sfumature dell’autore. ",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-07-17T14:53:37.390Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-07-15T12:18:14.549Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-17T14:53:37.391Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6876b8bf4a880177c69a8652"
+  },
+  "userId": {
+    "$oid": "68751b8e4a880177c69a71f4"
+  },
+  "artistName": "Adder",
+  "contactEmail": "stefan.miljkovic06@gmail.com",
+  "telephone": "+393772840047",
+  "releaseName": "Adder",
+  "biography": "Sono Adder, faccio musica da circa 2 anni e faccio prevalentemente rap, ma spazio anche in altri generi come glitch pop, pop e molti altri. Cerco di trasmettere qualcosa all'ascoltatore e far pensare, non soltanto fruire della mia musica.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-07-17T14:53:35.034Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-07-15T20:23:27.723Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-17T14:53:35.035Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "687a56b04a880177c69aa67d"
+  },
+  "userId": {
+    "$oid": "687778974a880177c69a8b68"
+  },
+  "artistName": "Riccardo Moccia",
+  "contactEmail": "riccardomoccia.genes@gmail.com",
+  "telephone": "+393339270165",
+  "releaseName": "RiccardoMocciaVEVO",
+  "biography": "This is the Youtube channel of Riccardo Moccia.\nBorn in Rome, Riccardo Moccia is a producer, composer, guitarist, singer, playwright, actor and sound engineer. \nHis music is very respectful of the traditional styles and cultures it approaches, and largely follows the stylistic traits of classical occidental music.\nHis music could be allocated on the Progressive Rock and Metal scene, but this would be just a mere simplification of his true essence and researches about Sound and Musical Languages.  \nWith his music he tries to open new doors of perception and also to (re)connect the listener to our inner primordial light.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-07-22T09:08:00.132Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-07-18T14:14:08.894Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-22T09:08:00.138Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "687e79594a880177c69ad66f"
+  },
+  "userId": {
+    "$oid": "68655a92a00508ed7d811891"
+  },
+  "artistName": "Chrystal",
+  "contactEmail": "christian06cerminara@gmail.com",
+  "telephone": "3313811151",
+  "releaseName": "Chrystal",
+  "biography": "Christian Antonio Cerminara, in arte Chrystal, è un giovane artista rap/pop originario di Catanzaro, classe 2006. Inizia a scrivere canzoni all’età di 14 anni, trovando nella musica uno strumento essenziale per esprimere la propria interiorità. Da sempre di natura introversa e riflessiva, Chrystal considera la musica non solo una forma d’arte, ma anche una via per raccontare il proprio mondo interiore e dare voce a chi si sente invisibile.\n\nNel 2024 debutta con il suo primo tour estivo intitolato \"Più in alto di Icaro\", composto da sette date. L’anno successivo dà vita a una seconda tournée con lo stesso titolo, a conferma del fatto che \"Più in alto di Icaro\" non rappresenta solo un evento, ma un vero e proprio percorso di crescita personale: un viaggio verso la scoperta di sé stessi e il coraggio di inseguire i propri sogni, senza permettere a nessuno di spezzare le ali della passione.\n\nIl messaggio alla base della sua musica è chiaro: trasmettere speranza a chi non ne ha, offrire una prospettiva diversa ai giovani e ricordare loro che esiste sempre una scelta e qualcosa in cui credere. Chrystal invita a non arrendersi e a lottare per la propria identità, perché – come afferma lui stesso – \"Nessuno nasce come qualcuno, ma tutti possono diventarlo.\"\n\nIl suo motto, che racchiude la filosofia del suo percorso artistico, è:\n“Non so se sarò il N.1, ma sarò Chrystal alle orecchie di qualcuno.”",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-07-23T14:16:40.834Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-07-21T17:31:05.785Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-23T14:16:40.835Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a869cec60e9ca730c75cd3"
+  },
+  "userId": {
+    "$oid": "68a852d9c60e9ca730c75782"
+  },
+  "artistName": "mr.kronik",
+  "contactEmail": "mariovitillo@gmail.com",
+  "telephone": "3482993631",
+  "releaseName": "joker",
+  "biography": "mr.kronik da tempo nella scena underground con varie collaborazioni tra cui Vacca , JAck the Smoker , Caneda , tormeno e altri , con un bakground live affiancando FAbri Fibra Clementino Gemitaiz e molti altri",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-08-26T08:21:18.489Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-08-22T12:59:58.855Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-26T08:21:18.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68cfe5916728dc3c0df0d946"
+  },
+  "userId": {
+    "$oid": "68ce6ba46728dc3c0df0c8d9"
+  },
+  "artistName": "Dany J",
+  "contactEmail": "danyjreal@gmail.com",
+  "telephone": "3805867775",
+  "releaseName": "Dany J",
+  "biography": "Ciao sono Daniel Jirebie, in arte Dany J , sono un artista rumeno che vive in Italia ormai da 15 anni precisamente a Napoli, faccio musica dal 2018 , faccio rap napoletano e sto costruendo la mia carriera a poco alla volta con grandi risultati , attualmente collaboro con Caronte Music Group. ",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": "",
+  "approvedAt": {
+    "$date": "2025-09-30T07:13:46.826Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-09-21T11:46:25.713Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-30T07:13:46.827Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68de28036728dc3c0df1b23d"
+  },
+  "userId": {
+    "$oid": "68cbd11ae6cb9dacd3ebd328"
+  },
+  "artistName": "MYSSY",
+  "contactEmail": "officialmyssy@gmail.com",
+  "telephone": "3455288620",
+  "releaseName": "MYSSY REAL",
+  "biography": "Lulys Arria in arte Myssy classe 92 si è trasferita in piccolo paese di Pavia, dove il fresetyleè diventato il suo passatempo preferito.\nSuo fratello maggiore in arte John Veterano l'ha introdotta in questo mondo, trascorrevano ore tra sfide e consigli.\nPer molti una passione passeggera ma per Myssy ed il suo amico Elemento no!\nLa sua scomparsa è stato un duro colpo, la la promessa che si erano fatti, \"se salgono uno salgono tutti\", l'ha spinta a continuare.\nDurante gli anni ha partecipato a molti contest locali e durante il lockdown, ha allestito uno studio amatoriale per allenarsi.\nDopo essersi trasferita a Pavia ha finalmente iniziato il suo progetto.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-10-07T13:02:26.324Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-10-02T07:21:39.443Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-07T13:02:26.324Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68f5f27681435f88e30ae905"
+  },
+  "userId": {
+    "$oid": "68655a92a00508ed7d811891"
+  },
+  "artistName": "MARY N’ THE HOLY SPIRIT",
+  "contactEmail": "aiellomariamusic@gmail.com",
+  "telephone": "3403547672",
+  "releaseName": "MARY N’ THE HOLY SPIRIT VEVO",
+  "biography": "Mary N’ The Holy Spirit è molto più di una musicista: è una voce necessaria.\nIl suo rock ruvido, essenziale e visionario nasce da un'urgenza reale: dare forma al disagio, alla disillusione, ma anche alla resistenza umana.\nI suoi testi non si limitano a raccontare: denunciano, interrogano, squarciano.\nDietro al nome d’arte si cela una personalità poliedrica: artista, autrice, avvocata e attivista per i diritti civili.\nLontana da ogni costruzione commerciale, Mary porta nella musica il peso – e la luce – di un vissuto autentico.\nLa sua scrittura si nutre della lettura viscerale di Baudelaire e della poesia maledetta, degli echi cupi del rock anni '80, delle tensioni profonde del metal più emotivo.\nIn lei convivono l’estetica decadente e la battaglia civile, l'introspezione lirica e il dissenso radicale.\nHa amato sin da giovanissima le voci ruvide e oscure della scena new wave e post-punk, le metal band più visionarie e iconoclaste, ma anche le forme musicali più dirette e sincere: quelle che non temono di sporcarsi le mani con la realtà.\n“Life is not only a dirty game”, brano manifesto del suo percorso, è un inno crudo e lucido contro l’ipocrisia del sistema e il vuoto della contemporaneità.\nNel suo universo lirico incontriamo incubi sociali, visioni simboliche, degrado morale, ma anche un grido ostinato di resistenza.\nOgni brano è un atto di denuncia e insieme un gesto di sopravvivenza, un varco aperto verso chi è stanco della superficie e affamato di verità.\nMary N’ The Holy Spirit canta per chi sente di non avere più voce. Per chi cerca ancora senso, anche nel buio.\nE nella sua musica — viscerale, scomoda, poetica — qualcosa brucia ancora.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-10-22T10:32:25.781Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-10-20T08:27:34.169Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-22T10:32:25.782Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690226f081435f88e30b6dcf"
+  },
+  "userId": {
+    "$oid": "687e49724a880177c69acf40"
+  },
+  "artistName": "Vijaya",
+  "contactEmail": "trentin.vijaya@gmail.com",
+  "telephone": "+39345834895",
+  "releaseName": "VijayaIm",
+  "biography": "Vijaya a Milan-based singer/songwriter, pianist and composer from Italy.After studying music, she released her first album of original compositions exploring free improvisation.Through performative art, she then sought her expression in language, leading to the creation of this new pop-inspired project. It unfolds into vast soundscapes, weaving together pop songs and instrumentals, while centering on the profound and multifaceted theme of femininity.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-11-03T08:28:41.330Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-10-29T14:38:40.295Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T08:28:41.331Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690734ac81435f88e30b9e9f"
+  },
+  "userId": {
+    "$oid": "68cd5732e6cb9dacd3ebe8f9"
+  },
+  "artistName": "sirio",
+  "contactEmail": "sirioalbe03@gmail.com",
+  "telephone": "+41789045898",
+  "releaseName": "sirio vevo",
+  "biography": "\n\nsirio, classe 2003 e originario di Foggia, è una delle voci più interessanti della nuova scena\nurban italiana. Nei suoi brani fonde emozione e autenticità, trasformando esperienze, relazioni e\npercorsi di crescita in racconti sonori che arrivano dritti al cuore. Il suo stile mescola rap, R&B e\nsonorità contemporanee, alternando momenti introspettivi a ritornelli immediati e coinvolgenti. Dopo\ni primi lavori che ne hanno messo in luce scrittura e carisma, Sirio continua a definire la propria\nidentità artistica con nuove release e una visione sempre più matura. Con il suo approccio fresco e\nsincero, rappresenta la nuova generazione musicale del Sud Italia, capace di dare voce a emozioni\nvere e storie autentiche.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-11-13T09:31:37.495Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-11-02T10:38:36.819Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-13T09:31:37.497Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69087ae781435f88e30bae26"
+  },
+  "userId": {
+    "$oid": "6908715d81435f88e30bab9d"
+  },
+  "artistName": "Lorix01",
+  "contactEmail": "minardilorenzo@gmail.com",
+  "telephone": "+393383240948",
+  "releaseName": "Lorix01",
+  "biography": "Lorenzo Minardi, in arte Lorix01, ha iniziato il suo percorso di studio del canto nel 2014. Nel 2022 partecipa al musical “Tutti insieme appassionatamente”, e ai concorsi “La musica nel cuore “, “Je so pazzo festival”, “La festa degli artisti”, “premio arte Sicilia”. A Settembre 2022 partecipa al contest “Promuovi La Tua Musica” di Fanya di Croce e in seguito al Tour Music Fest. A febbraio 2023 ha partecipato a Sanremo discovery e Television song contest con la collaborazione di E.D.M. International di Mario greco piazzandosi come finalista per la Promozione radiofonica italiana a Roma e al 2mari song Festival a Taranto nel mese di Ottobre. A maggio 2023 è stato selezionato per partecipare ai casting di Xfactor, di Rumore bim festival e al MUVI Music Contest, e artista iscritto alla Vetrina dei Talenti. A giugno 2023 esce il suo secondo album di inediti “Il bacio di Giuda”. Ha presentato l’inedito “Cuore Nero” brano che presentato a Sanremo Giovani, con l’etichetta discografica “Hikaru Label”, etichetta con cui collabora, oltre l’agenzia di moda e spettacolo “Identity Agency”, l’agenzia cinematografica “Ancora Cinematografica” e l’agenzia “Moda Tv Productions”. Ha partecipato come attore a Forum e ha scritto le colonne sonore per un film che si registrerà nel 2026, e lo vedrà attore, film che andrà sulla piattaforma streaming Prime video. Quest’anno si è ripresentato a Sanremo giovani, con un brano pop, “Ricordi (Angeli Custodi)”.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-11-12T08:48:43.964Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-11-03T09:50:31.684Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T08:48:43.965Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b319081435f88e30c05c3"
+  },
+  "userId": {
+    "$oid": "68655a92a00508ed7d811891"
+  },
+  "artistName": "Genvilla",
+  "contactEmail": "riccardovillari08@gmail.com",
+  "telephone": "3713062973",
+  "releaseName": "OnlyGenvillaVEVO",
+  "biography": "Riccardo Villari, meglio conosciuto come Genvilla, è un giovane artista nato a Catania il 1 settembre 2008. La sua storia è quella di un sognatore, di un ragazzo che ha trovato nella musica il mezzo perfetto per esprimere il suo mondo e i suoi sogni. Cresciuto in una famiglia catanese, Genvilla ha sempre avuto una grande passione per la musica. Il suo nome d'arte è un omaggio ai suoi amici che lo sentivano suonare e cantare, esclamando \"Genio!\", e al suo cognome \"Villari\", del quale va davvero fiero. Nel 2024, Genvilla ha pubblicato il suo primo singolo, inaugurando una carriera musicale che promette di essere ricca di successi. Fino ad oggi, ha pubblicato 7 singoli, ognuno con uno stile unico e diverso, che testimoniano la sua versatilità e creatività artistica. Ultimamente, sembra intento ad affermarsi nel rap conscious, un genere che gli permette di esprimere le sue riflessioni e le sue emozioni in modo profondo e autentico. Genvilla ha già riscosso successo tra i coetanei della sua città, grazie all'importanza dei suoi testi e alla sua originalità. La sua musica è un riflesso della sua personalità e della sua visione del mondo, e promette di lasciare un segno indelebile nel panorama musicale.",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-11-14T09:40:27.403Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-11-05T11:14:24.923Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-14T09:40:27.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6917490b81435f88e30cece4"
+  },
+  "userId": {
+    "$oid": "68d505ee6728dc3c0df14f1a"
+  },
+  "artistName": "Sabrina Asiani",
+  "contactEmail": "sabrinasiani@hotmail.com",
+  "telephone": "3476996938",
+  "releaseName": "ASIAN",
+  "biography": "Sabrina Asiani   è una cantante e vocal coach specializzata nel linguaggio jazz e R&B .Ha partecipato a numerosi eventi live (Teatro del Popolo di Gallarate, Teatro Bonci di Cesena, Festival Jazz Baveno ecc) e attualmente collabora con  numerosi artisti (Federico Spagnoli -autore di Mina e Celentano, Claudio Fontana, Ettore Autunno) nella produzione di molti brani inediti pop/jazz/soul . Accanto all'attivita' di cantante lavora come vocal coach affiancando numerosi artisti nei casting e nelle esibizioni live ( Plant -Sanremo 2024, Pietro Mandelli -Amici 2022)   ",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-11-24T09:42:05.193Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-11-14T15:21:47.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T09:42:05.196Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691c561b81435f88e30d3032"
+  },
+  "userId": {
+    "$oid": "69024c9c81435f88e30b71db"
+  },
+  "artistName": "The Steel Bones",
+  "contactEmail": "info@thesteelvbones.com",
+  "telephone": "+393208972134",
+  "releaseName": "TheSteelBonesVEVO",
+  "biography": "The Steel Bones are a Southern Rock, Blues and Country Rock band formed in 2020 in full lockdown from an idea by Carlo Lantieri and Ivan Battistella. The two had already been collaborating for years in various musical projects, but wanted to dedicate  to composing and producing new music.\n\nThe band's style grows from the influences of the two musicians, ranging from the classic Stones, Zeppelin, to the Allman Brothers, Lynyrd Skynyrd, Neil Young, Marshall Tucker Band and many others.\nQuickly the two had enough material to fill two albums already.\n\nBetween 2021 and the end of 2022 the band released the first single Hard Bones, which is accompanied by an official video, the singles Rockompany and Scars Remain, the latter also accompanied by a video clip. The album FIRST STEP  relasd on October 2022.\n\nIn 2023 The Steel Bones bassist Mirco Agostini joined the band th increased frequent live collaborations with keyboardist Andrea Gagliardi.\nThe intense live activity leads the band to tour around Italy, and share the stage with bands such as Rain, ClanDestino, Strana Officina until opening the concert of the legendary Deep Purple’s drummer Ian Paice.\nThe band alternates intense live activity and studio work that lead to the production of new songs for the new album.\nThe first single Wasted Years released in March 2024, followed by the signing with Nova Era Records. On April 15, 2025 the lyric video \"Down on my Wheels\" and in June 2025 the second official video Queen of Rock n 'Roll, anticipate the release of the album 3 LEGS CHAIR scheduled for July 2025, with a third video Someone Who Cares\n\nIvan Battistella : Voce, Chitarra, Armonica\nCarlo Lantieri: Chitarra ,voce, Banjo\nSimone Gagliardi: Batteria, Voce\nMirco Agostini : Basso\n",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2025-11-24T09:42:06.859Z"
+  },
+  "approvedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-11-18T11:18:51.888Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T09:42:06.859Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69387ae45c00f12b7b6e027d"
+  },
+  "userId": {
+    "$oid": "69305c7f81435f88e30e7a8d"
+  },
+  "artistName": "La famy",
+  "contactEmail": "simoneindri21@gmail.com",
+  "telephone": "3881537221",
+  "releaseName": "No stop",
+  "biography": "Siamo un collettivo e vogliamo fare diventare la musica il nostro lavoro, cantiamo da qualche anno e siamo abbastanza versatili a livello di genere musicale",
+  "status": "pending",
+  "adminNotes": "",
+  "vevoChannelUrl": "",
+  "approvedAt": null,
+  "approvedBy": null,
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2025-12-09T19:39:16.093Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-23T19:57:07.784Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "699cb86a2f0fdb8180d6f53d"
+  },
+  "userId": {
+    "$oid": "684b35d673f61210cf77de94"
+  },
+  "artistName": "test",
+  "contactEmail": "test@gmail.com",
+  "telephone": "+24525",
+  "releaseName": "test",
+  "biography": "Scrivi una biografia completa per il tuo profilo VEVO (minimo 50 caratteri)Scrivi una biografia completa per il tuo profilo VEVO (minimo 50 caratteri)Scrivi una biografia completa per il tuo profilo VEVO (minimo 50 caratteri)Scrivi una biografia completa per il tuo profilo VEVO (minimo 50 caratteri)",
+  "status": "approved",
+  "adminNotes": "",
+  "vevoChannelUrl": null,
+  "approvedAt": {
+    "$date": "2026-02-23T20:28:42.906Z"
+  },
+  "approvedBy": {
+    "$oid": "68455ab11790a83d240a6273"
+  },
+  "rejectedAt": null,
+  "rejectedBy": null,
+  "createdAt": {
+    "$date": "2026-02-23T20:28:26.759Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-23T20:28:42.909Z"
+  },
+  "__v": 0
+}]

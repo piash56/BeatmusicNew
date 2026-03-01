@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "683b9103895bf03edf7f2bda"
+  },
+  "name": "Radio 105",
+  "coverImage": "uploads\\radio-networks\\radio-network-1748734211187-633196204.jpg",
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:30:11.281Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-01T06:16:57.094Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683b91ccf89468e313406eb5"
+  },
+  "name": "Radio Italia",
+  "coverImage": "uploads\\radio-networks\\radio-network-1748734412241-845518277.jpg",
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:33:32.337Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-31T23:33:32.337Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683b91e4f89468e313406ed4"
+  },
+  "name": "Radio Zeta",
+  "coverImage": "uploads\\radio-networks\\radio-network-1748734436001-777379319.png",
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:33:56.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-31T23:33:56.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683b91fdf89468e313406eec"
+  },
+  "name": "Radio RTL 102.5",
+  "coverImage": "uploads\\radio-networks\\radio-network-1748734461394-972999799.png",
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:34:21.529Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-01T06:17:11.774Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683b921af89468e313406f0b"
+  },
+  "name": "Radio Dee Jay",
+  "coverImage": "uploads\\radio-networks\\radio-network-1748734490615-822010389.png",
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:34:50.706Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-31T23:34:50.706Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683b9234f89468e313406f25"
+  },
+  "name": "Radio RDS",
+  "coverImage": "uploads\\radio-networks\\radio-network-1748734516606-883524631.png",
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:35:16.697Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-01T06:17:34.184Z"
+  },
+  "__v": 0
+}]

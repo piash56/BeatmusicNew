@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "683b9161f89468e313406e40"
+  },
+  "name": "Festival Estate Rock",
+  "city": "Milan",
+  "concertDate": {
+    "$date": "2025-07-15T00:00:00.000Z"
+  },
+  "slotsAvailable": 100,
+  "slotsBooked": 3,
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:31:45.607Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-11T15:32:34.750Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683b917af89468e313406e5e"
+  },
+  "name": "Club Tour North Italy",
+  "city": "Various cities",
+  "concertDate": {
+    "$date": "2025-08-05T00:00:00.000Z"
+  },
+  "slotsAvailable": 400,
+  "slotsBooked": 3,
+  "isActive": false,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:32:10.555Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-29T13:50:30.138Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683b918ef89468e313406e78"
+  },
+  "name": "Opening for International Artist",
+  "city": "Rome",
+  "concertDate": {
+    "$date": "2025-08-22T00:00:00.000Z"
+  },
+  "slotsAvailable": 300,
+  "slotsBooked": 1,
+  "isActive": false,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-05-31T23:32:30.279Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-29T13:50:37.806Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68403ef8abd72cb49b246dac"
+  },
+  "name": "Barrio's",
+  "city": "Milano",
+  "concertDate": {
+    "$date": "2025-06-27T00:00:00.000Z"
+  },
+  "slotsAvailable": 20,
+  "slotsBooked": 3,
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-06-04T12:41:28.355Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-13T10:58:52.723Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684143fdabd72cb49b2471f5"
+  },
+  "name": "bass",
+  "city": "Rome",
+  "concertDate": {
+    "$date": "2025-06-20T00:00:00.000Z"
+  },
+  "slotsAvailable": 100,
+  "slotsBooked": 3,
+  "isActive": true,
+  "createdBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "createdAt": {
+    "$date": "2025-06-05T07:15:09.493Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-13T20:20:40.828Z"
+  },
+  "__v": 0
+}]

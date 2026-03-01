@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "684bf7ef22ad8a043434dd84"
+  },
+  "userId": {
+    "$oid": "684bf08122ad8a043434d809"
+  },
+  "paypalEmail": "prova@gmail.com",
+  "amount": 128,
+  "status": "paid",
+  "userFullName": "Denis Toska",
+  "userEmail": "denistoska27@gmail.com",
+  "payoutStats": {
+    "availableBalance": 0,
+    "lastPayout": 0,
+    "totalPayouts": 0
+  },
+  "requestDate": {
+    "$date": "2025-06-13T10:05:35.767Z"
+  },
+  "__v": 0,
+  "paidDate": {
+    "$date": "2025-06-13T10:05:49.364Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685af26e396d044201127fcb"
+  },
+  "userId": {
+    "$oid": "684b35d673f61210cf77de94"
+  },
+  "paypalEmail": "mypaypal@email.com",
+  "amount": 110,
+  "status": "paid",
+  "userFullName": "MD Piash",
+  "userEmail": "mdpiash4447@gmail.com",
+  "payoutStats": {
+    "availableBalance": 0,
+    "lastPayout": 0,
+    "totalPayouts": 0
+  },
+  "requestDate": {
+    "$date": "2025-06-24T18:46:06.420Z"
+  },
+  "__v": 0,
+  "paidDate": {
+    "$date": "2025-06-24T18:46:13.807Z"
+  }
+}]

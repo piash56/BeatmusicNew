@@ -1,0 +1,167 @@
+[{
+  "_id": {
+    "$oid": "681903b79f4325171e6990f3"
+  },
+  "logo": {
+    "url": "/uploads/brand/logo.png",
+    "alt": "SoundWave Logo"
+  },
+  "favicon": {
+    "url": "/uploads/brand/favicon.png"
+  },
+  "footerText": "Beat Music la soluzione definitiva per artisti, etichette, manager e promotori. Aumenta la tua visibilità, accedi ad analisi esclusive e sfrutta la nostra rete di distribuzione per massimizzare il tuo impatto sul mercato musicale.",
+  "copyrightText": "© 2025 Beat Music. All rights reserved. Caronte Music Group S.r.l. | P.IVA 14136540961 | Capitale sociale €20.000 i.v. | Sede legale e operativa: Piazza Gae Aulenti 1, Torre B, 20154 Milano (MI – IT)",
+  "socialLinks": [
+    {
+      "platform": "facebook",
+      "url": "#",
+      "isActive": true,
+      "_id": {
+        "$oid": "6819da25f2e7c20edead8e96"
+      }
+    },
+    {
+      "platform": "twitter",
+      "url": "#",
+      "isActive": true,
+      "_id": {
+        "$oid": "6819da25f2e7c20edead8e97"
+      }
+    },
+    {
+      "platform": "instagram",
+      "url": "#",
+      "isActive": true,
+      "_id": {
+        "$oid": "6819da25f2e7c20edead8e98"
+      }
+    },
+    {
+      "platform": "youtube",
+      "url": "#",
+      "isActive": true,
+      "_id": {
+        "$oid": "6819da25f2e7c20edead8e99"
+      }
+    }
+  ],
+  "footerLinks1": {
+    "title": "Azienda",
+    "links": [
+      {
+        "title": "Chi siamo",
+        "url": "/about-us",
+        "isActive": true,
+        "_id": {
+          "$oid": "6819da25f2e7c20edead8e9a"
+        }
+      },
+      {
+        "title": "Carriere",
+        "url": "/careers",
+        "isActive": true,
+        "_id": {
+          "$oid": "6819da25f2e7c20edead8e9b"
+        }
+      },
+      {
+        "title": "Premere",
+        "url": "/press",
+        "isActive": true,
+        "_id": {
+          "$oid": "6819da25f2e7c20edead8e9c"
+        }
+      },
+      {
+        "title": "Contattaci",
+        "url": "/help-center",
+        "isActive": true,
+        "_id": {
+          "$oid": "6819da25f2e7c20edead8e9d"
+        }
+      }
+    ]
+  },
+  "footerLinks2": {
+    "title": "Collegamenti utili",
+    "links": [
+      {
+        "title": "Caratteristiche",
+        "url": "/features",
+        "isActive": true,
+        "_id": {
+          "$oid": "6819da25f2e7c20edead8e9e"
+        }
+      },
+      {
+        "title": "Base di conoscenza",
+        "url": "/knowledge-base",
+        "isActive": true,
+        "_id": {
+          "$oid": "6819da25f2e7c20edead8e9f"
+        }
+      },
+      {
+        "title": "Prezzi",
+        "url": "/pricing",
+        "isActive": true,
+        "_id": {
+          "$oid": "6819da25f2e7c20edead8ea0"
+        }
+      },
+      {
+        "title": "Storie di successo",
+        "url": "/success-stories",
+        "isActive": true,
+        "_id": {
+          "$oid": "6819da25f2e7c20edead8ea1"
+        }
+      }
+    ]
+  },
+  "copyrightLinks": [
+    {
+      "title": "Base di conoscenza",
+      "url": "/knowledge-base",
+      "isActive": true,
+      "_id": {
+        "$oid": "6819da25f2e7c20edead8ea2"
+      }
+    },
+    {
+      "title": "Termini di servizio",
+      "url": "/terms-of-service",
+      "isActive": true,
+      "_id": {
+        "$oid": "6819da25f2e7c20edead8ea3"
+      }
+    },
+    {
+      "title": "politica sulla riservatezza",
+      "url": "/privacy-policy",
+      "isActive": true,
+      "_id": {
+        "$oid": "6819da25f2e7c20edead8ea4"
+      }
+    },
+    {
+      "title": "Politica sui cookie",
+      "url": "/cookie-policy",
+      "isActive": true,
+      "_id": {
+        "$oid": "6819da25f2e7c20edead8ea5"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-05-05T18:30:15.969Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-03T18:53:48.056Z"
+  },
+  "__v": 37,
+  "lastUpdatedBy": {
+    "$oid": "67fe4a5ce4cb47e4ff98a492"
+  },
+  "title": "Beat Music"
+}]

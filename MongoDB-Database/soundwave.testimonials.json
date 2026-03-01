@@ -1,0 +1,176 @@
+[{
+  "_id": {
+    "$oid": "6808bee0fc01e23092a551ad"
+  },
+  "customerName": "Artist",
+  "title": "Independent Artist",
+  "feedback": "Sto attualmente lavorando con loro e devo dire che per ora sono molto soddisfatto. Sono professionali e mi stanno aiutando a raggiungere molti dei miei obiettivi!",
+  "rating": 5,
+  "status": "active",
+  "displayOn": [
+    "home",
+    "about"
+  ],
+  "profilePicture": "/uploads/testimonials/testimonial-1748539480774-443903614.png",
+  "createdAt": {
+    "$date": "2025-04-23T10:20:16.194Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T10:20:16.195Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6808bf71fc01e23092a551b1"
+  },
+  "customerName": "Artist",
+  "title": "Pop Artist",
+  "feedback": "100% professionali, con francesco ci lavoro da anni e abbiamo avuto sempre uno splendido rapporto sia artistico che umano.\nÈ un ottimo producer e le campagne sono reali al 100%.\nGrazie di tutto fra❤️",
+  "rating": 5,
+  "status": "active",
+  "displayOn": [
+    "home",
+    "about"
+  ],
+  "profilePicture": "/uploads/testimonials/testimonial-1748534491921-850937874.png",
+  "createdAt": {
+    "$date": "2025-04-23T10:22:41.986Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T10:22:41.987Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6808bf9efc01e23092a551b5"
+  },
+  "customerName": "Artist",
+  "title": "Label Manager",
+  "feedback": "Sono veramente top🫡\n\nFidatevi che non sbagliate🤙🤙",
+  "rating": 5,
+  "status": "active",
+  "displayOn": [
+    "home",
+    "about"
+  ],
+  "profilePicture": "/uploads/testimonials/testimonial-1748539490223-151108050.png",
+  "createdAt": {
+    "$date": "2025-04-23T10:23:26.393Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T10:23:26.394Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6808bfc8fc01e23092a551b9"
+  },
+  "customerName": "Artist",
+  "title": "Singer-Songwriter",
+  "feedback": "Ho appena iniziato il percorso con questa agenzia e per il momento mi trovo bene.\nHo già un live organizzato a Milano. Lo staff di Caronte Music Group è sempre pronto a rispondere tempestivamente alle mie richieste.",
+  "rating": 5,
+  "status": "active",
+  "displayOn": [
+    "home",
+    "about"
+  ],
+  "profilePicture": "/uploads/testimonials/testimonial-1748539455423-400935937.png",
+  "createdAt": {
+    "$date": "2025-04-23T10:24:08.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T10:24:08.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6808bff4fc01e23092a551bd"
+  },
+  "customerName": "Artist",
+  "title": "EDM Producer",
+  "feedback": "Un’agenzia che lavora con grande professionalità e soprattutto grande onestà. Sono entusiasta di averli scelti già per diversi inediti e di aver portato la mia musica a livelli più alti. Credono negli artisti, mettono tanta passione e dedizione. Grandi tutti e soprattutto grande Francesco, che è riuscito a costruirsi una realtà che cresce sempre di Più...💪",
+  "rating": 5,
+  "status": "active",
+  "displayOn": [
+    "home",
+    "about"
+  ],
+  "profilePicture": "/uploads/testimonials/testimonial-1748539446574-493217768.png",
+  "createdAt": {
+    "$date": "2025-04-23T10:24:52.860Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T10:24:52.860Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6808c02ffc01e23092a551c1"
+  },
+  "customerName": "Artist",
+  "title": "Indie Band Manager",
+  "feedback": "Mi sono affidato a Caronte all'inizio titubante dopo aver ricevuto decine di offerte truffa, dopo aver parlato con Andrea ho subito capito che erano persone che sapevano fare il loro lavoro e ci tenevano a farlo bene.\nMi stanno attualmente seguendo per l'uscita del mio prossimo progetto e sono sempre super disponibili e professionali.\nProfilo IG. Icagram__",
+  "rating": 5,
+  "status": "active",
+  "displayOn": [
+    "about",
+    "home"
+  ],
+  "profilePicture": "/uploads/testimonials/testimonial-1748539435233-496828732.png",
+  "createdAt": {
+    "$date": "2025-04-23T10:25:51.547Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T10:25:51.548Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6808c058fc01e23092a551c5"
+  },
+  "customerName": "Artist",
+  "title": "Label Manager",
+  "feedback": "Sono il titolare della realtà “IMI Music” ho acquistato diversi servizi da Caronte Music Group, la mia esperienza è stata super positiva, team di lavoro affidabile e molto professionale con ottima organizzazione e immediatezza nel gestire i miei artisti, suggerisco al team aziendale di comunicare una descrizione più chiara dei servizi offerti per facilitare la comunicazione con i miei artisti.",
+  "rating": 5,
+  "status": "active",
+  "displayOn": [
+    "home",
+    "about"
+  ],
+  "profilePicture": "/uploads/testimonials/testimonial-1748534533361-85112704.png",
+  "createdAt": {
+    "$date": "2025-04-23T10:26:32.272Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T10:26:32.273Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6808c086fc01e23092a551c9"
+  },
+  "customerName": "Artist",
+  "title": "Responsabile Etichetta",
+  "feedback": "Siamo contentissimi di essere seguiti da Caronte Music Group che ci sta guidando passo dopo passo aiutandoci a sviluppare la nostra musica e a raggiungere nuovi traguardi.\nUn Team di professionisti super competenti, disponibili e pronti a darti i migliori consigli.\nLa loro passione e dedizione sono evidenti in tutto quello che fanno.\nConsigliamo vivamente i loro servizi a chiunque desideri portare la propria musica a un livello sucessivo.\nGrazie per tutto quello che state facendo per noi.",
+  "rating": 5,
+  "status": "active",
+  "displayOn": [
+    "home",
+    "about"
+  ],
+  "profilePicture": "/uploads/testimonials/testimonial-1748534324844-812710747.png",
+  "createdAt": {
+    "$date": "2025-04-23T10:27:18.764Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-06T15:05:16.656Z"
+  },
+  "__v": 0
+}]
