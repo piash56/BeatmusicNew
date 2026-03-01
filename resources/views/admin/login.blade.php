@@ -21,7 +21,11 @@
         @if($errors->any())
             <div class="bg-red-900/30 border border-red-500/30 text-red-300 rounded-lg p-3 mb-6 text-sm">{{ $errors->first() }}</div>
         @endif
-        <form method="POST" action="{{ route('admin.login.post') }}" class="space-y-5">
+        <form method="POST"
+              action="{{ route('admin.login.post') }}"
+              class="space-y-5"
+              x-data="{ loading: false }"
+              @submit="loading = true">
             @csrf
             <div>
                 <label class="block text-sm font-medium text-gray-300 mb-1.5">Email</label>
@@ -31,7 +35,12 @@
                 <label class="block text-sm font-medium text-gray-300 mb-1.5">Password</label>
                 <input type="password" name="password" required class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-red-500 transition" placeholder="Admin password">
             </div>
-            <button type="submit" class="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition">Sign In as Admin</button>
+            <button type="submit"
+                    :disabled="loading"
+                    class="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition disabled:opacity-60 flex items-center justify-center gap-2">
+                <span x-show="loading" x-cloak class="inline-block w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin"></span>
+                <span x-text="loading ? 'Signing In...' : 'Sign In as Admin'"></span>
+            </button>
         </form>
         <div class="mt-4 text-center">
             <a href="{{ route('admin.forgot-password') }}" class="text-gray-500 hover:text-gray-400 text-sm">Forgot password?</a>

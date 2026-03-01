@@ -11,7 +11,11 @@
             @if($errors->any())
                 <div class="bg-red-900/30 border border-red-500/30 text-red-300 rounded-lg p-3 mb-6 text-sm">{{ $errors->first() }}</div>
             @endif
-            <form method="POST" action="{{ route('set-password.post') }}" class="space-y-5" x-data="{ passwordStrength: 0, password: '' }">
+            <form method="POST"
+                  action="{{ route('set-password.post') }}"
+                  class="space-y-5"
+                  x-data="{ passwordStrength: 0, password: '', loading: false }"
+                  @submit="loading = true">
                 @csrf
                 <input type="hidden" name="token" value="{{ $token }}">
                 <input type="hidden" name="email" value="{{ $email }}">
@@ -44,7 +48,12 @@
                         </button>
                     </div>
                 </div>
-                <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition">Set Password</button>
+                <button type="submit"
+                        :disabled="loading"
+                        class="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition disabled:opacity-60 flex items-center justify-center gap-2">
+                    <span x-show="loading" x-cloak class="inline-block w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin"></span>
+                    <span x-text="loading ? 'Setting Password...' : 'Set Password'"></span>
+                </button>
             </form>
         </div>
     </div>

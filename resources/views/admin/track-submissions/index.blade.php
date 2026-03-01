@@ -118,7 +118,7 @@ document.addEventListener('alpine:init', function() {
                     <td class="px-4 py-3">
                         <div class="flex items-center space-x-3">
                             @if($track->cover_art)
-                                <img src="{{ $track->cover_art_url }}" alt="" class="w-9 h-9 rounded-lg object-cover flex-shrink-0">
+                                <img src="{{ $track->cover_art_url }}" alt="" loading="lazy" class="w-9 h-9 rounded-lg object-cover flex-shrink-0">
                             @else
                                 <div class="w-9 h-9 bg-purple-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
                                     <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/></svg>

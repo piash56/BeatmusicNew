@@ -18,7 +18,11 @@
     </div>
     @endif
 
-    <form method="POST" action="{{ route('admin.users.store') }}" class="bg-gray-900 rounded-2xl border border-white/5 p-6 space-y-5">
+    <form method="POST"
+          action="{{ route('admin.users.store') }}"
+          class="bg-gray-900 rounded-2xl border border-white/5 p-6 space-y-5"
+          x-data="{ loading: false }"
+          @submit="loading = true">
         @csrf
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="sm:col-span-2">
@@ -41,7 +45,12 @@
         </div>
         <div class="flex justify-end space-x-3">
             <a href="{{ route('admin.users') }}" class="px-5 py-2 bg-white/5 hover:bg-white/10 text-gray-300 rounded-xl border border-white/10 transition text-sm">Cancel</a>
-            <button type="submit" class="px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Create User</button>
+            <button type="submit"
+                    :disabled="loading"
+                    class="px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition disabled:opacity-60 flex items-center gap-2">
+                <span x-show="loading" x-cloak class="inline-block w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin"></span>
+                <span x-text="loading ? 'Creating...' : 'Create User'"></span>
+            </button>
         </div>
     </form>
 </div>

@@ -46,15 +46,22 @@
                 <p class="text-gray-400 text-xs">Gestisci i flussi per tutti i brani e gli album pubblicati.</p>
             </div>
             <div class="flex items-center gap-2 w-full md:w-auto">
-                <div class="relative flex-1 md:w-80">
-                    <input type="text"
-                           x-model="search"
-                           placeholder="Cerca tracce, album, o artisti..."
-                           class="w-full bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-9 py-2 rounded-xl text-sm focus:outline-none focus:border-purple-500">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"/></svg>
-                    </span>
-                </div>
+                <form method="GET" class="flex items-center gap-2 w-full">
+                    <div class="relative flex-1 md:w-80">
+                        <input type="text"
+                               name="search"
+                               value="{{ request('search') }}"
+                               placeholder="Cerca tracce, album, artisti, UPC o utente..."
+                               class="w-full bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-9 py-2 rounded-xl text-sm focus:outline-none focus:border-purple-500">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"/></svg>
+                        </span>
+                    </div>
+                    <button type="submit"
+                            class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs rounded-xl transition whitespace-nowrap">
+                        Filter
+                    </button>
+                </form>
                 <button type="button"
                         @click="importModalOpen = true"
                         class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs rounded-xl transition whitespace-nowrap">
@@ -78,21 +85,12 @@
                     @php
                         $isAlbum = $track->release_type === 'album';
                         $title = $isAlbum ? ($track->album_title ?: $track->title) : $track->title;
-                        $searchText = strtolower(trim(
-                            ($title ?? '') . ' ' .
-                            ($track->upc ?? '') . ' ' .
-                            ($track->release_type ?? '') . ' ' .
-                            ($track->artists ?? '') . ' ' .
-                            ($track->user->full_name ?? '') . ' ' .
-                            ($track->user->email ?? '')
-                        ));
                     @endphp
-                <tr class="hover:bg-white/2 transition"
-                    x-show="!search || '{{ $searchText }}'.includes(search.toLowerCase())">
+                <tr class="hover:bg-white/2 transition">
                     <td class="px-4 py-3">
                         <div class="flex items-center gap-3">
                             @if($track->cover_art)
-                                <img src="{{ $track->cover_art_url }}" class="w-10 h-10 rounded-lg object-cover shrink-0">
+                                <img src="{{ $track->cover_art_url }}" loading="lazy" class="w-10 h-10 rounded-lg object-cover shrink-0">
                             @else
                                 <div class="w-10 h-10 bg-purple-600/20 rounded-lg flex items-center justify-center text-xs shrink-0">🎵</div>
                             @endif

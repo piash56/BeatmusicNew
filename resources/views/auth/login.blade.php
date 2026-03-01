@@ -20,7 +20,11 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('login.post') }}" class="space-y-5">
+            <form method="POST"
+                  action="{{ route('login.post') }}"
+                  class="space-y-5"
+                  x-data="{ loading: false }"
+                  @submit="loading = true">
                 @csrf
                 <div>
                     <label class="block text-sm font-medium text-gray-300 mb-1.5">Email Address</label>
@@ -48,8 +52,11 @@
                     </label>
                     <a href="{{ route('forgot-password') }}" class="text-sm text-purple-400 hover:text-purple-300">Forgot password?</a>
                 </div>
-                <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all">
-                    Sign In
+                <button type="submit"
+                        :disabled="loading"
+                        class="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all disabled:opacity-60 flex items-center justify-center gap-2">
+                    <span x-show="loading" x-cloak class="inline-block w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin"></span>
+                    <span x-text="loading ? 'Signing In...' : 'Sign In'"></span>
                 </button>
             </form>
 

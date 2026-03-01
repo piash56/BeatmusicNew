@@ -8,11 +8,17 @@
     <p class="text-gray-400 text-sm">Manually add royalty earnings to artist accounts.</p>
 
     <div class="flex items-center justify-between gap-3">
-        <div class="flex items-center gap-2 w-full sm:w-auto">
-            <input type="text" x-model="search"
-                placeholder="Search by name or email..."
-                class="bg-gray-900 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-purple-500 w-full sm:w-72">
-        </div>
+        <form method="GET" class="flex items-center gap-2 w-full sm:w-auto">
+            <input type="text"
+                   name="search"
+                   value="{{ request('search') }}"
+                   placeholder="Search by name or email..."
+                   class="bg-gray-900 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-purple-500 w-full sm:w-72">
+            <button type="submit"
+                    class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition whitespace-nowrap">
+                Filter
+            </button>
+        </form>
     </div>
 
     <div class="bg-gray-900 rounded-xl border border-white/5 overflow-hidden">
@@ -28,11 +34,7 @@
             </thead>
             <tbody class="divide-y divide-white/3">
                 @forelse($users as $user)
-                @php
-                    $searchText = strtolower(trim(($user->full_name ?? '') . ' ' . ($user->email ?? '')));
-                @endphp
-                <tr class="hover:bg-white/2 transition"
-                    x-show="!search || '{{ $searchText }}'.includes(search.toLowerCase())">
+                <tr class="hover:bg-white/2 transition">
                     <td class="px-4 py-3">
                         <div class="flex items-center space-x-3">
                             <div class="w-9 h-9 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
@@ -127,7 +129,6 @@
     function royaltiesPage() {
         const actionTemplate = '{{ route('admin.update-royalties.add', ['userId' => '__ID__']) }}';
         return {
-            search: '',
             modalOpen: false,
             loading: false,
             userId: null,

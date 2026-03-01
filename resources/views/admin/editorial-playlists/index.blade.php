@@ -21,7 +21,6 @@
         currentListeners: 0,
         streamsIncrement: 0,
         listenersIncrement: 0,
-        search: '',
         statusUrlTemplate: @js(route('admin.editorial-playlists.status', 0)),
         streamsUrlTemplate: @js(route('admin.editorial-playlists.streams', 0)),
         buildUrl(template, id) {
@@ -95,19 +94,8 @@
                     $userEmail = $sub->user->email ?? '';
                     $userLabel = trim($userName . ($userEmail ? " ({$userEmail})" : ''));
                     $submittedAt = $sub->submission_date ?? $sub->created_at;
-                    $searchText = strtolower(trim(
-                        ($title ?? '') . ' ' .
-                        ($artist ?? '') . ' ' .
-                        ($userName ?? '') . ' ' .
-                        ($userEmail ?? '') . ' ' .
-                        ($sub->playlist_name ?? '') . ' ' .
-                        ($sub->platform ?? '') . ' ' .
-                        ($sub->status ?? '')
-                    ));
                 @endphp
-                <tr class="hover:bg-white/2 transition"
-                    x-show="!search || $el.dataset.search?.includes(search.toLowerCase())"
-                    data-search="{{ $searchText }}">
+                <tr class="hover:bg-white/2 transition">
 
                     <td class="px-4 py-3">
                         <div class="flex items-center gap-3">

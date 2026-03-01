@@ -12,7 +12,20 @@ class AdminTracksController extends Controller
 {
     public function trackSubmissions(Request $request)
     {
-        $query = Track::where('release_type', 'single')->with('user');
+        $query = Track::select([
+                'id',
+                'user_id',
+                'title',
+                'artists',
+                'release_type',
+                'primary_genre',
+                'status',
+                'cover_art',
+                'created_at',
+                'upc',
+            ])
+            ->where('release_type', 'single')
+            ->with(['user:id,full_name,email']);
 
         if ($request->filled('status')) {
             $query->where('status', $request->status);
@@ -37,7 +50,22 @@ class AdminTracksController extends Controller
 
     public function albumSubmissions(Request $request)
     {
-        $query = Track::where('release_type', 'album')->with('user');
+        $query = Track::select([
+                'id',
+                'user_id',
+                'title',
+                'album_title',
+                'artists',
+                'release_type',
+                'primary_genre',
+                'status',
+                'cover_art',
+                'created_at',
+                'album_tracks',
+                'upc',
+            ])
+            ->where('release_type', 'album')
+            ->with(['user:id,full_name,email']);
 
         if ($request->filled('status')) {
             $query->where('status', $request->status);
@@ -171,7 +199,39 @@ class AdminTracksController extends Controller
 
     public function streamsManagement(Request $request)
     {
-        $tracks = Track::with('user')->where('status', 'Released')->paginate(20);
+        $query = Track::select([
+                'id',
+                'user_id',
+                'title',
+                'album_title',
+                'artists',
+                'release_type',
+                'upc',
+                'total_streams',
+                'new_streams',
+                'cover_art',
+                'status',
+            ])
+            ->with(['user:id,full_name,email'])
+            ->where('status', 'Released');
+
+        if ($request->filled('search')) {
+            $s = $request->search;
+            $query->where(function ($q) use ($s) {
+                $q->where('title', 'like', "%{$s}%")
+                    ->orWhere('album_title', 'like', "%{$s}%")
+                    ->orWhere('artists', 'like', "%{$s}%")
+                    ->orWhere('upc', 'like', "%{$s}%")
+                    ->orWhereHas('user', function ($u) use ($s) {
+                        $u->where('full_name', 'like', "%{$s}%")
+                            ->orWhere('email', 'like', "%{$s}%");
+                    });
+            });
+        }
+
+        $tracks = $query->orderByDesc('total_streams')
+            ->paginate(20)
+            ->withQueryString();
         return view('admin.streams', compact('tracks'));
     }
 

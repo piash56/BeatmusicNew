@@ -65,14 +65,42 @@ class AdminRadioController extends Controller
 
     public function requests(Request $request)
     {
-        $query = RadioPromotion::with(['user', 'track', 'radioNetwork']);
+        $query = RadioPromotion::select([
+                'id',
+                'user_id',
+                'track_id',
+                'radio_network_id',
+                'track_index',
+                'status',
+                'admin_notes',
+                'created_at',
+            ])
+            ->with([
+                'user:id,full_name,email',
+                'track:id,title,album_title,release_type,album_tracks,artists,primary_genre,cover_art',
+                'radioNetwork:id,name',
+            ]);
 
         if ($request->filled('status')) {
             $query->where('status', $request->status);
         }
         if ($request->filled('search')) {
             $s = $request->search;
-            $query->whereHas('user', fn ($u) => $u->where('full_name', 'like', "%{$s}%")->orWhere('email', 'like', "%{$s}%"));
+            $query->where(function ($q) use ($s) {
+                $q->whereHas('user', function ($u) use ($s) {
+                        $u->where('full_name', 'like', "%{$s}%")
+                            ->orWhere('email', 'like', "%{$s}%");
+                    })
+                    ->orWhereHas('track', function ($t) use ($s) {
+                        $t->where('title', 'like', "%{$s}%")
+                            ->orWhere('album_title', 'like', "%{$s}%")
+                            ->orWhere('artists', 'like', "%{$s}%");
+                    })
+                    ->orWhereHas('radioNetwork', function ($n) use ($s) {
+                        $n->where('name', 'like', "%{$s}%");
+                    })
+                    ->orWhere('status', 'like', "%{$s}%");
+            });
         }
 
         $promotions = $query->orderByDesc('created_at')->paginate(20);

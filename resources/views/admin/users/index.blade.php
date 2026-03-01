@@ -9,7 +9,6 @@
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <form method="GET" id="user-filter-form" class="flex flex-col sm:flex-row gap-3 flex-1">
             <input type="text" name="search" value="{{ request('search') }}" placeholder="Search by name or email..."
-                x-model="searchQuery"
                 class="bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-purple-500 w-full sm:w-64">
             <select name="status" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm">
                 <option value="">All Status</option>
@@ -43,11 +42,7 @@
             </thead>
             <tbody class="divide-y divide-white/3">
                 @forelse($users as $user)
-                @php
-                    $searchText = strtolower(trim(($user->full_name ?? '') . ' ' . ($user->email ?? '')));
-                @endphp
-                <tr class="hover:bg-white/2 transition"
-                    x-show="!searchQuery || '{{ $searchText }}'.includes(searchQuery.toLowerCase())">
+                <tr class="hover:bg-white/2 transition">
                     <td class="px-4 py-3">
                         <div class="flex items-center space-x-3">
                             <div class="w-9 h-9 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
@@ -131,9 +126,8 @@
 
 <script>
 function userList() {
-    const toggleUrlTemplate = '{{ route("admin.users.toggle-suspension", ["id" => "__ID__"]) }}';
+        const toggleUrlTemplate = '{{ route("admin.users.toggle-suspension", ["id" => "__ID__"]) }}';
     return {
-        searchQuery: '{{ request('search', '') }}',
         modalOpen: false,
         userName: '',
         userId: null,

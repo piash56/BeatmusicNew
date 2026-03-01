@@ -12,7 +12,6 @@
         statusNew: '',
         statusAdminNotes: '',
         statusSubmitting: false,
-        search: '{{ addslashes(request('search', '')) }}',
         statusUrlTemplate: @js(route('admin.radio-requests.status', 0)),
         buildStatusUrl(id) {
             if (!id) return this.statusUrlTemplate;
@@ -29,7 +28,7 @@
      }">
     <div class="flex flex-wrap gap-3">
         <form method="GET" class="flex flex-wrap gap-2">
-            <input type="text" name="search" value="{{ request('search') }}" x-model="search" placeholder="User name or email..."
+            <input type="text" name="search" value="{{ request('search') }}" placeholder="User, track, network, status..."
                 class="bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm w-48">
             <select name="status" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm">
                 <option value="">All statuses</option>
@@ -62,23 +61,12 @@
                         ? $albumTracks[$promo->track_index]['title']
                         : ($isAlbum && $promo->track_index !== null ? 'Track '.($promo->track_index + 1) : null);
                     $singleTitle = !$isAlbum ? ($track->title ?? 'Unknown track') : null;
-                    $searchText = strtolower(trim(
-                        ($singleTitle ?? '') . ' ' .
-                        ($albumTitle ?? '') . ' ' .
-                        ($albumTrackTitle ?? '') . ' ' .
-                        ($promo->user->full_name ?? '') . ' ' .
-                        ($promo->user->email ?? '') . ' ' .
-                        ($promo->radioNetwork->name ?? '') . ' ' .
-                        ($promo->status ?? '')
-                    ));
                 @endphp
-                <tr class="hover:bg-white/2 transition"
-                    x-show="!search || $el.dataset.search?.includes(search.toLowerCase())"
-                    data-search="{{ $searchText }}">
+                <tr class="hover:bg-white/2 transition">
                     <td class="px-4 py-3">
                         <div class="flex items-center gap-3">
                             @if($track && $track->cover_art)
-                                <img src="{{ $track->cover_art_url }}" class="w-10 h-10 rounded-lg object-cover shrink-0">
+                                <img src="{{ $track->cover_art_url }}" loading="lazy" class="w-10 h-10 rounded-lg object-cover shrink-0">
                             @else
                                 <div class="w-10 h-10 bg-purple-600/20 rounded-lg flex items-center justify-center text-sm shrink-0">📻</div>
                             @endif
