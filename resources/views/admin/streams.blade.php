@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Streams Management')
-@section('page-title', 'Streams Management')
+@section('title', 'Gestione dei flussi')
+@section('page-title', 'Gestione dei flussi')
 
 @section('content')
 <div class="space-y-6"
@@ -59,13 +59,13 @@
                     </div>
                     <button type="submit"
                             class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs rounded-xl transition whitespace-nowrap">
-                        Filter
+                            Filtro
                     </button>
                 </form>
                 <button type="button"
                         @click="importModalOpen = true"
                         class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs rounded-xl transition whitespace-nowrap">
-                    Import Bulk Streams
+                    Importa flussi in blocco
                 </button>
             </div>
         </div>
@@ -141,7 +141,7 @@
                     </td>
                 </tr>
                 @empty
-                <tr><td colspan="5" class="px-4 py-12 text-center text-gray-500">No released tracks found.</td></tr>
+                <tr><td colspan="5" class="px-4 py-12 text-center text-gray-500">Nessuna traccia pubblicata trovata.</td></tr>
                 @endforelse
             </tbody>
         </table>

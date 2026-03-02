@@ -5,3 +5,12 @@ And also in the admin dashboard side bar menu I want show notification values li
 And in the user dashboard also I want a notification icon left side of the website and there also show notification values means how much new notifications new I mean unread. and when click on the notification icon it will show 8 latest notifications and view all notification so click on it and go to notification page where will be show all the notification and there admin can mark as read all or click each notification will be mark as read and the notification didn't click can understand by admin and in the  notification icon show value also I mean how much new notifications new and didn't open or click and unread. And when click on specific notification go to there as like admin system.
 
 And also in the user dashboard side bar menu I want show notification values like if admin did any action like releases, Editorial Playlist, Radio, Concert, Vevo, Analytics, Revenue Help & Support if admin take any action or update any status of action then show the notification on that menu so user can understand there get any updates and when user view the sidebar then the notification values will be gone so it means for user dashboard sidebar menu notification will be gone when user click on it and view the page of the menu.
+
+---------------------------------------
+Commands prompts
+clear the database: php artisan migrate:from-mongo-clear
+migrate old database:   php artisan migrate:from-mongo
+old password restore:   php artisan migrate:from-mongo-normalize-passwords
+mismatch file directory:    php artisan migrate:normalize-storage-paths
+to preview mismatch file:   p     hp artisan migrate:normalize-storage-paths --dry-run
+---------------------------------------

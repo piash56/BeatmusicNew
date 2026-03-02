@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Track Submissions')
-@section('page-title', 'Track Submissions')
+@section('title', 'Traccia sottomissioni')
+@section('page-title', 'Traccia sottomissioni')
 
 @section('content')
 @push('scripts')
@@ -88,28 +88,28 @@ document.addEventListener('alpine:init', function() {
 @endpush
 <div class="space-y-4" x-data="upcModal()" data-upc-base="{{ url('/admin/track-submissions') }}">
     <form method="GET" class="flex flex-col sm:flex-row gap-3">
-        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search by title or artist..."
+        <input type="text" name="search" value="{{ request('search') }}" placeholder="Cerca per titolo o artista..."
             class="bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-purple-500 flex-1 sm:max-w-xs">
         <select name="status" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm">
-            <option value="">All Status</option>
+            <option value="">Tutti gli stati</option>
             @foreach(['Draft','On Request','On Process','Released','Rejected','Modify Pending','Modify Process','Modify Released','Modify Rejected'] as $s)
             <option value="{{ $s }}" {{ request('status') == $s ? 'selected' : '' }}>{{ $s }}</option>
             @endforeach
         </select>
-        <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Filter</button>
+        <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Filtro</button>
     </form>
 
     <div class="bg-gray-900 rounded-xl border border-white/5 overflow-x-auto">
         <table class="w-full text-sm min-w-[640px]">
             <thead class="bg-gray-800/50 border-b border-white/5">
                 <tr>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Track</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Artist</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">User Email</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Genre</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Status</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Submitted</th>
-                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Actions</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Traccia</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Artista</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">E-mail dell'utente</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Genere</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Stato</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Inviato</th>
+                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Azioni</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-white/3">
@@ -155,7 +155,7 @@ document.addEventListener('alpine:init', function() {
                     </td>
                 </tr>
                 @empty
-                <tr><td colspan="7" class="px-4 py-12 text-center text-gray-500">No track submissions found.</td></tr>
+                <tr><td colspan="7" class="px-4 py-12 text-center text-gray-500">Nessun brano inviato trovato.</td></tr>
                 @endforelse
             </tbody>
         </table>
@@ -166,15 +166,15 @@ document.addEventListener('alpine:init', function() {
     <template x-teleport="body">
         <div x-show="upcModalOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70" @keydown.escape.window="closeUpcModal()" @click.self="closeUpcModal()">
             <div x-show="upcModalOpen" x-transition class="bg-gray-900 rounded-2xl border border-white/10 shadow-xl max-w-md w-full p-6" @click.stop>
-            <h3 class="text-lg font-semibold text-white mb-4">UPC Code</h3>
-            <p class="text-gray-400 text-sm mb-3">Edit and update the UPC code for this release.</p>
+            <h3 class="text-lg font-semibold text-white mb-4">Codice UPC</h3>
+            <p class="text-gray-400 text-sm mb-3">Modifica e aggiorna il codice UPC per questa versione.</p>
             <input type="text" x-model="upcValue" placeholder="UPC code" class="w-full bg-gray-800 border border-white/10 text-white px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 mb-3">
             <div class="flex flex-wrap gap-2">
                 <button type="button" @click="saveUpc()" :disabled="upcSaving" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition disabled:opacity-70">
-                    <span x-show="!upcSaving">Save</span>
-                    <span x-show="upcSaving" x-cloak>Saving...</span>
+                    <span x-show="!upcSaving">Salva</span>
+                    <span x-show="upcSaving" x-cloak>Risparmio...</span>
                 </button>
-                <button type="button" @click="closeUpcModal()" class="px-4 py-2 text-gray-400 hover:text-white text-sm">Cancel</button>
+                <button type="button" @click="closeUpcModal()" class="px-4 py-2 text-gray-400 hover:text-white text-sm">Cancellare</button>
             </div>
             <p x-show="upcMessage" x-text="upcMessage" class="mt-3 text-sm text-green-400"></p>
             </div>
@@ -185,11 +185,11 @@ document.addEventListener('alpine:init', function() {
     <template x-teleport="body">
         <div x-show="statusConfirmOpen" x-cloak x-transition class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70" @keydown.escape.window="cancelStatusChange()" @click.self="cancelStatusChange()">
             <div x-show="statusConfirmOpen" x-transition class="bg-gray-900 rounded-2xl border border-white/10 shadow-xl max-w-md w-full p-6" @click.stop>
-                <h3 class="text-lg font-semibold text-white mb-2">Confirm status change</h3>
-                <p class="text-gray-400 text-sm mb-4">Are you sure you want to change the status to <strong class="text-white" x-text="statusConfirmNew"></strong>?</p>
+                <h3 class="text-lg font-semibold text-white mb-2">Conferma il cambiamento di stato</h3>
+                <p class="text-gray-400 text-sm mb-4">Sei sicuro di voler cambiare lo stato in <strong class="text-white" x-text="statusConfirmNew"></strong>?</p>
                 <div class="flex flex-wrap gap-2">
-                    <button type="button" @click="confirmStatusChange()" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Confirm</button>
-                    <button type="button" @click="cancelStatusChange()" class="px-4 py-2 bg-white/10 hover:bg-white/15 text-gray-300 text-sm rounded-lg transition">Cancel</button>
+                    <button type="button" @click="confirmStatusChange()" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Confermare</button>
+                    <button type="button" @click="cancelStatusChange()" class="px-4 py-2 bg-white/10 hover:bg-white/15 text-gray-300 text-sm rounded-lg transition">Cancellare</button>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Settings')
-@section('page-title', 'Account Settings')
+@section('title', 'Impostazioni')
+@section('page-title', 'Impostazioni Account')
 
 @section('content')
 <div class="max-w-2xl mx-auto space-y-6">
@@ -21,7 +21,7 @@
             }
         }">
         @csrf @method('PUT')
-        <h3 class="font-semibold text-white">Change Password</h3>
+        <h3 class="font-semibold text-white">Cambiare la password</h3>
         @if($errors->any())
         <div class="bg-red-900/30 border border-red-500/30 text-red-400 p-3 rounded-xl text-sm">
             @foreach($errors->all() as $error)<p>{{ $error }}</p>@endforeach
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div>
-                <label class="block text-sm text-gray-400 mb-1.5">New Password</label>
+                <label class="block text-sm text-gray-400 mb-1.5">Nuova parola d'ordine</label>
                 <div class="relative">
                     <input :type="showNew ? 'text' : 'password'" name="password" x-model="password"
                         @input="updateStrength()"
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div>
-                <label class="block text-sm text-gray-400 mb-1.5">Confirm New Password</label>
+                <label class="block text-sm text-gray-400 mb-1.5">Conferma nuova password</label>
                 <div class="relative">
                     <input :type="showConfirm ? 'text' : 'password'" name="password_confirmation" x-model="confirm" required
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 pr-10 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
@@ -99,37 +99,37 @@
                 </div>
                 <p x-show="confirm.length" class="text-xs mt-1"
                    :class="password && confirm && password === confirm ? 'text-green-400' : 'text-red-400'">
-                    <span x-show="password && confirm && password === confirm">Passwords match</span>
-                    <span x-show="password && confirm && password !== confirm">Passwords do not match</span>
+                    <span x-show="password && confirm && password === confirm">Le password corrispondono</span>
+                    <span x-show="password && confirm && password !== confirm">Le password non corrispondono</span>
                 </p>
             </div>
         </div>
         <div class="flex justify-end">
             <button type="submit" class="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition text-sm">
-                Update Password
+                Aggiorna password
             </button>
         </div>
     </form>
 
     <!-- Payout Settings -->
     <div class="bg-gray-900 rounded-2xl border border-white/5 p-6">
-        <h3 class="font-semibold text-white mb-1">Payout Settings</h3>
-        <p class="text-gray-400 text-sm mb-5">Configure how you receive your earnings</p>
+        <h3 class="font-semibold text-white mb-1">Impostazioni di pagamento</h3>
+        <p class="text-gray-400 text-sm mb-5">Configura come ricevi i tuoi guadagni</p>
         <form method="POST" action="{{ route('dashboard.settings.payout') }}">
             @csrf @method('PUT')
             <div class="space-y-4">
                 <div>
-                    <label class="block text-sm text-gray-400 mb-1.5">Payout Method</label>
+                    <label class="block text-sm text-gray-400 mb-1.5">Metodo di pagamento</label>
                     <input type="text" value="PayPal" disabled
                         class="w-full bg-gray-800/60 border border-white/10 text-gray-300 px-4 py-2.5 rounded-xl text-sm cursor-not-allowed">
                 </div>
                 <div>
-                    <label class="block text-sm text-gray-400 mb-1.5">PayPal Email</label>
+                    <label class="block text-sm text-gray-400 mb-1.5">E-mail PayPal</label>
                     <input type="email" name="paypal_email" value="{{ auth()->user()->paypal_email }}" placeholder="paypal@example.com"
                         @if(auth()->user()->paypal_email) disabled @endif
                         class="w-full bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm @if(auth()->user()->paypal_email) cursor-not-allowed opacity-70 @endif">
                     @if(auth()->user()->paypal_email)
-                        <p class="text-xs text-gray-500 mt-1">To change your PayPal email, please contact support or the admin team.</p>
+                        <p class="text-xs text-gray-500 mt-1">Per modificare l'indirizzo email PayPal, contatta l'assistenza o il team di amministrazione.</p>
                     @endif
                 </div>
             </div>
@@ -137,7 +137,7 @@
                 <button type="submit"
                     @if(auth()->user()->paypal_email) disabled @endif
                     class="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition text-sm @if(auth()->user()->paypal_email) opacity-60 cursor-not-allowed @endif">
-                    Save Payout Settings
+                    Salva le impostazioni di pagamento
                 </button>
             </div>
         </form>
@@ -145,24 +145,24 @@
 
     <!-- Account Info -->
     <div class="bg-gray-900 rounded-2xl border border-white/5 p-6">
-        <h3 class="font-semibold text-white mb-4">Account Info</h3>
+        <h3 class="font-semibold text-white mb-4">Informazioni sull'account</h3>
         <div class="space-y-3 text-sm">
             <div class="flex justify-between">
-                <span class="text-gray-500">Account Status</span>
+                <span class="text-gray-500">Stato dell'account</span>
                 <span class="px-2.5 py-1 rounded-full text-xs {{ auth()->user()->status === 'active' ? 'bg-green-900/50 text-green-400' : 'bg-red-900/50 text-red-400' }}">{{ ucfirst(auth()->user()->status) }}</span>
             </div>
             <div class="flex justify-between">
-                <span class="text-gray-500">Account Type</span>
+                <span class="text-gray-500">Tipo di conto</span>
                 <span class="px-2.5 py-1 rounded-full text-xs bg-purple-900/50 text-purple-400">
                     {{ auth()->user()->is_company ? 'Company' : 'Individual' }}
                 </span>
             </div>
             <div class="flex justify-between">
-                <span class="text-gray-500">Member Since</span>
+                <span class="text-gray-500">Membro dal</span>
                 <span class="text-gray-300">{{ auth()->user()->created_at->format('M d, Y') }}</span>
             </div>
             <div class="flex justify-between">
-                <span class="text-gray-500">Last Login</span>
+                <span class="text-gray-500">Ultimo accesso</span>
                 <span class="text-gray-300">{{ auth()->user()->last_login_at ? \Carbon\Carbon::parse(auth()->user()->last_login_at)->diffForHumans() : 'N/A' }}</span>
             </div>
         </div>

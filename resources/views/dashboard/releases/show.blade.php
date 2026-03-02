@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title', $track->title)
-@section('page-title', 'Release Details')
+@section('page-title', 'Dettagli del rilascio')
 @section('page-subtitle', $track->title)
 
 @section('content')
@@ -11,13 +11,13 @@
     <div class="flex items-center justify-between">
         <a href="{{ route('dashboard.releases.index') }}" class="flex items-center space-x-2 text-gray-400 hover:text-white transition text-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-            <span>All Releases</span>
+            <span>Tutte le versioni</span>
         </a>
         <div class="flex items-center space-x-2">
             @if(in_array($track->status, ['Draft','On Request','Rejected','Released']))
             <a href="{{ route('dashboard.releases.edit', $track->id) }}" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-sm rounded-lg border border-white/10 transition flex items-center space-x-1">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-                <span>Edit</span>
+                <span>Modificare</span>
             </a>
             @endif
         </div>
@@ -53,10 +53,10 @@
 
                     @if($track->release_type === 'single' && $track->audio_file)
                     <div class="mt-4">
-                        <p class="text-gray-500 text-xs mb-2">Track file</p>
+                        <p class="text-gray-500 text-xs mb-2">Traccia file</p>
                         <audio controls class="w-full h-10" style="accent-color: #7c3aed;">
                             <source src="{{ route('files.audio', $track->id) }}" type="audio/mpeg">
-                            Your browser does not support audio playback.
+                                Il tuo browser non supporta la riproduzione audio.
                         </audio>
                     </div>
                     @endif
@@ -66,36 +66,36 @@
                         @if($track->cover_art)
                         <a href="{{ route('files.cover.download', $track->id) }}" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 hover:bg-white/15 text-gray-300 text-sm rounded-lg transition">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                            Download cover
+                            Scarica la copertina
                         </a>
                         @endif
                         @if($track->release_type === 'single' && $track->audio_file)
                         <a href="{{ route('files.audio', $track->id) }}?download=1" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 hover:bg-white/15 text-gray-300 text-sm rounded-lg transition">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                            Download track
+                            Scarica la copertina
                         </a>
                         @endif
                     </div>
 
                     <div class="mt-4 space-y-2 text-sm">
                         <div class="flex justify-between">
-                            <span class="text-gray-500">Type</span>
+                            <span class="text-gray-500">Tipo</span>
                             <span class="text-gray-200 capitalize">{{ $track->release_type }}</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-500">Genre</span>
+                            <span class="text-gray-500">Genere</span>
                             <span class="text-gray-200">{{ $track->primary_genre }}</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-500">Release Date</span>
+                            <span class="text-gray-500">Data di rilascioe</span>
                             <span class="text-gray-200">{{ $track->release_date ? \Carbon\Carbon::parse($track->release_date)->format('M d, Y') : '—' }}</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-500">Submission Date</span>
+                            <span class="text-gray-500">Data di invio</span>
                             <span class="text-gray-200">{{ $track->created_at->format('M d, Y H:i') }}</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-500">Last Updated</span>
+                            <span class="text-gray-500">Ultimo aggiornamento</span>
                             <span class="text-gray-200">{{ $track->updated_at->format('M d, Y H:i') }}</span>
                         </div>
                         @if($track->isrc)
@@ -111,7 +111,7 @@
                         </div>
                         @endif
                         <div class="flex justify-between">
-                            <span class="text-gray-500">Explicit</span>
+                            <span class="text-gray-500">Esplicito</span>
                             <span class="text-gray-200">{{ $track->is_explicit ? 'Yes' : 'No' }}</span>
                         </div>
                     </div>
@@ -120,11 +120,11 @@
 
             <!-- Stats -->
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-4">
-                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Statistics</h3>
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Statistiche</h3>
                 <div class="grid grid-cols-2 gap-3">
                     <div class="bg-white/3 rounded-xl p-3 text-center">
                         <div class="text-2xl font-bold text-white">{{ number_format($track->total_streams ?? 0) }}</div>
-                        <div class="text-xs text-gray-500 mt-0.5">Total Streams</div>
+                        <div class="text-xs text-gray-500 mt-0.5">Streams Totale</div>
                     </div>
                     <div class="bg-white/3 rounded-xl p-3 text-center">
                         <div class="text-2xl font-bold text-white">{{ number_format($preSaves) }}</div>
@@ -132,11 +132,11 @@
                     </div>
                     <div class="bg-white/3 rounded-xl p-3 text-center">
                         <div class="text-2xl font-bold text-white">{{ number_format($track->new_streams ?? 0) }}</div>
-                        <div class="text-xs text-gray-500 mt-0.5">New Streams</div>
+                        <div class="text-xs text-gray-500 mt-0.5">Streams Nuovo</div>
                     </div>
                     <div class="bg-white/3 rounded-xl p-3 text-center">
                         <div class="text-2xl font-bold text-green-400">${{ number_format($track->total_revenue ?? 0, 2) }}</div>
-                        <div class="text-xs text-gray-500 mt-0.5">Revenue</div>
+                        <div class="text-xs text-gray-500 mt-0.5">Reddito</div>
                     </div>
                 </div>
             </div>
@@ -148,10 +148,10 @@
             <!-- Audio Player (if released) -->
             @if($track->release_type === 'single' && $track->audio_file && $track->status === 'Released')
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-4">
-                <h3 class="text-sm font-semibold text-white mb-3">Audio Preview</h3>
+                <h3 class="text-sm font-semibold text-white mb-3">Anteprima dell'audio</h3>
                 <audio controls class="w-full" style="accent-color: #7c3aed;">
                     <source src="{{ route('files.audio', $track->id) }}" type="audio/mpeg">
-                    Your browser does not support audio playback.
+                        Il tuo browser non supporta la riproduzione audio.
                 </audio>
             </div>
             @endif
@@ -160,7 +160,7 @@
             @if($track->release_type === 'album' && $track->album_tracks)
             <div class="bg-gray-900 rounded-2xl border border-white/5 overflow-hidden">
                 <div class="p-4 border-b border-white/5">
-                    <h3 class="text-sm font-semibold text-white">Album Tracks</h3>
+                    <h3 class="text-sm font-semibold text-white">Tracce Album</h3>
                 </div>
                 <div class="divide-y divide-white/5">
                     @foreach($track->album_tracks as $index => $albumTrack)
@@ -189,64 +189,64 @@
 
             <!-- Main release info (all submitted) -->
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-4">
-                <h3 class="text-sm font-semibold text-white mb-4">Release Information</h3>
+                <h3 class="text-sm font-semibold text-white mb-4">Informazioni sul rilascio</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-                    <div><span class="text-gray-500">Title</span><p class="text-gray-200 mt-0.5">{{ $track->title ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Titolo</span><p class="text-gray-200 mt-0.5">{{ $track->title ?: '—' }}</p></div>
                     @if($track->release_type === 'album')
-                    <div><span class="text-gray-500">Album title</span><p class="text-gray-200 mt-0.5">{{ $track->album_title ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Main track title</span><p class="text-gray-200 mt-0.5">{{ $track->main_track_title ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Titolo Album</span><p class="text-gray-200 mt-0.5">{{ $track->album_title ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Titolo della traccia principale</span><p class="text-gray-200 mt-0.5">{{ $track->main_track_title ?: '—' }}</p></div>
                     @endif
-                    <div><span class="text-gray-500">Artists</span><p class="text-gray-200 mt-0.5">{{ $track->artists ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Primary genre</span><p class="text-gray-200 mt-0.5">{{ $track->primary_genre ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Secondary genre</span><p class="text-gray-200 mt-0.5">{{ $track->secondary_genre ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Release date</span><p class="text-gray-200 mt-0.5">{{ $track->release_date ? $track->release_date->format('M d, Y') : '—' }}</p></div>
+                    <div><span class="text-gray-500">Artisti</span><p class="text-gray-200 mt-0.5">{{ $track->artists ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Genere primario</span><p class="text-gray-200 mt-0.5">{{ $track->primary_genre ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Genere secondario</span><p class="text-gray-200 mt-0.5">{{ $track->secondary_genre ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Data di rilascio</span><p class="text-gray-200 mt-0.5">{{ $track->release_date ? $track->release_date->format('M d, Y') : '—' }}</p></div>
                     <div><span class="text-gray-500">Spotify/Apple</span><p class="text-gray-200 mt-0.5">{{ $track->has_spotify_apple ?: '—' }}</p></div>
                 </div>
             </div>
 
             <!-- Artist & credits -->
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-4">
-                <h3 class="text-sm font-semibold text-white mb-4">Artist & Credits</h3>
+                <h3 class="text-sm font-semibold text-white mb-4">Artista e crediti</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-                    <div><span class="text-gray-500">First name</span><p class="text-gray-200 mt-0.5">{{ $track->first_name ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Last name</span><p class="text-gray-200 mt-0.5">{{ $track->last_name ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Stage name</span><p class="text-gray-200 mt-0.5">{{ $track->stage_name ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Featuring</span><p class="text-gray-200 mt-0.5">{{ $track->featuring_artists ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Authors</span><p class="text-gray-200 mt-0.5">{{ $track->authors ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Composers</span><p class="text-gray-200 mt-0.5">{{ $track->composers ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Producer</span><p class="text-gray-200 mt-0.5">{{ $track->producer ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Nome di battesimo</span><p class="text-gray-200 mt-0.5">{{ $track->first_name ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Cognome</span><p class="text-gray-200 mt-0.5">{{ $track->last_name ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Nome d'arte</span><p class="text-gray-200 mt-0.5">{{ $track->stage_name ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Dotato</span><p class="text-gray-200 mt-0.5">{{ $track->featuring_artists ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Autori</span><p class="text-gray-200 mt-0.5">{{ $track->authors ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Compositori</span><p class="text-gray-200 mt-0.5">{{ $track->composers ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Produttore</span><p class="text-gray-200 mt-0.5">{{ $track->producer ?: '—' }}</p></div>
                 </div>
             </div>
 
             <!-- Additional details -->
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-4">
-                <h3 class="text-sm font-semibold text-white mb-4">Additional Details</h3>
+                <h3 class="text-sm font-semibold text-white mb-4">Ulteriori dettagli</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
                     <div><span class="text-gray-500">ISRC</span><p class="text-gray-200 mt-0.5 font-mono text-xs">{{ $track->isrc ?: '—' }}</p></div>
                     <div><span class="text-gray-500">UPC</span><p class="text-gray-200 mt-0.5 font-mono text-xs">{{ $track->upc ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Explicit</span><p class="text-gray-200 mt-0.5">{{ $track->is_explicit ? 'Yes' : 'No' }}</p></div>
-                    <div><span class="text-gray-500">YouTube beat</span><p class="text-gray-200 mt-0.5">{{ $track->is_youtube_beat ? 'Yes' : 'No' }}</p></div>
-                    <div><span class="text-gray-500">Has license</span><p class="text-gray-200 mt-0.5">{{ $track->has_license ? 'Yes' : 'No' }}</p></div>
-                    <div><span class="text-gray-500">TikTok start time</span><p class="text-gray-200 mt-0.5">{{ $track->tik_tok_start_time ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">Song duration</span><p class="text-gray-200 mt-0.5">{{ $track->song_duration ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">CM society</span><p class="text-gray-200 mt-0.5">{{ $track->cm_society ?: '—' }}</p></div>
-                    <div><span class="text-gray-500">SIAE position</span><p class="text-gray-200 mt-0.5">{{ $track->siae_position ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Esplicito</span><p class="text-gray-200 mt-0.5">{{ $track->is_explicit ? 'Yes' : 'No' }}</p></div>
+                    <div><span class="text-gray-500">Battere YouTube</span><p class="text-gray-200 mt-0.5">{{ $track->is_youtube_beat ? 'Yes' : 'No' }}</p></div>
+                    <div><span class="text-gray-500">Ha la licenza</span><p class="text-gray-200 mt-0.5">{{ $track->has_license ? 'Yes' : 'No' }}</p></div>
+                    <div><span class="text-gray-500">Ora di inizio di TikTok</span><p class="text-gray-200 mt-0.5">{{ $track->tik_tok_start_time ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Durata della canzone</span><p class="text-gray-200 mt-0.5">{{ $track->song_duration ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Società CM</span><p class="text-gray-200 mt-0.5">{{ $track->cm_society ?: '—' }}</p></div>
+                    <div><span class="text-gray-500">Posizione della SIAE</span><p class="text-gray-200 mt-0.5">{{ $track->siae_position ?: '—' }}</p></div>
                 </div>
                 @if($track->short_bio)
-                <div class="mt-3"><span class="text-gray-500 block mb-1">Short bio</span><p class="text-gray-200 text-sm whitespace-pre-wrap">{{ $track->short_bio }}</p></div>
+                <div class="mt-3"><span class="text-gray-500 block mb-1">Breve biografia</span><p class="text-gray-200 text-sm whitespace-pre-wrap">{{ $track->short_bio }}</p></div>
                 @endif
                 @if($track->track_description)
-                <div class="mt-3"><span class="text-gray-500 block mb-1">Track description</span><p class="text-gray-200 text-sm whitespace-pre-wrap">{{ $track->track_description }}</p></div>
+                <div class="mt-3"><span class="text-gray-500 block mb-1">Descrizione della traccia</span><p class="text-gray-200 text-sm whitespace-pre-wrap">{{ $track->track_description }}</p></div>
                 @endif
                 @if($track->distribution_details)
-                <div class="mt-3"><span class="text-gray-500 block mb-1">Distribution details</span><p class="text-gray-200 text-sm whitespace-pre-wrap">{{ $track->distribution_details }}</p></div>
+                <div class="mt-3"><span class="text-gray-500 block mb-1">Dettagli sulla distribuzione</span><p class="text-gray-200 text-sm whitespace-pre-wrap">{{ $track->distribution_details }}</p></div>
                 @endif
             </div>
 
             <!-- Distribution Links -->
             @if($track->spotify_link || $track->apple_music_link || $track->tik_tok_link || $track->youtube_link)
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-4">
-                <h3 class="text-sm font-semibold text-white mb-4">Distribution Links</h3>
+                <h3 class="text-sm font-semibold text-white mb-4">Collegamenti di distribuzione</h3>
                 <div class="space-y-2">
                     @if($track->spotify_link)
                     <a href="{{ $track->spotify_link }}" target="_blank" class="flex items-center space-x-3 text-sm text-gray-300 hover:text-white transition">
@@ -284,12 +284,12 @@
             @if($track->status === 'On Request' || $track->status === 'On Process')
             <div class="bg-gradient-to-br from-purple-900/30 to-indigo-900/30 rounded-2xl border border-purple-500/20 p-4">
                 <h3 class="text-sm font-semibold text-white mb-2">Pre-save Campaign</h3>
-                <p class="text-gray-400 text-xs mb-3">Share this link with your fans so they can pre-save your release on Spotify.</p>
+                <p class="text-gray-400 text-xs mb-3">Condividi questo link con i tuoi fan in modo che possano salvare in anteprima la tua uscita su Spotify.</p>
                 <div class="flex items-center space-x-2">
                     <input type="text" value="{{ url('/presave/'.$track->id) }}" readonly
                         class="flex-1 bg-white/5 border border-white/10 text-gray-300 text-xs px-3 py-2 rounded-lg font-mono">
                     <button onclick="navigator.clipboard.writeText('{{ url('/presave/'.$track->id) }}')"
-                        class="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs rounded-lg transition">Copy</button>
+                        class="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs rounded-lg transition">Copia</button>
                 </div>
             </div>
             @endif
@@ -299,10 +299,10 @@
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-4" x-data="{ tab: 'desc' }">
                 <div class="flex space-x-4 mb-4 border-b border-white/5 pb-3">
                     @if($track->description)
-                    <button @click="tab='desc'" :class="tab==='desc' ? 'text-white border-b-2 border-purple-500' : 'text-gray-500'" class="text-sm font-medium pb-1 -mb-3.5 transition">Description</button>
+                    <button @click="tab='desc'" :class="tab==='desc' ? 'text-white border-b-2 border-purple-500' : 'text-gray-500'" class="text-sm font-medium pb-1 -mb-3.5 transition">Descrizione</button>
                     @endif
                     @if($track->lyrics)
-                    <button @click="tab='lyrics'" :class="tab==='lyrics' ? 'text-white border-b-2 border-purple-500' : 'text-gray-500'" class="text-sm font-medium pb-1 -mb-3.5 transition">Lyrics</button>
+                    <button @click="tab='lyrics'" :class="tab==='lyrics' ? 'text-white border-b-2 border-purple-500' : 'text-gray-500'" class="text-sm font-medium pb-1 -mb-3.5 transition">Testi</button>
                     @endif
                 </div>
                 @if($track->description)

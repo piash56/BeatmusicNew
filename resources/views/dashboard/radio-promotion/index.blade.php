@@ -1,8 +1,8 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Radio Promotion')
-@section('page-title', 'Radio Promotion')
-@section('page-subtitle', 'Promote your music on radio networks')
+@section('title', 'Promozione radiofonica')
+@section('page-title', 'Promozione radiofonica')
+@section('page-subtitle', 'Promuovi la tua musica sulle reti radiofoniche')
 
 @section('content')
 <div class="space-y-6">
@@ -83,25 +83,25 @@
                 <input type="hidden" name="track_index" :disabled="type !== 'album'" :value="albumTrackIndex">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-sm text-gray-400 mb-1.5">Select Type <span class="text-red-400">*</span></label>
+                        <label class="block text-sm text-gray-400 mb-1.5">Seleziona Tipo <span class="text-red-400">*</span></label>
                         <select x-model="type" class="w-full bg-gray-800 border border-white/10 text-gray-300 px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
-                            <option value="single">Single</option>
-                            <option value="album">Album (choose one track)</option>
+                            <option value="single">Singolo</option>
+                            <option value="album">Album (scegli una traccia)</option>
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm text-gray-400 mb-1.5">Radio Network (optional)</label>
+                        <label class="block text-sm text-gray-400 mb-1.5">Rete radiofonica (facoltativo)</label>
                         <select name="radio_network_id" class="w-full bg-gray-800 border border-white/10 text-gray-300 px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
-                            <option value="">Choose a network...</option>
+                            <option value="">Scegli una rete...</option>
                             @foreach($radioNetworks as $network)
                             <option value="{{ $network->id }}">{{ $network->name }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div x-show="type === 'single'" class="sm:col-span-2" x-cloak>
-                        <label class="block text-sm text-gray-400 mb-1.5">Single track <span class="text-red-400">*</span></label>
+                        <label class="block text-sm text-gray-400 mb-1.5">Traccia unica <span class="text-red-400">*</span></label>
                         <select x-model="singleId" :required="type === 'single'" class="w-full bg-gray-800 border border-white/10 text-gray-300 px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
-                            <option value="">Choose a released single...</option>
+                            <option value="">Scegli un singolo pubblicato...</option>
                             @foreach($releasedSingles as $t)
                                 <option value="{{ $t->id }}">{{ $t->title }} — {{ $t->artists }}</option>
                             @endforeach
@@ -110,7 +110,7 @@
                     <div x-show="type === 'album'" class="sm:col-span-2" x-cloak>
                         <label class="block text-sm text-gray-400 mb-1.5">Album <span class="text-red-400">*</span></label>
                         <select x-model="albumId" @change="loadAlbumTracks()" :required="type === 'album'" class="w-full bg-gray-800 border border-white/10 text-gray-300 px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
-                            <option value="">Choose a released album...</option>
+                            <option value="">Scegli un album pubblicato...</option>
                             @foreach($releasedAlbums as $a)
                                 <option value="{{ $a->id }}">{{ $a->album_title ?: $a->title }} — {{ $a->artists }}</option>
                             @endforeach
@@ -126,11 +126,11 @@
                         </select>
                     </div>
                     <div class="sm:col-span-2">
-                        <p class="text-xs text-gray-500">When published, the campaign lasts 28 days.</p>
+                        <p class="text-xs text-gray-500">Una volta pubblicata, la campagna dura 28 giorni.</p>
                     </div>
                 </div>
                 <div class="flex justify-end space-x-3 mt-4">
-                    <button type="button" @click="open = false" class="px-4 py-2 text-gray-400 hover:text-white text-sm transition">Cancel</button>
+                    <button type="button" @click="open = false" class="px-4 py-2 text-gray-400 hover:text-white text-sm transition">Cancellare</button>
                     <button type="submit"
                             :disabled="submitting"
                             class="px-5 py-2 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-900/40 disabled:cursor-not-allowed text-white text-sm rounded-xl transition flex items-center gap-2">
@@ -149,7 +149,7 @@
     <!-- Available Networks -->
     @if($radioNetworks->isNotEmpty())
     <div class="bg-gray-900 rounded-2xl border border-white/5 p-6">
-        <h3 class="font-semibold text-white mb-4">Available Networks</h3>
+        <h3 class="font-semibold text-white mb-4">Reti disponibili</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             @foreach($radioNetworks as $network)
             <div class="bg-white/3 rounded-xl p-3 border border-white/5 flex items-center gap-3">
@@ -160,7 +160,7 @@
                 @endif
                 <div class="min-w-0">
                     <p class="text-white text-sm font-medium truncate">{{ $network->name }}</p>
-                    <p class="text-gray-500 text-xs">Active network</p>
+                    <p class="text-gray-500 text-xs">Rete attiva</p>
                 </div>
             </div>
             @endforeach
@@ -172,7 +172,7 @@
     @if($promotions->isNotEmpty())
     <div class="bg-gray-900 rounded-2xl border border-white/5 overflow-hidden">
         <div class="p-4 border-b border-white/5 flex items-center justify-between">
-            <h3 class="font-semibold text-white">My Radio Promotions</h3>
+            <h3 class="font-semibold text-white">Le mie promozioni radiofoniche</h3>
         </div>
         <div class="divide-y divide-white/5">
             @foreach($promotions as $promo)
@@ -199,9 +199,9 @@
                         <div class="min-w-0">
                             @if($isAlbum)
                                 <p class="text-white font-medium truncate">Album: {{ $albumTitle }}</p>
-                                <p class="text-gray-200 text-sm truncate">Track: {{ $albumTrackTitle }}</p>
+                                <p class="text-gray-200 text-sm truncate">Traccia: {{ $albumTrackTitle }}</p>
                             @else
-                                <p class="text-white font-medium truncate">Track: {{ $singleTitle }}</p>
+                                <p class="text-white font-medium truncate">Traccia: {{ $singleTitle }}</p>
                             @endif
                             @if($t)
                                 <p class="text-gray-400 text-xs mt-0.5 truncate">{{ $t->artists ?? 'Unknown artist' }}</p>
@@ -224,7 +224,7 @@
                     @if($promo->status === 'published' && $promo->progress_percentage !== null)
                         <div class="mt-3">
                             <div class="flex justify-between text-xs text-gray-500 mb-1">
-                                <span>{{ $promo->days_remaining }} days remaining</span>
+                                <span>{{ $promo->days_remaining }} giorni rimanenti</span>
                                 <span>{{ $promo->progress_percentage }}%</span>
                             </div>
                             <div class="h-2 bg-white/10 rounded-full">
@@ -245,8 +245,8 @@
         <div class="w-16 h-16 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-purple-400/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
         </div>
-        <p class="text-gray-400">No radio promotions yet.</p>
-        <p class="text-gray-600 text-sm mt-1">Submit your track above to get started.</p>
+        <p class="text-gray-400">Nessuna promozione radiofonica ancora.</p>
+        <p class="text-gray-600 text-sm mt-1">Invia la tua traccia qui sopra per iniziare.</p>
     </div>
     @endif
 </div>

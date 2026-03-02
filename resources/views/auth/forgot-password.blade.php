@@ -1,11 +1,11 @@
 @extends('layouts.app')
-@section('title', 'Forgot Password')
+@section('title', 'Ha dimenticato la password')
 @section('content')
 <div class="min-h-screen flex items-center justify-center px-4 py-20">
     <div class="w-full max-w-md">
         <div class="text-center mb-8">
-            <h1 class="text-2xl font-bold text-white">Forgot Password</h1>
-            <p class="text-gray-400 mt-1">Enter your email to receive a reset link</p>
+            <h1 class="text-2xl font-bold text-white">Ha dimenticato la password</h1>
+            <p class="text-gray-400 mt-1">Inserisci la tua email per ricevere un link di reimpostazione</p>
         </div>
         <div class="glass rounded-2xl p-8">
             @if(session('success'))
@@ -21,7 +21,7 @@
                   @submit="loading = true">
                 @csrf
                 <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Email Address</label>
+                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Indirizzo e-mail</label>
                     <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 transition" placeholder="you@example.com">
                 </div>
                 <button type="submit"
@@ -31,7 +31,7 @@
                     <span x-text="loading ? 'Sending...' : 'Send Reset Link'"></span>
                 </button>
             </form>
-            <p class="text-center text-gray-400 text-sm mt-6"><a href="{{ route('login') }}" class="text-purple-400 hover:text-purple-300">← Back to Sign In</a></p>
+            <p class="text-center text-gray-400 text-sm mt-6"><a href="{{ route('login') }}" class="text-purple-400 hover:text-purple-300">← Torna a Accedi</a></p>
         </div>
     </div>
 </div>

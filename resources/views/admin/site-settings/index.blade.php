@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Site Settings')
-@section('page-title', 'Site Settings')
+@section('title', 'Impostazioni del sito')
+@section('page-title', 'Impostazioni del sito')
 
 @section('content')
 <div class="max-w-4xl space-y-6">
@@ -15,25 +15,25 @@
 
         {{-- General --}}
         <div class="bg-gray-900 rounded-2xl border border-white/5 p-6 mb-6">
-            <h2 class="text-white font-semibold mb-5">General</h2>
+            <h2 class="text-white font-semibold mb-5">Generale</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="sm:col-span-2">
-                    <label class="text-sm text-gray-400 mb-1.5 block">Site Title</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Titolo del sito</label>
                     <input type="text" name="site_title" value="{{ old('site_title', $settings->site_title ?? '') }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Logo Alt Text</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Testo alternativo del logo</label>
                     <input type="text" name="logo_alt" value="{{ old('logo_alt', $settings->logo_alt ?? '') }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Copyright Text</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Testo sul diritto d'autore</label>
                     <input type="text" name="copyright_text" value="{{ old('copyright_text', $settings->copyright_text ?? '') }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div class="sm:col-span-2">
-                    <label class="text-sm text-gray-400 mb-1.5 block">Footer Text</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Testo del piè di pagina</label>
                     <textarea name="footer_text" rows="3"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500 resize-none">{{ old('footer_text', $settings->footer_text ?? '') }}</textarea>
                 </div>
@@ -42,7 +42,7 @@
 
         {{-- Branding --}}
         <div class="bg-gray-900 rounded-2xl border border-white/5 p-6 mb-6">
-            <h2 class="text-white font-semibold mb-5">Branding</h2>
+            <h2 class="text-white font-semibold mb-5">Marchio</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                     <label class="text-sm text-gray-400 mb-1.5 block">Logo</label>
@@ -51,11 +51,11 @@
                             <img src="{{ Storage::url($settings->logo_url) }}" class="h-10" alt="Current logo">
                             <label class="flex items-center gap-2 text-sm text-red-400 hover:text-red-300 cursor-pointer">
                                 <input type="checkbox" name="remove_logo" value="1" class="rounded border-white/20 text-red-500">
-                                Remove (use default)
+                                Rimuovi (usa predefinito)
                             </label>
                         </div>
                     @else
-                        <p class="text-gray-500 text-sm mb-2">No custom logo. Default is used.</p>
+                        <p class="text-gray-500 text-sm mb-2">Nessun logo personalizzato. Viene utilizzato quello predefinito.</p>
                     @endif
                     <input type="file" name="logo" accept="image/*" class="text-sm text-gray-300 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:bg-purple-600 file:text-white hover:file:bg-purple-700">
                 </div>
@@ -66,11 +66,11 @@
                             <img src="{{ Storage::url($settings->favicon) }}" class="h-8" alt="Current favicon">
                             <label class="flex items-center gap-2 text-sm text-red-400 hover:text-red-300 cursor-pointer">
                                 <input type="checkbox" name="remove_favicon" value="1" class="rounded border-white/20 text-red-500">
-                                Remove (use default)
+                                Rimuovi (usa predefinito)
                             </label>
                         </div>
                     @else
-                        <p class="text-gray-500 text-sm mb-2">No custom favicon. Default is used.</p>
+                        <p class="text-gray-500 text-sm mb-2">Nessuna favicon personalizzata. Viene utilizzata quella predefinita.</p>
                     @endif
                     <input type="file" name="favicon" accept="image/*" class="text-sm text-gray-300 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:bg-purple-600 file:text-white hover:file:bg-purple-700">
                 </div>
@@ -79,7 +79,7 @@
 
         {{-- Social Links --}}
         <div class="bg-gray-900 rounded-2xl border border-white/5 p-6 mb-6">
-            <h2 class="text-white font-semibold mb-5">Social Links</h2>
+            <h2 class="text-white font-semibold mb-5">Collegamenti sociali</h2>
             @php
                 $social = $settings->social_links ?? [];
                 $socialString = function ($key) use ($social) {

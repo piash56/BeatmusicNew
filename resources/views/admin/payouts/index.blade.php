@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Payout Requests')
-@section('page-title', 'Artist Payout Requests')
+@section('title', 'Richieste di pagamento')
+@section('page-title', 'Richieste di pagamento degli artisti')
 
 @section('content')
 <div class="space-y-4" x-data="payoutsPage()">
@@ -9,12 +9,12 @@
         <table class="w-full text-sm">
             <thead class="bg-gray-800/50 border-b border-white/5">
                 <tr>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Artist</th>
-                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Amount</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Method</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Email</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Status</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Requested</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Artista</th>
+                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Quantità</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Metodo</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">E-mail</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Stato</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Richiesto</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-white/3">
@@ -55,7 +55,7 @@
                     </td>
                 </tr>
                 @empty
-                <tr><td colspan="6" class="px-4 py-12 text-center text-gray-500">No payout requests found.</td></tr>
+                <tr><td colspan="6" class="px-4 py-12 text-center text-gray-500">Nessuna richiesta di pagamento trovata.</td></tr>
                 @endforelse
             </tbody>
         </table>
@@ -68,13 +68,13 @@
         <div class="relative bg-gray-900 border border-white/10 rounded-2xl shadow-xl max-w-md w-full p-6" @click.stop>
             <div class="flex items-start justify-between mb-4">
                 <div>
-                    <h3 class="text-lg font-semibold text-white">Update payout status</h3>
+                    <h3 class="text-lg font-semibold text-white">Aggiorna lo stato del pagamento</h3>
                     <p class="text-gray-400 text-xs mt-1">
-                        Artist: <span class="text-gray-200" x-text="userName"></span>
+                        Artista: <span class="text-gray-200" x-text="userName"></span>
                         <span class="text-gray-500" x-text="userEmail ? ' • ' + userEmail : ''"></span>
                     </p>
                     <p class="text-gray-400 text-xs">
-                        Amount: <span class="text-green-400" x-text="'$' + amount"></span>
+                        Quantità: <span class="text-green-400" x-text="'$' + amount"></span>
                     </p>
                 </div>
                 <button type="button" @click="if (!loading) modalOpen = false" class="text-gray-400 hover:text-white">
@@ -86,19 +86,19 @@
                 @method('PATCH')
                 <div class="space-y-3 text-sm">
                     <div>
-                        <label class="block text-gray-300 mb-1.5">Status</label>
+                        <label class="block text-gray-300 mb-1.5">Stato</label>
                         <select name="status" x-model="status"
                             class="w-full bg-gray-800 border border-white/10 text-gray-200 px-3 py-2 rounded-xl text-sm focus:outline-none focus:border-purple-500">
-                            <option value="pending">Pending</option>
-                            <option value="paid">Paid</option>
-                            <option value="rejected">Rejected</option>
+                            <option value="pending">In attesa di</option>
+                            <option value="paid">Pagato</option>
+                            <option value="rejected">Respinto</option>
                         </select>
                     </div>
                 </div>
                 <div class="flex justify-end gap-2 mt-5">
                     <button type="button" @click="if (!loading) modalOpen = false"
                         class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 text-sm transition">
-                        Cancel
+                        Cancellare
                     </button>
                     <button type="submit"
                         :disabled="loading"

@@ -14,34 +14,34 @@
                 <div>
                     <div class="flex items-center space-x-2 mb-2">
                         <span class="text-2xl">{{ $user->is_company ? '🏢' : '👤' }}</span>
-                        <h3 class="text-xl font-bold text-white">Account Type</h3>
+                        <h3 class="text-xl font-bold text-white">Tipo di conto</h3>
                     </div>
                     <p class="text-gray-400 text-sm">{{ $user->is_company ? 'Company' : 'Individual' }}</p>
                 </div>
                 <div class="flex flex-col space-y-2">
-                    <a href="{{ route('dashboard.support') }}" class="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-sm font-semibold rounded-xl transition text-center">Upgrade Plan</a>
+                    <a href="{{ route('dashboard.support') }}" class="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-sm font-semibold rounded-xl transition text-center">Piano di aggiornamento</a>
                 </div>
             </div>
         </div>
 
         <!-- Quick Stats -->
         <div class="glass rounded-2xl p-6">
-            <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Quick Stats</h3>
+            <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Statistiche rapide</h3>
             <div class="space-y-3">
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-400 text-sm">Total Streams</span>
+                    <span class="text-gray-400 text-sm">Streams Totali</span>
                     <span class="text-white font-semibold">{{ number_format($stats['total_streams']) }}</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-400 text-sm">Released Tracks</span>
+                    <span class="text-gray-400 text-sm">Tracce pubblicate</span>
                     <span class="text-white font-semibold">{{ $stats['released_tracks'] }}</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-400 text-sm">Pending Review</span>
+                    <span class="text-gray-400 text-sm">In attesa di revisione</span>
                     <span class="text-white font-semibold">{{ $stats['pending_review'] }}</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-400 text-sm">Published Playlists</span>
+                    <span class="text-gray-400 text-sm">Playlist pubblicate</span>
                     <span class="text-white font-semibold">{{ $stats['playlist_published'] }}</span>
                 </div>
             </div>
@@ -52,10 +52,10 @@
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         @php
         $statCards = [
-            ['label' => 'Total Streams', 'value' => number_format($stats['total_streams']), 'icon' => '📊', 'color' => 'purple'],
-            ['label' => 'Last 30 Days', 'value' => number_format($user->stats_last_month ?? 0), 'icon' => '📈', 'color' => 'green'],
-            ['label' => 'Total Tracks', 'value' => $stats['total_tracks'], 'icon' => '🎵', 'color' => 'blue'],
-            ['label' => 'Balance', 'value' => '$' . number_format($user->balance ?? 0, 2), 'icon' => '💰', 'color' => 'yellow'],
+            ['label' => 'Streams Totali', 'value' => number_format($stats['total_streams']), 'icon' => '📊', 'color' => 'purple'],
+            ['label' => 'Ultimi 30 giorni', 'value' => number_format($user->stats_last_month ?? 0), 'icon' => '📈', 'color' => 'green'],
+            ['label' => 'Tracce totali', 'value' => $stats['total_tracks'], 'icon' => '🎵', 'color' => 'blue'],
+            ['label' => 'Bilancia', 'value' => '$' . number_format($user->balance ?? 0, 2), 'icon' => '💰', 'color' => 'yellow'],
         ];
         @endphp
         @foreach($statCards as $card)
@@ -72,8 +72,8 @@
         <!-- Recent Releases -->
         <div class="lg:col-span-2 glass rounded-2xl overflow-hidden">
             <div class="p-6 border-b border-white/5 flex items-center justify-between">
-                <h3 class="font-semibold text-white">Recent Releases</h3>
-                <a href="{{ route('dashboard.releases.index') }}" class="text-purple-400 hover:text-purple-300 text-sm">View all →</a>
+                <h3 class="font-semibold text-white">Uscite recenti</h3>
+                <a href="{{ route('dashboard.releases.index') }}" class="text-purple-400 hover:text-purple-300 text-sm">Visualizza tutto →</a>
             </div>
             <div class="divide-y divide-white/5">
                 @forelse($recentReleases as $track)
@@ -104,7 +104,7 @@
                 @empty
                 <div class="p-8 text-center">
                     <div class="text-4xl mb-3">🎵</div>
-                    <p class="text-gray-400 text-sm">No releases yet.</p>
+                    <p class="text-gray-400 text-sm">Nessuna uscita ancora.</p>
                 </div>
                 @endforelse
             </div>
@@ -114,20 +114,20 @@
         <div class="space-y-4">
             <div class="glass rounded-2xl p-6 bg-gradient-to-br from-purple-600/10 to-indigo-600/10 border border-purple-500/20">
                 <div class="text-3xl mb-3">🚀</div>
-                <h3 class="font-semibold text-white mb-2">Upload New Release</h3>
-                <p class="text-gray-400 text-sm mb-4">Share your music with the world. Upload your single or album today.</p>
+                <h3 class="font-semibold text-white mb-2">Carica nuova versione</h3>
+                <p class="text-gray-400 text-sm mb-4">Condividi la tua musica con il mondo. Carica il tuo singolo o album oggi stesso.</p>
                 <a href="{{ route('dashboard.releases.create') }}?new=1" class="block w-full text-center py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-sm font-semibold rounded-xl transition">
-                    Upload Release
+                    Carica versione
                 </a>
             </div>
 
             <div class="glass rounded-2xl p-6">
-                <h3 class="font-semibold text-white mb-3 text-sm">Quick Links</h3>
+                <h3 class="font-semibold text-white mb-3 text-sm">Collegamenti rapidi</h3>
                 <div class="space-y-2">
                     @foreach([
-                        ['label' => 'Analytics', 'route' => 'dashboard.streams', 'icon' => '📊'],
-                        ['label' => 'Support', 'route' => 'dashboard.support', 'icon' => '🎧'],
-                        ['label' => 'Revenue', 'route' => 'dashboard.revenue', 'icon' => '💰'],
+                        ['label' => 'Analitica', 'route' => 'dashboard.streams', 'icon' => '📊'],
+                        ['label' => 'Supporto', 'route' => 'dashboard.support', 'icon' => '🎧'],
+                        ['label' => 'Reddito', 'route' => 'dashboard.revenue', 'icon' => '💰'],
                     ] as $link)
                     <a href="{{ route($link['route']) }}" class="flex items-center space-x-2 py-2 text-gray-400 hover:text-white text-sm transition">
                         <span>{{ $link['icon'] }}</span>

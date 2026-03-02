@@ -7,12 +7,12 @@
 <section class="pt-32 pb-20 px-4 text-center relative overflow-hidden">
     <div class="absolute inset-0 hero-glow pointer-events-none opacity-50"></div>
     <div class="max-w-4xl mx-auto relative z-10 animate-fade-in-up">
-        <span class="inline-block bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold px-5 py-2 rounded-full mb-6 uppercase tracking-wider">Everything You Need</span>
+        <span class="inline-block bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold px-5 py-2 rounded-full mb-6 uppercase tracking-wider">Tutto ciò di cui hai bisogno</span>
         <h1 class="text-4xl sm:text-6xl font-bold text-white leading-tight mb-6">
-            Powerful Features for <span class="gradient-text">Independent Artists</span>
+            Funzionalità potenti per <span class="gradient-text">Artisti indipendenti</span>
         </h1>
         <p class="text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
-            From distribution to analytics, radio promotion to Vevo verification — Beat Music gives you all the tools to grow your music career.
+            Tutto ciò di cui hai bisogno per distribuire, promuovere e monetizzare la tua musica alle tue condizioni.
         </p>
     </div>
 </section>
@@ -25,18 +25,18 @@
 
             @php
             $features = [
-                ['icon'=>'🎵','title'=>'Global Distribution','desc'=>'Distribute your music to 150+ streaming platforms including Spotify, Apple Music, YouTube Music, Tidal, and more.'],
-                ['icon'=>'📊','title'=>'Real-Time Analytics','desc'=>'Track your streams, listeners, and revenue across all platforms from one beautiful dashboard.'],
-                ['icon'=>'📻','title'=>'Radio Promotion','desc'=>'Get your music played on radio stations worldwide through our extensive network of radio partners.'],
-                ['icon'=>'🎬','title'=>'Vevo Verification','desc'=>'Apply for a verified Vevo channel and get your music videos distributed on YouTube with the Vevo brand.'],
-                ['icon'=>'🎭','title'=>'Concert Live Slots','desc'=>'Request live performance slots at events and festivals managed through the Beat Music network.'],
-                ['icon'=>'💿','title'=>'Singles & Albums','desc'=>'Upload singles with a single track or full albums with up to 20 tracks. Support for all major audio formats.'],
-                ['icon'=>'💾','title'=>'Pre-Save Campaigns','desc'=>'Create pre-save campaigns so your fans can save your upcoming releases before they drop.'],
-                ['icon'=>'🎼','title'=>'Editorial Playlists','desc'=>'Submit your tracks for consideration on curated editorial playlists on major platforms.'],
-                ['icon'=>'💰','title'=>'Revenue & Royalties','desc'=>'Earn royalties from every stream. Transparent reporting and easy payout requests to your bank or PayPal.'],
-                ['icon'=>'🏷️','title'=>'White Label UPC/ISRC','desc'=>'Every release gets its own UPC barcode and ISRC codes automatically assigned.'],
-                ['icon'=>'🎙️','title'=>'Artist Profile','desc'=>'Build your artist profile with bio, social links, and a portfolio of all your releases.'],
-                ['icon'=>'🛡️','title'=>'24/7 Support','desc'=>'Our support team is always available via the help center, knowledge base, and ticketing system.'],
+                ['icon'=>'🎵','title'=>'Distribuzione globale','desc'=>'Distribuisci la tua musica su oltre 150 piattaforme di streaming, tra cui Spotify, Apple Music, YouTube Music, Tidal e altre ancora.'],
+                ['icon'=>'📊','title'=>'Analisi in tempo reale','desc'=>'Tieni traccia dei tuoi flussi, ascoltatori e ricavi su tutte le piattaforme da ununica, splendida dashboard.'],
+                ['icon'=>'📻','title'=>'Promozione radiofonica','desc'=>'Fai in modo che la tua musica venga trasmessa nelle stazioni radio di tutto il mondo attraverso la nostra vasta rete di partner radiofonici.'],
+                ['icon'=>'🎬','title'=>'Verifica Vevo','desc'=>'Richiedi un canale Vevo verificato e distribuisci i tuoi video musicali su YouTube con il marchio Vevo.'],
+                ['icon'=>'🎭','title'=>'Slot per concerti dal vivo','desc'=>'Richiedi slot per esibizioni dal vivo in eventi e festival gestiti tramite la rete Beat Music.'],
+                ['icon'=>'💿','title'=>'Singoli e album','desc'=>'Carica singoli con una sola traccia o album completi con un massimo di 20 tracce. Supporta tutti i principali formati audio.'],
+                ['icon'=>'💾','title'=>'Campagne di pre-salvataggio','desc'=>'Crea campagne di pre-salvataggio in modo che i tuoi fan possano salvare le tue prossime uscite prima che vengano pubblicate.'],
+                ['icon'=>'🎼','title'=>'Playlist editoriali','desc'=>'Invia i tuoi brani affinché vengano presi in considerazione nelle playlist editoriali curate sulle principali piattaforme.'],
+                ['icon'=>'💰','title'=>'Entrate e royalties','desc'=>'Guadagna royalties da ogni streaming. Report trasparenti e semplici richieste di pagamento alla tua banca o a PayPal.'],
+                ['icon'=>'🏷️','title'=>'Etichetta bianca UPC/ISRC','desc'=>'A ogni versione vengono assegnati automaticamente il proprio codice a barre UPC e i codici ISRC.'],
+                ['icon'=>'🎙️','title'=>'Profilo dellartista','desc'=>'Crea il tuo profilo artista con biografia, link social e un portfolio di tutte le tue uscite.'],
+                ['icon'=>'🛡️','title'=>'24/7 Supporto','desc'=>'Il nostro team di supporto è sempre disponibile tramite il centro assistenza, la knowledge base e il sistema di ticketing.'],
             ];
             @endphp
 
@@ -57,8 +57,8 @@
     <div class="max-w-3xl mx-auto text-center glass rounded-3xl p-12 border border-slate-700/30 bg-gradient-to-br from-cyan-500/10 to-teal-600/10 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent"></div>
         <div class="relative z-10 animate-fade-in-up">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p class="text-slate-400 mb-8 leading-relaxed">Join thousands of independent artists already using Beat Music to grow their careers.</p>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Pronti per iniziare?</h2>
+            <p class="text-slate-400 mb-8 leading-relaxed">Unisciti a migliaia di artisti indipendenti che già utilizzano Beat Music per far crescere la propria carriera.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="{{ route('login') }}" class="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-600 hover:to-teal-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40">
                     Sign In

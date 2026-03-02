@@ -5,12 +5,12 @@
 @section('content')
 <section class="pt-32 pb-20 px-4 text-center">
     <div class="max-w-4xl mx-auto">
-        <span class="inline-block bg-purple-600/20 text-purple-300 text-sm font-medium px-4 py-1.5 rounded-full border border-purple-500/30 mb-6">Artist Spotlight</span>
+        <span class="inline-block bg-purple-600/20 text-purple-300 text-sm font-medium px-4 py-1.5 rounded-full border border-purple-500/30 mb-6">Riflettori sull'artista</span>
         <h1 class="text-4xl sm:text-6xl font-bold text-white leading-tight mb-6">
-            Real Artists, <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Real Success</span>
+            Veri artisti, <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Vero successo</span>
         </h1>
         <p class="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Thousands of independent artists have used Beat Music to reach millions of fans worldwide. Here are some of their stories.
+            Migliaia di artisti indipendenti hanno utilizzato la Beat Music per raggiungere milioni di fan in tutto il mondo. Ecco alcune delle loro storie.
         </p>
     </div>
 </section>
@@ -20,10 +20,10 @@
     <div class="max-w-6xl mx-auto space-y-16">
         @php
         $stories = [
-            ['name'=>'Amara Diallo','genre'=>'Afrobeats','streams'=>'12M+','quote'=>'Beat Music gave me access to platforms I never thought possible. Within 6 months of uploading my debut EP, I had 12 million streams and fans on every continent.','emoji'=>'🎤'],
-            ['name'=>'Lucas Torres','genre'=>'Latin Pop','streams'=>'8M+','quote'=>'The radio promotion feature is a game changer. My single got picked up by 3 major Latin radio stations and the streams just exploded.','emoji'=>'🎸'],
-            ['name'=>'Yuki Tanaka','genre'=>'Electronic','streams'=>'5M+','quote'=>'Getting my Vevo channel through Beat Music was huge. The credibility boost alone helped me land brand deals and sync licenses.','emoji'=>'🎹'],
-            ['name'=>'Nia Roberts','genre'=>'R&B / Soul','streams'=>'20M+','quote'=>'The pre-save campaign tool built incredible anticipation for my album release. We hit #1 on three regional charts on day one.','emoji'=>'🎶'],
+            ['name'=>'Amara Diallo','genre'=>'Afrobeats','streams'=>'12M+','quote'=>'Beat Music mi ha dato accesso a piattaforme che non avrei mai pensato possibili. Entro 6 mesi dal caricamento del mio EP di debutto, avevo 12 milioni di ascolti e fan in ogni continente.','emoji'=>'🎤'],
+            ['name'=>'Lucas Torres','genre'=>'Latin Pop','streams'=>'8M+','quote'=>'La promozione radiofonica è stata una vera svolta. Il mio singolo è stato scelto da 3 importanti stazioni radio latine e gli ascolti sono letteralmente esplosi.','emoji'=>'🎸'],
+            ['name'=>'Yuki Tanaka','genre'=>'Electronic','streams'=>'5M+','quote'=>'Avere il mio canale Vevo tramite Beat Music è stato fantastico. Il solo aumento di credibilità mi ha aiutato a ottenere accordi con i marchi e licenze di sincronizzazione.','emoji'=>'🎹'],
+            ['name'=>'Nia Roberts','genre'=>'R&B / Soul','streams'=>'20M+','quote'=>'Lo strumento di pre-salvataggio ha creato unattesa incredibile per luscita del mio album. Abbiamo raggiunto il primo posto in tre classifiche regionali il primo giorno.','emoji'=>'🎶'],
         ];
         @endphp
 
@@ -52,7 +52,7 @@
 @if(isset($testimonials) && $testimonials->count())
 <section class="py-20 px-4 bg-white/2">
     <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold text-white text-center mb-12">What Artists Say</h2>
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Cosa dicono gli artisti</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($testimonials as $t)
             <div class="glass rounded-2xl p-5 border border-white/5">
@@ -79,8 +79,8 @@
 {{-- CTA --}}
 <section class="py-24 px-4">
     <div class="max-w-3xl mx-auto text-center glass rounded-3xl p-12 border border-white/5">
-        <h2 class="text-3xl font-bold text-white mb-4">Write Your Success Story</h2>
-        <p class="text-gray-400 mb-8">Join Beat Music today and start your journey to global recognition.</p>
+        <h2 class="text-3xl font-bold text-white mb-4">Scrivi la tua storia di successo</h2>
+        <p class="text-gray-400 mb-8">Iscriviti oggi a Beat Music e inizia il tuo viaggio verso il riconoscimento globale.</p>
         <a href="{{ route('login') }}" class="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-600 hover:to-teal-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40">
             Sign In
             <span class="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>

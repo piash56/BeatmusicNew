@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'User Management')
-@section('page-title', 'User Management')
+@section('title', 'Gestione utenti')
+@section('page-title', 'Gestione utenti')
 
 @section('content')
 <div class="space-y-4" x-data="userList()">
@@ -11,20 +11,20 @@
             <input type="text" name="search" value="{{ request('search') }}" placeholder="Search by name or email..."
                 class="bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-purple-500 w-full sm:w-64">
             <select name="status" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm">
-                <option value="">All Status</option>
-                <option value="active" {{ request('status') == 'active' ? 'selected' : '' }}>Active</option>
-                <option value="suspended" {{ request('status') == 'suspended' ? 'selected' : '' }}>Suspended</option>
+                <option value="">Tutti gli stati</option>
+                <option value="active" {{ request('status') == 'active' ? 'selected' : '' }}>Attivo</option>
+                <option value="suspended" {{ request('status') == 'suspended' ? 'selected' : '' }}>Sospeso</option>
             </select>
             <select name="artist_type" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm">
                 <option value="">All Types</option>
-                <option value="individual" {{ request('artist_type') == 'individual' ? 'selected' : '' }}>Individual</option>
-                <option value="company" {{ request('artist_type') == 'company' ? 'selected' : '' }}>Company</option>
+                <option value="individual" {{ request('artist_type') == 'individual' ? 'selected' : '' }}>Individuale</option>
+                <option value="company" {{ request('artist_type') == 'company' ? 'selected' : '' }}>Azienda</option>
             </select>
-            <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Filter</button>
+            <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Filtro</button>
         </form>
         <a href="{{ route('admin.users.create') }}" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm rounded-lg transition flex items-center space-x-1">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-            <span>Add User</span>
+            <span>Aggiungi utente</span>
         </a>
     </div>
 
@@ -32,12 +32,12 @@
         <table class="w-full text-sm">
             <thead class="bg-gray-800/50 border-b border-white/5">
                 <tr>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">User</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Type</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Joined</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Verified</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Status</th>
-                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Actions</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Utente</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Tipo</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Partecipato</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Verificato</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Stato</th>
+                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Azioni</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-white/3">
@@ -91,7 +91,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="6" class="px-4 py-12 text-center text-gray-500">No users found.</td>
+                    <td colspan="6" class="px-4 py-12 text-center text-gray-500">Nessun utente trovato.</td>
                 </tr>
                 @endforelse
             </tbody>
@@ -113,7 +113,7 @@
                 @csrf
             </form>
             <div class="flex justify-end gap-2">
-                <button type="button" @click="if (!confirmLoading) modalOpen = false" :disabled="confirmLoading" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 text-sm transition disabled:opacity-50">Cancel</button>
+                <button type="button" @click="if (!confirmLoading) modalOpen = false" :disabled="confirmLoading" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 text-sm transition disabled:opacity-50">Cancellare</button>
                 <button type="submit" form="toggle-suspension-form" :disabled="confirmLoading" class="px-4 py-2 rounded-lg text-sm transition flex items-center gap-2 min-w-[100px] justify-center disabled:opacity-70"
                     :class="isBan ? 'bg-red-600 hover:bg-red-700 text-white' : 'bg-green-600 hover:bg-green-700 text-white'">
                     <span x-show="confirmLoading" class="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>

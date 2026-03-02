@@ -15,11 +15,19 @@ class HomeController extends Controller
     public function index()
     {
         $settings = SiteSetting::getSettings();
+        // Prefer testimonials explicitly marked for home; fall back to any active ones
         $testimonials = Testimonial::where('status', 'active')
             ->whereJsonContains('display_on', 'home')
             ->latest()
             ->take(6)
             ->get();
+
+        if ($testimonials->isEmpty()) {
+            $testimonials = Testimonial::where('status', 'active')
+                ->latest()
+                ->take(6)
+                ->get();
+        }
         return view('website.home', compact('settings', 'testimonials'));
     }
 

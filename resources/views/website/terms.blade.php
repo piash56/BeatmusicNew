@@ -6,22 +6,22 @@
 <section class="pt-32 pb-24 px-4">
     <div class="max-w-3xl mx-auto">
         <div class="mb-10">
-            <h1 class="text-4xl font-bold text-white mb-2">Terms of Service</h1>
-            <p class="text-gray-400 text-sm">Last updated: January 1, 2024</p>
+            <h1 class="text-4xl font-bold text-white mb-2">Termini di servizio</h1>
+            <p class="text-gray-400 text-sm">Ultimo aggiornamento: 1 gennaio 2024</p>
         </div>
         <div class="glass rounded-2xl p-8 border border-white/5 space-y-8 text-gray-300 text-sm leading-relaxed">
             @foreach([
-                ['1. Acceptance of Terms','By accessing and using Beat Music, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service.'],
-                ['2. Description of Service','Beat Music is a music distribution platform that allows artists to upload and distribute their music to digital streaming platforms worldwide. We provide tools for music promotion, analytics, and revenue management.'],
-                ['3. User Accounts','You must create an account to use our services. You are responsible for maintaining the security of your account credentials and for all activities that occur under your account. You must be at least 18 years old to create an account.'],
-                ['4. Content Ownership','You retain all ownership rights to your music and content uploaded to Beat Music. By uploading content, you grant Beat Music a non-exclusive license to distribute and promote your content on your behalf to the platforms you select.'],
-                ['5. Acceptable Use','You agree not to upload content that infringes on copyrights, trademarks, or other intellectual property rights of others. You may not upload explicit content without proper labeling, malicious code, or content that violates any applicable laws.'],
-                ['6. Revenue & Royalties','Beat Music distributes royalties collected from streaming platforms to artists. Royalty rates and payment schedules are defined in your subscription plan. Payments are processed within 30 days of collection.'],
-                ['7. Subscriptions & Payments','Subscription fees are charged according to your selected plan. You can cancel your subscription at any time. Refunds are provided on a case-by-case basis at our discretion.'],
-                ['8. Termination','Beat Music reserves the right to terminate or suspend accounts that violate these terms. Upon termination, your music will remain distributed for any remaining subscription period.'],
-                ['9. Disclaimer of Warranties','Beat Music is provided "as is" without warranties of any kind. We do not guarantee specific streaming numbers, revenue amounts, or placement on any platform.'],
-                ['10. Changes to Terms','We may update these terms at any time. Continued use of the service after changes constitutes acceptance of the new terms. We will notify users of significant changes via email.'],
-                ['11. Contact','If you have questions about these terms, please contact us at legal@beatmusic.com'],
+                ['1. Accettazione dei Termini','Accedendo e utilizzando Beat Music, accetti di essere vincolato dai presenti Termini di Servizio. Se non accetti questi termini, ti preghiamo di non utilizzare il nostro servizio.'],
+                ['2. Descrizione del Servizio','Beat Music è una piattaforma di distribuzione musicale che consente agli artisti di caricare e distribuire la propria musica su piattaforme di streaming digitale in tutto il mondo. Forniamo strumenti per la promozione musicale, lanalisi e la gestione dei ricavi.'],
+                ['3. Account Utente','Devi creare un account per utilizzare i nostri servizi. Sei responsabile della sicurezza delle credenziali del tuo account e di tutte le attività che si verificano tramite il tuo account. Devi avere almeno 18 anni per creare un account.'],
+                ['4. Proprietà dei Contenuti','Conservi tutti i diritti di proprietà sulla tua musica e sui contenuti caricati su Beat Music. Caricando contenuti, concedi a Beat Music una licenza non esclusiva per distribuire e promuovere i tuoi contenuti per tuo conto sulle piattaforme da te selezionate.'],
+                ['5. Utilizzo accettabile','Accetti di non caricare contenuti che violino copyright, marchi commerciali o altri diritti di proprietà intellettuale di terzi. Non puoi caricare contenuti espliciti senza unetichetta appropriata, codice dannoso o contenuti che violino le leggi applicabili.'],
+                ['6. Ricavi e royalty','Beat Music distribuisce le royalty raccolte dalle piattaforme di streaming agli artisti. Le percentuali di royalty e le tempistiche di pagamento sono definite nel tuo piano di abbonamento. I pagamenti vengono elaborati entro 30 giorni dalla riscossione.'],
+                ['7. Abbonamenti e pagamenti','Le quote di abbonamento vengono addebitate in base al piano selezionato. Puoi annullare labbonamento in qualsiasi momento. I rimborsi vengono forniti caso per caso a nostra discrezione.'],
+                ['8. Risoluzione','Beat Music si riserva il diritto di chiudere o sospendere gli account che violano i presenti termini. In caso di risoluzione, la tua musica continuerà a essere distribuita per qualsiasi periodo di abbonamento rimanente.'],
+                ['9. Esclusione di garanzie','Beat Music viene fornito "così comè" senza garanzie di alcun tipo. Non garantiamo numeri specifici di streaming, importi di fatturato o posizionamento su alcuna piattaforma.'],
+                ['10. Modifiche ai Termini','Potremmo aggiornare i presenti termini in qualsiasi momento. Lutilizzo continuato del servizio dopo le modifiche costituisce accettazione dei nuovi termini. Informeremo gli utenti di eventuali modifiche significative via e-mail.'],
+                ['11. Contatti','Per qualsiasi domanda sui presenti termini, contattaci allindirizzo legal@beatmusic.com'],
             ] as [$title, $content])
             <div>
                 <h2 class="text-white font-semibold text-base mb-2">{{ $title }}</h2>

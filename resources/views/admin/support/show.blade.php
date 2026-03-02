@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
 @section('title', 'Ticket #' . $ticket->id)
-@section('page-title', 'Support Ticket')
+@section('page-title', 'Biglietto di supporto')
 
 @section('content')
 <div class="max-w-3xl space-y-6" x-data="{ deleteOpen: false, deleteLoading: false }">
     <a href="{{ route('admin.support') }}" class="flex items-center space-x-2 text-gray-400 hover:text-white transition text-sm">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        <span>Back to Tickets</span>
+        <span>Torna a Biglietti</span>
     </a>
 
     @if(session('success'))
@@ -20,7 +20,7 @@
             <div>
                 <h2 class="text-white font-semibold text-lg">{{ $ticket->subject }}</h2>
                 <p class="text-gray-400 text-sm mt-0.5">
-                    By <span class="text-white">{{ $ticket->user->name ?? 'Unknown' }}</span>
+                    Di <span class="text-white">{{ $ticket->user->name ?? 'Unknown' }}</span>
                     ({{ $ticket->user->email ?? '' }}) · {{ $ticket->created_at->format('M d, Y H:i') }}
                 </p>
             </div>
@@ -32,12 +32,12 @@
                             <option value="{{ $s }}" {{ $ticket->status==$s?'selected':'' }}>{{ ucfirst(str_replace('_',' ',$s)) }}</option>
                         @endforeach
                     </select>
-                    <button type="submit" class="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Update</button>
+                    <button type="submit" class="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Aggiornamento</button>
                 </form>
                 <button type="button"
                         @click="deleteOpen = true; deleteLoading = false"
                         class="px-3 py-1.5 bg-red-600/20 hover:bg-red-600/30 text-red-300 text-sm rounded-xl border border-red-500/20 transition inline-flex items-center gap-2">
-                    Delete
+                        Eliminare
                 </button>
             </div>
         </div>
@@ -108,11 +108,11 @@
     {{-- Reply Form --}}
     @if($ticket->status !== 'closed')
     <div class="bg-gray-900 rounded-2xl border border-white/5 p-6">
-        <h3 class="text-white font-medium mb-4">Reply</h3>
+        <h3 class="text-white font-medium mb-4">Rispondere</h3>
         <form method="POST" action="{{ route('admin.support.reply', $ticket->id) }}" enctype="multipart/form-data"
             class="space-y-4" x-data="{ loading: false }" @submit="loading = true">
             @csrf
-            <textarea name="message" rows="5" required placeholder="Write your reply..."
+            <textarea name="message" rows="5" required placeholder="Scrivi la tua risposta..."
                 class="w-full bg-gray-800 border border-white/10 text-white px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-purple-500 resize-none"></textarea>
             <div>
                 <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx,.txt"
@@ -130,11 +130,11 @@
     </div>
     @else
     <div class="bg-gray-900 rounded-2xl border border-white/5 p-6 text-center">
-        <p class="text-gray-400 text-sm">This ticket is closed. Reopen it to reply.</p>
+        <p class="text-gray-400 text-sm">Questo ticket è chiuso. Riaprilo per rispondere.</p>
         <form method="POST" action="{{ route('admin.support.status', $ticket->id) }}" class="mt-3 inline-block">
             @csrf @method('PATCH')
             <input type="hidden" name="status" value="open">
-            <button type="submit" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm rounded-xl transition">Reopen Ticket</button>
+            <button type="submit" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm rounded-xl transition">Riapri biglietto</button>
         </form>
     </div>
     @endif
@@ -143,9 +143,9 @@
     <div x-show="deleteOpen" x-cloak class="fixed inset-0 z-50 flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/70" @click="if (!deleteLoading) deleteOpen = false"></div>
         <div class="relative bg-gray-900 border border-white/10 rounded-2xl shadow-xl max-w-sm w-full p-6" @click.stop>
-            <h3 class="text-lg font-semibold text-white mb-2">Delete ticket?</h3>
+            <h3 class="text-lg font-semibold text-white mb-2">Eliminare il biglietto?</h3>
             <p class="text-gray-400 text-sm mb-4">
-                This ticket and all its replies will be permanently deleted. This action cannot be undone.
+                Questo ticket e tutte le relative risposte verranno eliminati definitivamente. Questa azione non può essere annullata.
             </p>
             <form method="POST" action="{{ route('admin.support.destroy', $ticket->id) }}"
                   @submit="deleteLoading = true" class="flex justify-end gap-2">
@@ -153,7 +153,7 @@
                 <button type="button"
                         @click="if (!deleteLoading) deleteOpen = false"
                         class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 text-sm transition">
-                    Cancel
+                        Cancellare
                 </button>
                 <button type="submit"
                         :disabled="deleteLoading"

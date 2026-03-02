@@ -1,17 +1,17 @@
 @extends('layouts.admin')
 
 @section('title', $user->full_name)
-@section('page-title', 'User Profile')
+@section('page-title', 'Profilo utente')
 
 @section('content')
 <div class="space-y-6">
     <div class="flex items-center justify-between">
         <a href="{{ route('admin.users') }}" class="flex items-center space-x-2 text-gray-400 hover:text-white transition text-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-            <span>Back to Users</span>
+            <span>Torniamo agli Utenti</span>
         </a>
         <div class="flex items-center space-x-2">
-            <a href="{{ route('admin.users.edit', $user->id) }}" class="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Edit User</a>
+            <a href="{{ route('admin.users.edit', $user->id) }}" class="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Modifica utente</a>
             <form method="POST" action="{{ route('admin.users.toggle-suspension', $user->id) }}" onsubmit="return confirm('{{ $user->status === 'active' ? 'Suspend' : 'Activate' }} this user?')">
                 @csrf
                 <button type="submit" class="px-3 py-1.5 {{ $user->status === 'active' ? 'bg-red-600/20 text-red-400 hover:bg-red-600/40' : 'bg-green-600/20 text-green-400 hover:bg-green-600/40' }} text-sm rounded-lg border border-white/10 transition">
@@ -47,18 +47,18 @@
             <div class="mt-4">
                 <form method="POST" action="{{ route('admin.users.resend-set-password', $user->id) }}" class="inline">
                     @csrf
-                    <button type="submit" class="w-full px-4 py-2 bg-amber-600/20 hover:bg-amber-600/40 text-amber-400 text-sm rounded-lg border border-amber-500/30 transition">Resend set password email</button>
+                    <button type="submit" class="w-full px-4 py-2 bg-amber-600/20 hover:bg-amber-600/40 text-amber-400 text-sm rounded-lg border border-amber-500/30 transition">Invia nuovamente l'email con la password impostata</button>
                 </form>
-                <p class="text-xs text-gray-500 mt-1">Link valid 24 hours. User must set password to become verified.</p>
+                <p class="text-xs text-gray-500 mt-1">Link valido 24 ore. L'utente deve impostare una password per essere verificato.</p>
             </div>
             @endif
             <div class="mt-5 space-y-2 text-sm text-left">
-                <div class="flex justify-between"><span class="text-gray-500">Joined</span><span class="text-gray-300">{{ $user->created_at->format('M d, Y') }}</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Last Login</span><span class="text-gray-300">{{ $user->last_login_time ? $user->last_login_time->diffForHumans() : 'N/A' }}</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Verified</span><span class="text-gray-300">{{ $user->is_verified ? 'Yes (password set)' : 'No' }}</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Partecipato</span><span class="text-gray-300">{{ $user->created_at->format('M d, Y') }}</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Ultimo accesso</span><span class="text-gray-300">{{ $user->last_login_time ? $user->last_login_time->diffForHumans() : 'N/A' }}</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Verificato</span><span class="text-gray-300">{{ $user->is_verified ? 'Yes (password set)' : 'No' }}</span></div>
             </div>
             <div class="mt-5 border-t border-white/5 pt-4 text-left text-sm">
-                <h3 class="font-semibold text-white mb-3">Profile & Social</h3>
+                <h3 class="font-semibold text-white mb-3">Profilo e social</h3>
                 <div class="space-y-4">
                     <div>
                         <div class="text-gray-500 text-xs mb-1">Bio</div>
@@ -112,68 +112,68 @@
 
             <!-- Financials -->
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-5">
-                <h3 class="font-semibold text-white mb-3">Financials</h3>
+                <h3 class="font-semibold text-white mb-3">Dati finanziari</h3>
                 <div class="grid grid-cols-3 gap-3 text-sm">
-                    <div><span class="text-gray-500 text-xs block">Available Balance</span><p class="text-green-400 font-semibold">${{ number_format($user->balance ?? 0, 2) }}</p></div>
-                    <div><span class="text-gray-500 text-xs block">Total Earned</span><p class="text-gray-200">${{ number_format($user->total_revenue ?? 0, 2) }}</p></div>
-                    <div><span class="text-gray-500 text-xs block">Total Paid</span><p class="text-gray-200">${{ number_format($user->total_paid ?? 0, 2) }}</p></div>
+                    <div><span class="text-gray-500 text-xs block">Saldo disponibile</span><p class="text-green-400 font-semibold">${{ number_format($user->balance ?? 0, 2) }}</p></div>
+                    <div><span class="text-gray-500 text-xs block">Totale guadagnato</span><p class="text-gray-200">${{ number_format($user->total_revenue ?? 0, 2) }}</p></div>
+                    <div><span class="text-gray-500 text-xs block">Totale pagato</span><p class="text-gray-200">${{ number_format($user->total_paid ?? 0, 2) }}</p></div>
                 </div>
             </div>
 
             <!-- Account & Contact Details -->
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-5">
-                <h3 class="font-semibold text-white mb-3">Account & Contact</h3>
+                <h3 class="font-semibold text-white mb-3">Conto e contatto</h3>
                 <dl class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div>
-                        <dt class="text-gray-500">Full Name</dt>
+                        <dt class="text-gray-500">Nome e cognome</dt>
                         <dd class="text-white">{{ $user->full_name ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Email</dt>
+                        <dt class="text-gray-500">E-mail</dt>
                         <dd class="text-white">{{ $user->email ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Phone</dt>
+                        <dt class="text-gray-500">Telefono</dt>
                         <dd class="text-white">{{ $user->phone ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Country</dt>
+                        <dt class="text-gray-500">Paese</dt>
                         <dd class="text-white">{{ $user->country ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">City</dt>
+                        <dt class="text-gray-500">Città</dt>
                         <dd class="text-white">{{ $user->city ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">State</dt>
+                        <dt class="text-gray-500">Stato</dt>
                         <dd class="text-white">{{ $user->state ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Zip Code</dt>
+                        <dt class="text-gray-500">Cap</dt>
                         <dd class="text-white">{{ $user->zip ?? '—' }}</dd>
                     </div>
                     <div class="sm:col-span-2">
-                        <dt class="text-gray-500">Address</dt>
+                        <dt class="text-gray-500">Indirizzo</dt>
                         <dd class="text-white">{{ $user->address ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Account Type</dt>
+                        <dt class="text-gray-500">Tipo di conto</dt>
                         <dd class="text-white">{{ $user->is_company ? 'Company' : 'Individual' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Subscription</dt>
+                        <dt class="text-gray-500">Sottoscrizione</dt>
                         <dd class="text-white">{{ $user->subscription ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Can Upload Tracks</dt>
+                        <dt class="text-gray-500">Può caricare tracce</dt>
                         <dd class="text-white">{{ $user->can_upload_tracks ? 'Yes' : 'No' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Payout Method</dt>
+                        <dt class="text-gray-500">Metodo di pagamento</dt>
                         <dd class="text-white">{{ $user->payout_method ? ucfirst($user->payout_method) : '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">PayPal Email</dt>
+                        <dt class="text-gray-500">E-mail PayPal</dt>
                         <dd class="text-white">{{ $user->paypal_email ?? '—' }}</dd>
                     </div>
                 </dl>
@@ -181,34 +181,34 @@
 
             <!-- Billing Info -->
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-5">
-                <h3 class="font-semibold text-white mb-3">Billing Information</h3>
+                <h3 class="font-semibold text-white mb-3">Informazioni di fatturazione</h3>
                 <dl class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div>
-                        <dt class="text-gray-500">Billing Name</dt>
+                        <dt class="text-gray-500">Nome di fatturazione</dt>
                         <dd class="text-white">{{ $user->billing_full_name ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Billing Email</dt>
+                        <dt class="text-gray-500">E-mail di fatturazione</dt>
                         <dd class="text-white">{{ $user->billing_email ?? '—' }}</dd>
                     </div>
                     <div class="sm:col-span-2">
-                        <dt class="text-gray-500">Billing Address</dt>
+                        <dt class="text-gray-500">Indirizzo di fatturazione</dt>
                         <dd class="text-white">{{ $user->billing_address ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">City</dt>
+                        <dt class="text-gray-500">Città</dt>
                         <dd class="text-white">{{ $user->billing_city ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">State</dt>
+                        <dt class="text-gray-500">Stato</dt>
                         <dd class="text-white">{{ $user->billing_state ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Zip Code</dt>
+                        <dt class="text-gray-500">Cap</dt>
                         <dd class="text-white">{{ $user->billing_zip_code ?? '—' }}</dd>
                     </div>
                     <div>
-                        <dt class="text-gray-500">Country</dt>
+                        <dt class="text-gray-500">Paese</dt>
                         <dd class="text-white">{{ $user->billing_country ?? '—' }}</dd>
                     </div>
                 </dl>

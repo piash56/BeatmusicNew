@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Account VEVO')
+@section('title', 'Conto VEVO')
 @section('page-title', 'Crea un account VEVO')
 @section('page-subtitle', 'Crea il tuo canale VEVO ufficiale per le tue uscite musicali')
 

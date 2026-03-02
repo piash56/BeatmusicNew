@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Account VEVO')
-@section('page-title', 'Account VEVO')
+@section('title', 'Conto VEVO')
+@section('page-title', 'Conto VEVO')
 
 @section('content')
 <div class="space-y-4"
@@ -12,7 +12,7 @@
     <div class="bg-gray-900 rounded-2xl border border-white/5 overflow-hidden">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 p-4 border-b border-white/5">
             <div>
-                <h3 class="text-white font-semibold text-base">Account VEVO</h3>
+                <h3 class="text-white font-semibold text-base">Conto VEVO</h3>
                 <p class="text-gray-400 text-xs">Gestire e rivedere le richieste di account VEVO da parte degli artisti.</p>
             </div>
             <form method="GET" class="flex items-center gap-2 w-full md:w-auto">

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Admin Profile')
-@section('page-title', 'My Profile')
+@section('title', 'Profilo amministratore')
+@section('page-title', 'Il mio profilo')
 
 @section('content')
 <div class="max-w-3xl space-y-6">
@@ -30,48 +30,48 @@
                     </div>
                 @endif
                 <div>
-                    <label class="text-xs text-gray-400 mb-1 block">Profile Picture</label>
+                    <label class="text-xs text-gray-400 mb-1 block">Immagine del profilo</label>
                     <input type="file" name="profile_picture" accept="image/*" class="text-sm text-gray-300 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:bg-purple-600 file:text-white hover:file:bg-purple-700">
                 </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Full Name</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Nome e cognome</label>
                     <input type="text" name="full_name" value="{{ old('full_name', $admin->full_name) }}" required
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Email</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">E-mail</label>
                     <input type="email" name="email" value="{{ old('email', $admin->email) }}" required
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Phone Number</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Numero di telefono</label>
                     <input type="text" name="phone" value="{{ old('phone', $admin->phone) }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Country</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Paese</label>
                     <input type="text" name="country" value="{{ old('country', $admin->country) }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">City</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Città</label>
                     <input type="text" name="city" value="{{ old('city', $admin->city) }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">State</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Stato</label>
                     <input type="text" name="state" value="{{ old('state', $admin->state) }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Zip Code</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Cap</label>
                     <input type="text" name="zip" value="{{ old('zip', $admin->zip) }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Address</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Indirizzo</label>
                     <input type="text" name="address" value="{{ old('address', $admin->address) }}"
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:border-purple-500">
                 </div>
@@ -83,7 +83,7 @@
                     placeholder="Tell artists and team who you are...">{{ old('bio', $admin->bio) }}</textarea>
             </div>
             <div>
-                <label class="text-sm text-gray-400 mb-1.5 block">Social Links</label>
+                <label class="text-sm text-gray-400 mb-1.5 block">Collegamenti sociali</label>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                         <span class="block text-xs text-gray-500 mb-1">Facebook</span>
@@ -136,11 +136,11 @@
                 this.strength = l >= 12 ? 3 : l >= 8 ? 2 : l >= 6 ? 1 : 0;
             }
          }">
-        <h2 class="text-white font-semibold mb-5">Change Password</h2>
+        <h2 class="text-white font-semibold mb-5">Cambiare la password</h2>
         <form method="POST" action="{{ route('admin.profile.password') }}" class="space-y-4">
             @csrf @method('PUT')
             <div>
-                <label class="text-sm text-gray-400 mb-1.5 block">Current Password</label>
+                <label class="text-sm text-gray-400 mb-1.5 block">password attuale</label>
                 <div class="relative">
                     <input :type="showCurrent ? 'text' : 'password'" name="current_password" required
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 pr-10 rounded-xl text-sm focus:outline-none focus:border-purple-500">
@@ -162,7 +162,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">New Password</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Nuova parola d'ordine</label>
                     <div class="relative">
                         <input :type="showNew ? 'text' : 'password'" name="password" x-model="password"
                             @input="updateStrength()"
@@ -190,7 +190,7 @@
                     </div>
                 </div>
                 <div>
-                    <label class="text-sm text-gray-400 mb-1.5 block">Confirm Password</label>
+                    <label class="text-sm text-gray-400 mb-1.5 block">Conferma password</label>
                     <div class="relative">
                         <input :type="showConfirm ? 'text' : 'password'" name="password_confirmation" x-model="confirm" required
                             class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 pr-10 rounded-xl text-sm focus:outline-none focus:border-purple-500">
@@ -211,14 +211,14 @@
                     </div>
                     <p x-show="confirm.length" class="text-xs mt-1"
                        :class="password && confirm && password === confirm ? 'text-green-400' : 'text-red-400'">
-                        <span x-show="password && confirm && password === confirm">Passwords match</span>
-                        <span x-show="password && confirm && password !== confirm">Passwords do not match</span>
+                        <span x-show="password && confirm && password === confirm">Le password corrispondono</span>
+                        <span x-show="password && confirm && password !== confirm">Le password non corrispondono</span>
                     </p>
                 </div>
             </div>
             <div class="flex justify-end">
                 <button type="submit" class="px-5 py-2 bg-red-600 hover:bg-red-700 text-white text-sm rounded-xl transition">
-                    Update Password
+                    Aggiorna password
                 </button>
             </div>
         </form>

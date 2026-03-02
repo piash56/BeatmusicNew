@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Live Requests')
-@section('page-title', 'Concert Live Requests')
+@section('title', 'Richieste in tempo reale')
+@section('page-title', 'Richieste di concerti dal vivo')
 
 @section('content')
 <div class="space-y-4"
@@ -32,22 +32,22 @@
         <input type="text" name="search" value="{{ request('search') }}" x-model="search" placeholder="Artist, concert, user..."
             class="bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm w-56">
         <select name="status" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm">
-            <option value="">All statuses</option>
+            <option value="">Tutti gli stati</option>
             @foreach(['pending','confirmed','cancelled','finished'] as $s)
             <option value="{{ $s }}" {{ request('status') === $s ? 'selected' : '' }}>{{ ucfirst($s) }}</option>
             @endforeach
         </select>
-        <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Filter</button>
+        <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Filtro</button>
     </form>
     <div class="bg-gray-900 rounded-xl border border-white/5 overflow-hidden">
         <table class="w-full text-sm min-w-[760px]">
             <thead class="bg-gray-800/50 border-b border-white/5">
                 <tr>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Artist</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Concert</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">User</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Status</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Submitted</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Artista</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Concerto</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Utente</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Stato</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Inviato</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-white/3">
@@ -101,7 +101,7 @@
                     </td>
                 </tr>
                 @empty
-                <tr><td colspan="5" class="px-4 py-12 text-center text-gray-500">No live requests found.</td></tr>
+                <tr><td colspan="5" class="px-4 py-12 text-center text-gray-500">Nessuna richiesta attiva trovata.</td></tr>
                 @endforelse
             </tbody>
         </table>

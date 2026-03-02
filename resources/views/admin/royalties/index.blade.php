@@ -1,22 +1,22 @@
 @extends('layouts.admin')
 
-@section('title', 'Update Royalties')
-@section('page-title', 'Update Royalties')
+@section('title', 'Aggiorna royalties')
+@section('page-title', 'Aggiorna royalties')
 
 @section('content')
 <div class="space-y-4" x-data="royaltiesPage()">
-    <p class="text-gray-400 text-sm">Manually add royalty earnings to artist accounts.</p>
+    <p class="text-gray-400 text-sm">Aggiungere manualmente i guadagni derivanti dalle royalty agli account degli artisti.</p>
 
     <div class="flex items-center justify-between gap-3">
         <form method="GET" class="flex items-center gap-2 w-full sm:w-auto">
             <input type="text"
                    name="search"
                    value="{{ request('search') }}"
-                   placeholder="Search by name or email..."
+                   placeholder="Cerca per nome o email..."
                    class="bg-gray-900 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-purple-500 w-full sm:w-72">
             <button type="submit"
                     class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition whitespace-nowrap">
-                Filter
+                    Filtro
             </button>
         </form>
     </div>
@@ -25,11 +25,11 @@
         <table class="w-full text-sm">
             <thead class="bg-gray-800/50 border-b border-white/5">
                 <tr>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">User</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Account Type</th>
-                    <th class="text-right px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Current Balance</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">PayPal Email</th>
-                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Action</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Utente</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Tipo di conto</th>
+                    <th class="text-right px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Saldo attuale</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">E-mail PayPal</th>
+                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Azione</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-white/3">
@@ -61,12 +61,12 @@
                         <button type="button"
                             @click="openModal({ id: {{ $user->id }}, name: '{{ addslashes($user->full_name) }}', balance: '{{ number_format($user->balance ?? 0, 2) }}', paypal: '{{ addslashes($user->paypal_email ?? 'Not set') }}' })"
                             class="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-xs rounded-lg transition whitespace-nowrap">
-                            Update Royalties
+                            Aggiorna royalties
                         </button>
                     </td>
                 </tr>
                 @empty
-                <tr><td colspan="5" class="px-4 py-12 text-center text-gray-500">No users found.</td></tr>
+                <tr><td colspan="5" class="px-4 py-12 text-center text-gray-500">Nessun utente trovato.</td></tr>
                 @endforelse
             </tbody>
         </table>
@@ -86,7 +86,7 @@
             <div class="flex items-start justify-between mb-4">
                 <div>
                     <h3 class="text-lg font-semibold text-white" x-text="'Update royalties for ' + userName"></h3>
-                    <p class="text-gray-400 text-xs mt-1">Enter the amount to add to the user&apos;s current balance.</p>
+                    <p class="text-gray-400 text-xs mt-1">Inserisci l'importo da aggiungere utente&apos;s equilibrio attuale.</p>
                 </div>
                 <button type="button" @click="if (!loading) modalOpen = false" class="text-gray-400 hover:text-white">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -96,7 +96,7 @@
                 @csrf
                 <div class="space-y-3">
                     <div>
-                        <label class="block text-sm text-gray-300 mb-1.5">Amount ({{ config('app.currency', 'USD') }})</label>
+                        <label class="block text-sm text-gray-300 mb-1.5">Quantità ({{ config('app.currency', 'USD') }})</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs">$</span>
                             <input type="number" name="amount" min="0.01" step="0.01" required placeholder="0.00"
@@ -104,14 +104,14 @@
                         </div>
                     </div>
                     <p class="text-xs text-gray-400">
-                        <span>Current balance: <span class="text-green-400" x-text="'$' + currentBalance"></span></span><br>
-                        <span>PayPal Email: <span class="text-gray-200 text-sm" x-text="paypalEmail"></span></span>
+                        <span>Saldo attuale: <span class="text-green-400" x-text="'$' + currentBalance"></span></span><br>
+                        <span>E-mail PayPal: <span class="text-gray-200 text-sm" x-text="paypalEmail"></span></span>
                     </p>
                 </div>
                 <div class="flex justify-end gap-2 mt-5">
                     <button type="button" @click="if (!loading) modalOpen = false"
                         class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 text-sm transition">
-                        Cancel
+                        Cancellare
                     </button>
                     <button type="submit"
                         :disabled="loading"

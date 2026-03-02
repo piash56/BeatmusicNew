@@ -1,8 +1,8 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Upload Release')
-@section('page-title', 'Upload New Release')
-@section('page-subtitle', 'Share your music with the world')
+@section('title', 'Carica versione')
+@section('page-title', 'Carica nuova versione')
+@section('page-subtitle', 'Condividi la tua musica con il mondo')
 
 @section('content')
 <div data-clear-draft-after="{{ $clearDraftIfSubmittedAfter ?? '' }}" x-data="{
@@ -324,9 +324,9 @@
 
     <!-- Draft restored notice -->
     <div x-show="draftRestored" x-cloak class="mb-4 p-3 rounded-xl bg-blue-900/30 border border-blue-500/30 text-blue-300 text-sm flex flex-wrap items-center justify-between gap-2">
-        <span>Draft restored. Please re-select cover and track file(s) if you had chosen any.</span>
+        <span>Bozza ripristinata. Seleziona nuovamente la copertina e il file della traccia se ne hai scelti alcuni.</span>
         <div class="flex items-center gap-2">
-            <button type="button" @click="clearDraft()" class="px-3 py-1.5 rounded-lg bg-red-500/30 hover:bg-red-500/50 text-red-200 text-sm font-medium border border-red-400/40">Delete draft & start fresh</button>
+            <button type="button" @click="clearDraft()" class="px-3 py-1.5 rounded-lg bg-red-500/30 hover:bg-red-500/50 text-red-200 text-sm font-medium border border-red-400/40">Elimina la bozza e ricomincia da capo</button>
             <button type="button" @click="draftRestored = false" class="text-blue-400 hover:text-white" title="Dismiss">×</button>
         </div>
     </div>
@@ -372,14 +372,14 @@
         <!-- Step 1: Release Type -->
         <div x-show="step === 1" x-cloak>
             <div class="glass rounded-2xl p-8">
-                <h2 class="text-xl font-bold text-white mb-6 text-center">What are you uploading?</h2>
+                <h2 class="text-xl font-bold text-white mb-6 text-center">Cosa stai caricando?</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
                     <label class="cursor-pointer">
                         <input type="radio" name="release_type" value="single" x-model="releaseType" class="sr-only">
                         <div :class="releaseType === 'single' ? 'border-purple-500 bg-purple-600/10' : 'border-white/10 hover:border-white/20'" class="glass rounded-2xl p-8 text-center border-2 transition cursor-pointer">
                             <div class="text-5xl mb-4">🎵</div>
-                            <h3 class="text-white font-bold text-xl mb-2">Single</h3>
-                            <p class="text-gray-400 text-sm">One track release with cover art and audio file</p>
+                            <h3 class="text-white font-bold text-xl mb-2">Singolo</h3>
+                            <p class="text-gray-400 text-sm">Uscita di una traccia con copertina e file audio</p>
                         </div>
                     </label>
                     <label class="cursor-pointer">
@@ -387,12 +387,12 @@
                         <div :class="releaseType === 'album' ? 'border-purple-500 bg-purple-600/10' : 'border-white/10 hover:border-white/20'" class="glass rounded-2xl p-8 text-center border-2 transition cursor-pointer">
                             <div class="text-5xl mb-4">💿</div>
                             <h3 class="text-white font-bold text-xl mb-2">EP / Album</h3>
-                            <p class="text-gray-400 text-sm">Multiple tracks with individual audio files</p>
+                            <p class="text-gray-400 text-sm">Tracce multiple con file audio individuali</p>
                         </div>
                     </label>
                 </div>
                 <div class="flex justify-end mt-8">
-                    <button type="button" @click="nextStep()" :disabled="!releaseType" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 disabled:opacity-40 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition">Next →</button>
+                    <button type="button" @click="nextStep()" :disabled="!releaseType" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 disabled:opacity-40 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition">prossimo →</button>
                 </div>
             </div>
         </div>
@@ -400,20 +400,20 @@
         <!-- Step 2: Main Info - Title only -->
         <div x-show="step === 2" x-cloak>
             <div class="glass rounded-2xl p-6">
-                <h2 class="text-lg font-bold text-white mb-4">Main Info</h2>
+                <h2 class="text-lg font-bold text-white mb-4">Informazioni principali</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div x-show="releaseType === 'album'">
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Album Title <span class="text-red-400">*</span></label>
-                        <input type="text" name="album_title" x-ref="albumTitleInput" :class="invalidFields.album_title ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Album title" @input="invalidFields.album_title = false">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Titolo dell'album <span class="text-red-400">*</span></label>
+                        <input type="text" name="album_title" x-ref="albumTitleInput" :class="invalidFields.album_title ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Titolo dell'album" @input="invalidFields.album_title = false">
                     </div>
                     <div :class="releaseType === 'album' ? '' : 'md:col-span-2'">
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Title <span class="text-red-400">*</span></label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Titolo <span class="text-red-400">*</span></label>
                         <input type="text" name="title" x-ref="titleInput" required :class="invalidFields.title ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" :placeholder="releaseType === 'album' ? 'Main track title' : 'Track title'" @input="invalidFields.title = false">
                     </div>
                 </div>
                 <div class="flex justify-between mt-8">
-                    <button type="button" @click="prevStep()" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl transition text-sm">← Back</button>
-                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition">Next →</button>
+                    <button type="button" @click="prevStep()" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl transition text-sm">← Indietro</button>
+                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition">Prossimo →</button>
                 </div>
             </div>
         </div>
@@ -421,93 +421,93 @@
         <!-- Step 3: Artist and Release Information -->
         <div x-show="step === 3" x-cloak>
             <div class="glass rounded-2xl p-6 space-y-6">
-                <h2 class="text-lg font-bold text-white mb-4">Artist and Release Information</h2>
+                <h2 class="text-lg font-bold text-white mb-4">Informazioni sull'artista e sulla pubblicazione</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">First name</label>
-                        <input type="text" name="first_name" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="First name">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Nome di battesimo</label>
+                        <input type="text" name="first_name" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Nome di battesimo">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Surname</label>
-                        <input type="text" name="last_name" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Surname">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Cognome</label>
+                        <input type="text" name="last_name" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Cognome">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-300 mb-1.5">Artist Name</label>
-                        <input type="text" name="stage_name" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Artist name">
+                        <input type="text" name="stage_name" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="ArtistNome dell'artista name">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Main Artist <span class="text-red-400">*</span></label>
-                        <input type="text" name="artists" x-ref="artistsInput" required :class="invalidFields.artists ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Main artist" @input="invalidFields.artists = false">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Artista principale <span class="text-red-400">*</span></label>
+                        <input type="text" name="artists" x-ref="artistsInput" required :class="invalidFields.artists ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Artista principale" @input="invalidFields.artists = false">
                     </div>
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Featured Artists (optional)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Artisti in evidenza (facoltativo)</label>
                         <input type="text" name="featuring_artists" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="feat. Artist Name">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Release date <span class="text-red-400">*</span></label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Data di rilascio <span class="text-red-400">*</span></label>
                         <input type="date" name="release_date" x-ref="releaseDateInput" required :class="invalidFields.release_date ? 'border-red-500' : 'border-white/10'" class="w-full bg-gray-800 border text-white px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" @change="invalidFields.release_date = false">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">ISRC Code (optional)</label>
-                        <input type="text" name="isrc" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Leave empty to auto-generate">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Codice ISRC (facoltativo)</label>
+                        <input type="text" name="isrc" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Lascia vuoto per generare automaticamente">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Authors – First and Last Name</label>
-                        <input type="text" name="authors" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Song authors">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Autori – Nome e Cognome</label>
+                        <input type="text" name="authors" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Autori di canzoni">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Composers – First and Last Name</label>
-                        <input type="text" name="composers" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Song composers">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Compositori – Nome e Cognome</label>
+                        <input type="text" name="composers" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Compositori di canzoni">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Produced by</label>
-                        <input type="text" name="producer" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Producer name">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Prodotto da</label>
+                        <input type="text" name="producer" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Nome del produttore">
                     </div>
                     <div class="md:col-span-2" x-data="{ youtubeBeat: false }">
                         <label class="flex items-center space-x-2 cursor-pointer mb-2">
                             <input type="checkbox" name="is_youtube_beat" value="1" x-model="youtubeBeat" class="w-4 h-4 rounded border-white/20 bg-white/5 text-purple-600">
-                            <span class="text-sm text-gray-300">Beat from YouTube</span>
+                            <span class="text-sm text-gray-300">Batti da YouTube</span>
                         </label>
                         <div x-show="youtubeBeat" x-cloak class="mt-2">
                             <label class="flex items-center space-x-2 cursor-pointer">
                                 <input type="checkbox" name="has_license" value="1" class="w-4 h-4 rounded border-white/20 bg-white/5 text-purple-600">
-                                <span class="text-sm text-gray-300">I have the license</span>
+                                <span class="text-sm text-gray-300">Ho la licenza</span>
                             </label>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Genres <span class="text-red-400">*</span></label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Generi <span class="text-red-400">*</span></label>
                         <select name="primary_genre" x-ref="primaryGenreSelect" required :class="invalidFields.primary_genre ? 'border-red-500' : 'border-white/10'" class="w-full bg-gray-800 border text-white px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" @change="invalidFields.primary_genre = false">
-                            <option value="">Select primary genre</option>
+                            <option value="">Seleziona il genere principale</option>
                             @foreach(['Pop','Hip-Hop','R&B','Electronic','Rock','Alternative','Jazz','Classical','Country','Latin','Folk','Reggae'] as $g)
                                 <option value="{{ $g }}">{{ $g }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Secondary Genre (optional)</label>
-                        <input type="text" name="secondary_genre" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Optional">
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Seleziona il genere principale</label>
+                        <input type="text" name="secondary_genre" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="Opzionale">
                     </div>
                     <div class="md:col-span-2">
                         <label class="flex items-center space-x-2 cursor-pointer">
                             <input type="checkbox" name="is_explicit" value="1" class="w-4 h-4 rounded border-white/20 bg-white/5 text-purple-600">
-                            <span class="text-sm text-gray-300">Explicit content</span>
+                            <span class="text-sm text-gray-300">Contenuto esplicito</span>
                         </label>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">TikTok start time (optional)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Ora di inizio di TikTok (facoltativo)</label>
                         <input type="text" name="tik_tok_start_time" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="e.g. 0:30">
                     </div>
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Short biography (third person)</label>
-                        <textarea name="short_bio" rows="3" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 resize-none" placeholder="Brief bio in third person..."></textarea>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Breve biografia (terza persona)</label>
+                        <textarea name="short_bio" rows="3" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 resize-none" placeholder="Breve biografia in terza persona..."></textarea>
                     </div>
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Track description</label>
-                        <textarea name="track_description" rows="3" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 resize-none" placeholder="Description of your release..."></textarea>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Descrizione della traccia</label>
+                        <textarea name="track_description" rows="3" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 resize-none" placeholder="Descrizione della tua versione..."></textarea>
                     </div>
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Collecting societies (optional)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Società di gestione collettiva (facoltativo)</label>
                         <div class="space-y-2" x-data="{ society: 'NONE' }">
                             <label class="flex items-center space-x-2 cursor-pointer">
                                 <input type="radio" name="cm_society" value="SIAE" x-model="society" class="w-4 h-4 border-white/20 bg-white/5 text-purple-600">
@@ -522,23 +522,23 @@
                                 <span class="text-sm text-gray-300">Non sono membro di nessuna società</span>
                             </label>
                             <div x-show="society === 'SIAE'" x-cloak class="mt-3">
-                                <label class="block text-sm font-medium text-gray-300 mb-1.5">SIAE position number (optional)</label>
+                                <label class="block text-sm font-medium text-gray-300 mb-1.5">Numero di posizione SIAE (facoltativo)</label>
                                 <input type="text" name="siae_position" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="SIAE position number">
                             </div>
                         </div>
                     </div>
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Deployment Details (optional)</label>
-                        <textarea name="distribution_details" rows="2" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 resize-none" placeholder="Optional deployment notes..."></textarea>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Dettagli di distribuzione (facoltativo)</label>
+                        <textarea name="distribution_details" rows="2" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 resize-none" placeholder="Note di distribuzione facoltative..."></textarea>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Song duration (optional)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Durata del brano (facoltativa)</label>
                         <input type="text" name="song_duration" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="00:00:00">
                     </div>
                 </div>
                 <div class="flex justify-between mt-8">
                     <button type="button" @click="prevStep()" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl transition text-sm">← Back</button>
-                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition">Next →</button>
+                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition">prossimo →</button>
                 </div>
             </div>
         </div>
@@ -546,22 +546,22 @@
         <!-- Step 4: Streaming Platforms (YES/NO) -->
         <div x-show="step === 4" x-cloak>
             <div class="glass rounded-2xl p-6">
-                <h2 class="text-lg font-bold text-white mb-4">Streaming Platforms</h2>
-                <p class="text-sm text-gray-400 mb-6">Do you already have Spotify and Apple Music profiles?</p>
+                <h2 class="text-lg font-bold text-white mb-4">Piattaforme di streaming</h2>
+                <p class="text-sm text-gray-400 mb-6">Hai già profili Spotify e Apple Music?</p>
                 <div class="space-y-4">
                     <label class="flex items-center space-x-3 cursor-pointer p-4 rounded-xl border-2 transition" :class="hasSpotifyApple === 'YES' ? 'border-purple-500 bg-purple-600/10' : 'border-white/10 hover:border-white/20'">
                         <input type="radio" name="has_spotify_apple" value="YES" x-model="hasSpotifyApple" class="w-4 h-4 border-white/20 bg-white/5 text-purple-600">
-                        <span class="text-gray-300">YES – I have both profiles</span>
+                        <span class="text-gray-300">SÌ – Ho entrambi i profili</span>
                     </label>
                     <label class="flex items-center space-x-3 cursor-pointer p-4 rounded-xl border-2 transition" :class="hasSpotifyApple === 'NO' ? 'border-purple-500 bg-purple-600/10' : 'border-white/10 hover:border-white/20'">
                         <input type="radio" name="has_spotify_apple" value="NO" x-model="hasSpotifyApple" class="w-4 h-4 border-white/20 bg-white/5 text-purple-600">
-                        <span class="text-gray-300">NO – I need to create them</span>
+                        <span class="text-gray-300">NO – Devo crearli</span>
                     </label>
                 </div>
-                <p class="text-xs text-gray-500 mt-4" x-show="hasSpotifyApple === 'YES'">Next step will ask for your Spotify and Apple Music profile links.</p>
+                <p class="text-xs text-gray-500 mt-4" x-show="hasSpotifyApple === 'YES'">Il passaggio successivo ti chiederà i link dei tuoi profili Spotify e Apple Music.</p>
                 <div class="flex justify-between mt-8">
                     <button type="button" @click="prevStep()" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl transition text-sm">← Back</button>
-                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-semibold rounded-xl transition">Next →</button>
+                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-semibold rounded-xl transition">prossimo →</button>
                 </div>
             </div>
         </div>
@@ -569,20 +569,20 @@
         <!-- Step 5 (if YES): Platform Links | (if NO): Social Media -->
         <div x-show="step === 5 && hasSpotifyApple === 'YES'" x-cloak>
             <div class="glass rounded-2xl p-6">
-                <h2 class="text-lg font-bold text-white mb-4">Platform Links</h2>
+                <h2 class="text-lg font-bold text-white mb-4">Collegamenti alla piattaforma</h2>
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Spotify Profile Link <span class="text-red-400">*</span></label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Collegamento al profilo Spotify <span class="text-red-400">*</span></label>
                         <input type="url" name="spotify_link" x-ref="spotifyLinkInput" :class="invalidFields.spotify_link ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="https://open.spotify.com/..." @input="invalidFields.spotify_link = false">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Apple Music Profile Link <span class="text-red-400">*</span></label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Collegamento al profilo Apple Music <span class="text-red-400">*</span></label>
                         <input type="url" name="apple_music_link" x-ref="appleMusicLinkInput" :class="invalidFields.apple_music_link ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="https://music.apple.com/..." @input="invalidFields.apple_music_link = false">
                     </div>
                 </div>
                 <div class="flex justify-between mt-8">
                     <button type="button" @click="prevStep()" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl transition text-sm">← Back</button>
-                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-semibold rounded-xl transition">Next →</button>
+                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-semibold rounded-xl transition">Prossimo →</button>
                 </div>
             </div>
         </div>
@@ -590,20 +590,20 @@
         <!-- Step 5 (if NO) or Step 6 (if YES): Social Media Links -->
         <div x-show="(step === 5 && hasSpotifyApple === 'NO') || (step === 6 && hasSpotifyApple === 'YES')" x-cloak>
             <div class="glass rounded-2xl p-6">
-                <h2 class="text-lg font-bold text-white mb-4">Social Media Links</h2>
+                <h2 class="text-lg font-bold text-white mb-4">Collegamenti ai social media</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">TikTok Profile Link (optional)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Link al profilo TikTok (facoltativo)</label>
                         <input type="url" name="tik_tok_link" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="https://tiktok.com/...">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">YouTube Profile Link (optional)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Link al profilo YouTube (facoltativo)</label>
                         <input type="url" name="youtube_link" class="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500" placeholder="https://youtube.com/...">
                     </div>
                 </div>
                 <div class="flex justify-between mt-8">
                     <button type="button" @click="prevStep()" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl transition text-sm">← Back</button>
-                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-semibold rounded-xl transition">Next →</button>
+                    <button type="button" @click="nextStep()" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 text-white font-semibold rounded-xl transition">Prossimo →</button>
                 </div>
             </div>
         </div>
@@ -611,16 +611,16 @@
         <!-- Step 6 (if NO) or Step 7 (if YES): Cover, Track, Lyrics -->
         <div x-show="(step === 6 && hasSpotifyApple === 'NO') || (step === 7 && hasSpotifyApple === 'YES')" x-cloak>
             <div class="glass rounded-2xl p-6 space-y-8">
-                <h2 class="text-lg font-bold text-white">Cover, Track & Lyrics</h2>
+                <h2 class="text-lg font-bold text-white">Copertina, traccia e testo</h2>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Cover Art <span class="text-red-400">*</span></label>
+                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Copertina<span class="text-red-400">*</span></label>
                     <div x-data="{ dragging: false }" class="relative border-2 border-dashed rounded-xl p-6 transition cursor-pointer" :class="invalidFields.cover_art ? 'border-red-500 bg-red-900/10' : (dragging ? 'border-purple-500 bg-purple-600/5' : 'border-white/10 hover:border-white/20')">
                         <input type="file" name="cover_art" x-ref="coverArtInput" accept="image/*" :required="!coverFilePath" @change="uploadCover($event.target); invalidFields.cover_art = false" @dragover.prevent="dragging = true" @dragleave="dragging = false" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
                         <div class="text-center" x-show="!coverPreview && !coverFilePath && !coverUploading">
                             <svg class="w-10 h-10 text-gray-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                            <p class="text-gray-400 text-sm">Drop image here or click to browse</p>
-                            <p class="text-gray-600 text-xs mt-1">JPEG, PNG, max 5MB. Square recommended (3000×3000px)</p>
+                            <p class="text-gray-400 text-sm">Trascina l'immagine qui o clicca per sfogliare</p>
+                            <p class="text-gray-600 text-xs mt-1">JPEG, PNG, max 5 MB. Quadrato consigliato (3000×3000px)</p>
                         </div>
                         <div x-show="coverPreview" x-cloak class="flex items-center space-x-4 relative">
                             <div class="relative">
@@ -628,16 +628,16 @@
                                 <button type="button" @click.prevent="clearCover()" class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-red-500 hover:bg-red-600 text-white flex items-center justify-center text-sm font-bold shadow" title="Remove cover">×</button>
                             </div>
                             <div>
-                                <p class="text-white text-sm font-medium">Cover art selected</p>
-                                <p class="text-gray-400 text-xs">Click to change or use × to remove</p>
+                                <p class="text-white text-sm font-medium">Copertina selezionata</p>
+                                <p class="text-gray-400 text-xs">Clicca per modificare o usa × per rimuovere</p>
                             </div>
                         </div>
                         <div x-show="coverFilePath && !coverPreview" x-cloak class="flex items-center gap-2">
-                            <span class="text-green-400 text-sm">Cover uploaded</span>
+                            <span class="text-green-400 text-sm">Copertina caricata</span>
                             <button type="button" @click="clearCover()" class="p-1 rounded text-red-400 hover:bg-red-500/20" title="Remove cover">×</button>
                         </div>
                         <div x-show="coverUploading" x-cloak class="mt-3 p-3 rounded-xl bg-white/5 border border-white/10">
-                            <p class="text-gray-400 text-sm mb-2">Uploading cover...</p>
+                            <p class="text-gray-400 text-sm mb-2">Caricamento copertina...</p>
                             <div class="h-2 bg-white/10 rounded-full overflow-hidden">
                                 <div class="h-full bg-purple-600 transition-all duration-300" :style="'width:'+coverUploadProgress+'%'"></div>
                             </div>
@@ -647,19 +647,19 @@
                 </div>
 
                 <div>
-                    <h3 class="text-white font-medium mb-3">Track</h3>
+                    <h3 class="text-white font-medium mb-3">Traccia</h3>
                     <div x-show="releaseType === 'single'">
-                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Audio File <span class="text-red-400">*</span></label>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">File audio <span class="text-red-400">*</span></label>
                         <input type="file" name="audio_file" x-ref="audioFileInput" accept=".mp3,.wav,.flac,.aac,.ogg" :class="invalidFields.audio_file ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 file:mr-3 file:py-1 file:px-3 file:rounded-lg file:border-0 file:bg-purple-600 file:text-white file:text-sm cursor-pointer" @change="invalidFields.audio_file = false; uploadSingleTrack($event.target)">
-                        <p class="text-xs text-gray-500 mt-1">MP3, WAV, FLAC, AAC, OGG — max 2GB. Select a file to upload immediately.</p>
+                        <p class="text-xs text-gray-500 mt-1">MP3, WAV, FLAC, AAC, OGG — max 2 GB. Seleziona un file da caricare immediatamente.</p>
                         <div x-show="audioFilePath" x-cloak class="mt-2 flex items-center gap-2">
-                            <span class="text-sm text-green-400">Track uploaded</span>
+                            <span class="text-sm text-green-400">Traccia caricata</span>
                             <button type="button" @click="clearSingleTrack()" class="p-1 rounded text-red-400 hover:bg-red-500/20 hover:text-red-300" title="Remove track">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                             </button>
                         </div>
                         <div x-show="trackUploading" x-cloak class="mt-3 p-3 rounded-xl bg-white/5 border border-white/10">
-                            <p class="text-gray-400 text-sm mb-2">Uploading track...</p>
+                            <p class="text-gray-400 text-sm mb-2">Caricamento traccia...</p>
                             <div class="h-2 bg-white/10 rounded-full overflow-hidden">
                                 <div class="h-full bg-purple-600 transition-all duration-300" :style="'width:'+trackUploadProgress+'%'"></div>
                             </div>
@@ -667,7 +667,7 @@
                         </div>
                     </div>
                     <div x-show="releaseType === 'album'" :class="invalidFields.audio_file ? 'rounded-xl ring-2 ring-red-500 p-2 -m-2' : ''">
-                        <label class="block text-sm font-medium text-gray-300 mb-3">Album Tracks <span class="text-red-400">*</span> (minimum 2 tracks required)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-3">Tracce dell'album <span class="text-red-400">*</span> (minimo 2 tracce richieste)</label>
                         <div class="space-y-3">
                             <template x-for="(track, i) in albumTracks" :key="i">
                                 <div class="glass rounded-xl p-4 flex flex-col gap-3">
@@ -686,7 +686,7 @@
                                         </button>
                                     </div>
                                     <div x-show="track.uploadProgress > 0" x-cloak class="mt-1 p-2 rounded-lg bg-white/5 border border-white/10">
-                                        <p class="text-gray-400 text-xs mb-1.5">Uploading track <span x-text="i + 1"></span>...</p>
+                                        <p class="text-gray-400 text-xs mb-1.5">Caricamento traccia <span x-text="i + 1"></span>...</p>
                                         <div class="h-1.5 bg-white/10 rounded-full overflow-hidden">
                                             <div class="h-full bg-purple-600 transition-all duration-300" :style="'width:' + (track.uploadProgress || 0) + '%'"></div>
                                         </div>
@@ -697,13 +697,13 @@
                         </div>
                         <button type="button" @click="addTrack()" x-show="albumTracks.length < 20" class="mt-3 flex items-center space-x-2 text-purple-400 hover:text-purple-300 text-sm">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                            <span>Add Track</span>
+                            <span>Caricamento traccia</span>
                         </button>
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Lyrics <span class="text-red-400">*</span> <span class="text-gray-500 font-normal">(required for Apple Music)</span></label>
+                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Testi <span class="text-red-400">*</span> <span class="text-gray-500 font-normal">(richiesto per Apple Music)</span></label>
                     <textarea name="lyrics" x-ref="lyricsInput" rows="6" required :class="invalidFields.lyrics ? 'border-red-500' : 'border-white/10'" class="w-full bg-white/5 border text-white placeholder-gray-500 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 resize-none" placeholder="Paste or type lyrics..." @input="invalidFields.lyrics = false"></textarea>
                 </div>
 
@@ -712,11 +712,11 @@
                     <button type="button" @click="uploadWaitMessage = ''" class="text-amber-400 hover:text-white">×</button>
                 </div>
                 <div class="flex justify-between pt-4 border-t border-white/10">
-                    <button type="button" @click="prevStep()" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl transition text-sm">← Back</button>
+                    <button type="button" @click="prevStep()" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl transition text-sm">← Indietro</button>
                     <button type="submit" :disabled="submitting || uploadsInProgress" class="px-8 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2">
-                        <span x-show="!submitting && !uploadsInProgress">Submit Release</span>
-                        <span x-show="uploadsInProgress && !submitting" x-cloak class="flex items-center gap-2">Wait for uploads to finish...</span>
-                        <span x-show="submitting" x-cloak class="flex items-center gap-2"><svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Submitting...</span>
+                        <span x-show="!submitting && !uploadsInProgress">Invia liberatoria</span>
+                        <span x-show="uploadsInProgress && !submitting" x-cloak class="flex items-center gap-2">Attendi il completamento dei caricamenti...</span>
+                        <span x-show="submitting" x-cloak class="flex items-center gap-2"><svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Invio...</span>
                     </button>
                 </div>
             </div>

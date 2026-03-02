@@ -1,8 +1,8 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Editorial Playlists')
-@section('page-title', 'Editorial Playlists')
-@section('page-subtitle', 'Submit your tracks to curated playlists')
+@section('title', 'Playlist editoriali')
+@section('page-title', 'Playlist editoriali')
+@section('page-subtitle', 'Invia i tuoi brani alle playlist curate')
 
 @section('content')
 @php
@@ -100,7 +100,7 @@
                                 <span class="inline-flex items-center gap-1 text-[11px] text-purple-300"
                                       x-show="selectedTrackId === {{ $track->id }}">
                                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                                    <span>Selected</span>
+                                    <span>Selezionato</span>
                                 </span>
                             </div>
                         </button>
@@ -270,7 +270,7 @@
                     <svg class="w-4 h-4 text-purple-300" fill="currentColor" viewBox="0 0 20 20"><path d="M4 3a1 1 0 00-1 1v12a1 1 0 001.514.857L10 14.101l5.486 2.756A1 1 0 0017 16V4a1 1 0 00-1-1H4z"/></svg>
                 </div>
                 <div>
-                    <p class="text-xs text-gray-400">Total Playlist</p>
+                    <p class="text-xs text-gray-400">Playlist Totale</p>
                     <p class="text-lg font-semibold text-white">{{ $reachedCount }}</p>
                 </div>
             </div>
@@ -279,7 +279,7 @@
                     <svg class="w-4 h-4 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/></svg>
                 </div>
                 <div>
-                    <p class="text-xs text-gray-400">Total Streams</p>
+                    <p class="text-xs text-gray-400">Streams Totali</p>
                     <p class="text-lg font-semibold text-white">{{ number_format($published->sum('streams')) }}</p>
                 </div>
             </div>
@@ -288,7 +288,7 @@
                     <svg class="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/></svg>
                 </div>
                 <div>
-                    <p class="text-xs text-gray-400">Total Listeners</p>
+                    <p class="text-xs text-gray-400">Listeners Totali</p>
                     <p class="text-lg font-semibold text-white">{{ number_format($published->sum('listeners')) }}</p>
                 </div>
             </div>

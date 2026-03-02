@@ -5,11 +5,11 @@
 @section('content')
 <section class="pt-32 pb-16 px-4 text-center">
     <div class="max-w-3xl mx-auto">
-        <h1 class="text-4xl font-bold text-white mb-4">How can we help you?</h1>
-        <p class="text-gray-400 mb-8">Search our help center or browse topics below</p>
+        <h1 class="text-4xl font-bold text-white mb-4">Come possiamo aiutarti?</h1>
+        <p class="text-gray-400 mb-8">Cerca nel nostro centro assistenza o esplora gli argomenti qui sotto</p>
         <div class="relative max-w-xl mx-auto">
             <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <input type="text" placeholder="Search help articles..." id="helpSearch"
+            <input type="text" placeholder="Cerca articoli della guida..." id="helpSearch"
                 class="w-full bg-white/5 border border-white/10 text-white pl-12 pr-4 py-4 rounded-2xl focus:outline-none focus:border-purple-500 text-lg">
         </div>
     </div>
@@ -25,19 +25,19 @@
                     <div class="w-10 h-10 rounded-full bg-purple-600/20 flex items-center justify-center mb-3">
                         <span class="text-lg">💬</span>
                     </div>
-                    <h3 class="text-white font-semibold text-lg mb-1">Live chat</h3>
-                    <p class="text-gray-400 text-sm">Chat with our support team in real time during business hours.</p>
+                    <h3 class="text-white font-semibold text-lg mb-1">Chatta dal vivo</h3>
+                    <p class="text-gray-400 text-sm">Chatta con il nostro team di supporto in tempo reale durante l'orario lavorativo.</p>
                 </div>
                 <div class="mt-5">
                     @auth
                     <a href="{{ route('dashboard.support.create') }}"
                        class="inline-flex items-center justify-center px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition w-full md:w-auto">
-                        Start chat
+                       Avvia la chat
                     </a>
                     @else
                     <a href="{{ route('login') }}"
                        class="inline-flex items-center justify-center px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition w-full md:w-auto">
-                        Login to chat
+                       Accedi per chattare
                     </a>
                     @endauth
                 </div>
@@ -49,19 +49,19 @@
                     <div class="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center mb-3">
                         <span class="text-lg">✉️</span>
                     </div>
-                    <h3 class="text-white font-semibold text-lg mb-1">Submit a ticket</h3>
-                    <p class="text-gray-400 text-sm">Open a support ticket and we&apos;ll get back to you as soon as possible.</p>
+                    <h3 class="text-white font-semibold text-lg mb-1">Invia un biglietto</h3>
+                    <p class="text-gray-400 text-sm">Apri un ticket di supporto e noi&apos;ti risponderemo il prima possibile.</p>
                 </div>
                 <div class="mt-5">
                     @auth
                     <a href="{{ route('dashboard.support.create') }}"
                        class="inline-flex items-center justify-center px-4 py-2.5 bg-white/10 hover:bg-white/15 text-white text-sm rounded-xl border border-white/10 transition w-full md:w-auto">
-                        Submit ticket
+                       Invia biglietto
                     </a>
                     @else
                     <a href="{{ route('login') }}"
                        class="inline-flex items-center justify-center px-4 py-2.5 bg-white/10 hover:bg-white/15 text-white text-sm rounded-xl border border-white/10 transition w-full md:w-auto">
-                        Login to submit ticket
+                       Accedi per inviare il biglietto
                     </a>
                     @endauth
                 </div>
@@ -73,14 +73,14 @@
                     <div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center mb-3">
                         <span class="text-lg">📚</span>
                     </div>
-                    <h3 class="text-white font-semibold text-lg mb-1">Knowledge base</h3>
-                    <p class="text-gray-400 text-sm">Browse our documentation and step‑by‑step guides for common questions.</p>
+                    <h3 class="text-white font-semibold text-lg mb-1">Base di conoscenza</h3>
+                    <p class="text-gray-400 text-sm">Consulta la nostra documentazione e le guide dettagliate per le domande più comuni.</p>
                 </div>
                 <div class="mt-5">
                     {{-- Reload the same Help Center page --}}
                     <a href="{{ url()->current() }}"
                        class="inline-flex items-center justify-center px-4 py-2.5 bg-white/10 hover:bg-white/15 text-white text-sm rounded-xl border border-white/10 transition w-full md:w-auto">
-                        Browse articles
+                       Sfoglia gli articoli
                     </a>
                 </div>
             </div>
@@ -138,14 +138,14 @@
 {{-- Still need help? --}}
 <section class="pb-24 px-4">
     <div class="max-w-3xl mx-auto text-center glass rounded-3xl p-10 border border-white/5">
-        <h2 class="text-2xl font-bold text-white mb-3">Still need help?</h2>
-        <p class="text-gray-400 mb-6">Our support team is ready to assist you.</p>
+        <h2 class="text-2xl font-bold text-white mb-3">Hai ancora bisogno di aiuto?</h2>
+        <p class="text-gray-400 mb-6">Il nostro team di supporto è pronto ad assisterti.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="{{ url()->current() }}" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white text-sm rounded-xl border border-white/10 transition">Browse Knowledge Base</a>
+            <a href="{{ url()->current() }}" class="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-white text-sm rounded-xl border border-white/10 transition">Sfoglia la base di conoscenza</a>
             @auth
-            <a href="{{ route('dashboard.support.create') }}" class="px-6 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Submit a Ticket</a>
+            <a href="{{ route('dashboard.support.create') }}" class="px-6 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Invia un biglietto</a>
             @else
-            <a href="{{ route('login') }}" class="px-6 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Login to Submit Ticket</a>
+            <a href="{{ route('login') }}" class="px-6 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Login to Invia biglietto</a>
             @endauth
         </div>
     </div>

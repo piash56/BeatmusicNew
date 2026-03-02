@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Editorial Playlists')
-@section('page-title', 'Editorial Playlist Submissions')
+@section('title', 'Playlist editoriali')
+@section('page-title', 'sottomissione di playlist editoriali')
 
 @section('content')
 <div class="space-y-4"
@@ -48,7 +48,7 @@
         }
      }">
     <div class="flex flex-wrap items-center justify-between gap-3">
-        <a href="{{ route('admin.editorial-playlists.catalog') }}" class="text-purple-400 hover:text-purple-300 text-sm">Manage Playlist Catalog →</a>
+        <a href="{{ route('admin.editorial-playlists.catalog') }}" class="text-purple-400 hover:text-purple-300 text-sm">Gestisci catalogo playlist →</a>
         <form method="GET" class="flex flex-wrap gap-2">
             <input type="text"
                    name="search"
@@ -57,29 +57,29 @@
                    placeholder="Track, artist, playlist, user..."
                    class="bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-3 py-2 rounded-lg text-sm w-48">
             <select name="platform" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm">
-                <option value="">All platforms</option>
+                <option value="">Tutte le piattaforme</option>
                 @foreach(['Spotify','Apple Music','Amazon Music'] as $p)
                 <option value="{{ $p }}" {{ request('platform') === $p ? 'selected' : '' }}>{{ $p }}</option>
                 @endforeach
             </select>
             <select name="status" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm">
-                <option value="">All statuses</option>
+                <option value="">Tutti gli stati</option>
                 @foreach(['Waiting','Processing','Published','Rejected'] as $s)
                 <option value="{{ $s }}" {{ request('status') === $s ? 'selected' : '' }}>{{ $s }}</option>
                 @endforeach
             </select>
-            <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Filter</button>
+            <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Filtro</button>
         </form>
     </div>
     <div class="bg-gray-900 rounded-xl border border-white/5 overflow-hidden">
         <table class="w-full text-sm min-w-[980px]">
             <thead class="bg-gray-800/50 border-b border-white/5">
                 <tr>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Track</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">User</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Traccia</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Utente</th>
                     <th class="text-left px-4 py-3 text-gray-400 font-medium">Playlist</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Status</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Submitted Date</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Stato</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Data di invio</th>
                     <th class="text-right px-4 py-3 text-gray-400 font-medium">Streams / Listeners</th>
                 </tr>
             </thead>
@@ -124,7 +124,7 @@
                                 <span class="text-gray-200 font-medium truncate">{{ $sub->playlist_name }}</span>
                                 @if($sub->playlist_url)
                                     <a href="{{ $sub->playlist_url }}" target="_blank" class="text-purple-400 hover:text-purple-300 text-xs inline-flex items-center gap-1 shrink-0">
-                                        <span>Open</span>
+                                        <span>Aprire</span>
                                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                                     </a>
                                 @endif
@@ -181,7 +181,7 @@
                     </td>
                 </tr>
                 @empty
-                <tr><td colspan="5" class="px-4 py-12 text-center text-gray-500">No playlist submissions found.</td></tr>
+                <tr><td colspan="5" class="px-4 py-12 text-center text-gray-500">Nessuna playlist inviata trovata.</td></tr>
                 @endforelse
             </tbody>
         </table>
@@ -194,9 +194,9 @@
         <div class="relative w-full max-w-lg bg-gray-900 border border-white/10 rounded-2xl p-5">
             <div class="flex items-start justify-between gap-3">
                 <div>
-                    <h3 class="text-white font-semibold">Update submission status</h3>
+                    <h3 class="text-white font-semibold">Aggiorna lo stato dell'invio</h3>
                     <p class="text-gray-400 text-xs mt-1">
-                        Track: <span class="text-gray-200" x-text="statusTrackTitle"></span>
+                        Traccia: <span class="text-gray-200" x-text="statusTrackTitle"></span>
                         <span class="text-gray-600">•</span>
                         <span class="text-gray-300" x-text="statusUserLabel"></span>
                     </p>
@@ -209,7 +209,7 @@
                 @method('PATCH')
 
                 <div>
-                    <label class="block text-xs text-gray-400 mb-1.5">New status</label>
+                    <label class="block text-xs text-gray-400 mb-1.5">Nuovo stato</label>
                     <select name="status" x-model="statusNew" class="w-full bg-gray-800 border border-white/10 text-gray-200 px-3 py-2 rounded-xl text-sm">
                         @foreach(['Waiting','Processing','Published','Rejected'] as $s)
                             <option value="{{ $s }}">{{ $s }}</option>
@@ -218,7 +218,7 @@
                 </div>
 
                 <div>
-                    <label class="block text-xs text-gray-400 mb-1.5">Review note (optional)</label>
+                    <label class="block text-xs text-gray-400 mb-1.5">Nota di revisione (facoltativa)</label>
                     <textarea name="review_note" x-model="reviewNote" rows="3" class="w-full bg-gray-800 border border-white/10 text-gray-200 px-3 py-2 rounded-xl text-sm" placeholder="Optional note..."></textarea>
                 </div>
 
@@ -227,7 +227,7 @@
                     <button type="submit"
                             class="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium transition"
                             :disabled="!statusTargetId || !statusNew || statusNew === statusCurrent">
-                        Confirm update
+                            Conferma aggiornamento
                     </button>
                 </div>
             </form>
@@ -242,18 +242,18 @@
                 <div>
                     <h3 class="text-white font-semibold">Update streams / listeners</h3>
                     <p class="text-gray-400 text-xs mt-1">
-                        Track: <span class="text-gray-200" x-text="streamsTrackTitle"></span>
+                        Traccia: <span class="text-gray-200" x-text="streamsTrackTitle"></span>
                         <span class="text-gray-600">•</span>
                         <span class="text-gray-300" x-text="streamsUserLabel"></span>
                     </p>
                     <p class="text-gray-500 text-[11px] mt-1">
-                        Current totals —
+                        Totali attuali —
                         <span class="text-gray-300">Streams:</span>
                         <span class="text-gray-200" x-text="currentStreams"></span>
                         <span class="text-gray-300 ml-2">Listeners:</span>
                         <span class="text-gray-200" x-text="currentListeners"></span>
                     </p>
-                    <p class="text-gray-600 text-[11px] mt-1">Enter how many to <span class="text-gray-300">add</span>; new totals will be old + added.</p>
+                    <p class="text-gray-600 text-[11px] mt-1">Inserisci quanti a <span class="text-gray-300">aggiungere</span>; i nuovi totali saranno vecchi + aggiunti.</p>
                 </div>
                 <button type="button" class="text-gray-400 hover:text-white" @click="streamsModalOpen = false" aria-label="Close">✕</button>
             </div>
@@ -280,7 +280,7 @@
                     <button type="submit"
                             class="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium transition"
                             :disabled="!streamsTargetId">
-                        Save
+                            Salva
                     </button>
                 </div>
             </form>

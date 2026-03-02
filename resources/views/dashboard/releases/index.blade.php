@@ -1,8 +1,8 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Releases')
-@section('page-title', 'Releases')
-@section('page-subtitle', 'Manage your music releases')
+@section('title', 'Rilasci')
+@section('page-title', 'Rilasci')
+@section('page-subtitle', 'Gestisci le tue uscite musicali')
 
 @section('content')
 @php
@@ -14,13 +14,13 @@
     <!-- Filter: All | Single | Album + Upload Button -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div class="flex bg-white/5 border border-white/10 rounded-xl p-1 space-x-1">
-            <a href="{{ $queryTab('all') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ $currentTab === 'all' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white' }}">All</a>
-            <a href="{{ $queryTab('single') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ $currentTab === 'single' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white' }}">Single</a>
+            <a href="{{ $queryTab('all') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ $currentTab === 'all' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white' }}">Tutto</a>
+            <a href="{{ $queryTab('single') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ $currentTab === 'single' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white' }}">Singolo</a>
             <a href="{{ $queryTab('album') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ $currentTab === 'album' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white' }}">Album</a>
         </div>
         <a href="{{ route('dashboard.releases.create') }}?new=1" class="flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium rounded-xl transition text-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-            <span>Upload New</span>
+            <span>Carica nuovo</span>
         </a>
     </div>
 
@@ -29,12 +29,12 @@
         <form method="GET" class="flex flex-col sm:flex-row gap-3">
             <input type="hidden" name="tab" value="{{ $currentTab }}">
             <select name="status" class="bg-gray-800 border border-white/10 text-gray-300 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-purple-500">
-                <option value="">All Statuses</option>
+                <option value="">Tutti gli stati</option>
                 @foreach(['Draft','On Request','On Process','Released','Rejected','Modify Pending','Modify Process','Modify Released','Modify Rejected'] as $s)
                     <option value="{{ $s }}" {{ request('status') == $s ? 'selected' : '' }}>{{ $s }}</option>
                 @endforeach
             </select>
-            <button type="submit" class="px-4 py-2 bg-white/10 hover:bg-white/15 text-white text-sm rounded-lg transition">Filter</button>
+            <button type="submit" class="px-4 py-2 bg-white/10 hover:bg-white/15 text-white text-sm rounded-lg transition">Filtro</button>
         </form>
     </div>
 
@@ -44,13 +44,13 @@
             <table class="w-full min-w-[640px]">
                 <thead>
                     <tr class="border-b border-white/10 text-left text-xs text-gray-500 uppercase tracking-wider">
-                        <th class="px-4 py-3 font-medium w-20">Track</th>
-                        <th class="px-4 py-3 font-medium">Genre</th>
-                        <th class="px-4 py-3 font-medium w-24">Type</th>
-                        <th class="px-4 py-3 font-medium">Date submitted</th>
-                        <th class="px-4 py-3 font-medium">Release date</th>
-                        <th class="px-4 py-3 font-medium w-28">Status</th>
-                        <th class="px-4 py-3 font-medium text-right w-24">Actions</th>
+                        <th class="px-4 py-3 font-medium w-20">Traccia</th>
+                        <th class="px-4 py-3 font-medium">Genere</th>
+                        <th class="px-4 py-3 font-medium w-24">Tipo</th>
+                        <th class="px-4 py-3 font-medium">Data di invio</th>
+                        <th class="px-4 py-3 font-medium">Data di rilascio</th>
+                        <th class="px-4 py-3 font-medium w-28">Stato</th>
+                        <th class="px-4 py-3 font-medium text-right w-24">Azioni</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,9 +104,9 @@
                     <tr>
                         <td colspan="7" class="px-4 py-16 text-center">
                             <div class="text-5xl mb-4">🎵</div>
-                            <h3 class="text-white font-semibold mb-2">No releases found</h3>
-                            <p class="text-gray-400 text-sm mb-6">Upload your first single or album to get started.</p>
-                            <a href="{{ route('dashboard.releases.create') }}?new=1" class="inline-block px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-semibold rounded-xl transition">Upload Release</a>
+                            <h3 class="text-white font-semibold mb-2">Nessuna versione trovata</h3>
+                            <p class="text-gray-400 text-sm mb-6">Per iniziare, carica il tuo primo singolo o album.</p>
+                            <a href="{{ route('dashboard.releases.create') }}?new=1" class="inline-block px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-semibold rounded-xl transition">Carica versione</a>
                         </td>
                     </tr>
                     @endforelse

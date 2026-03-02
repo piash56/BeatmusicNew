@@ -8,26 +8,26 @@
 
     <!-- Welcome Section -->
     <div class="mb-8">
-        <h2 class="text-2xl font-bold text-white mb-2">Welcome back, {{ auth()->user()->full_name }}!</h2>
-        <p class="text-slate-400">Here's what's happening with your platform today.</p>
+        <h2 class="text-2xl font-bold text-white mb-2">Bentornato, {{ auth()->user()->full_name }}!</h2>
+        <p class="text-slate-400">Ecco cosa sta succedendo oggi con la tua piattaforma.</p>
     </div>
 
     <!-- Stats Grid -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
         @php
         $statCards = [
-            ['value' => $stats['tracks_require_review'] + $stats['tracks_processing'], 'label' => 'Releases Pending', 'subtext' => 'require review: ' . $stats['tracks_require_review'] . '  ', 'subtext2' => 'Processing: ' . $stats['tracks_processing'] . ' ', 'subtext2_class' => 'text-rose-400', 'icon' => '📋', 'route' => 'admin.track-submissions', 'bg' => 'from-yellow-500/10 to-yellow-600/5'],
-            ['value' => $stats['vevo_pending'], 'label' => 'Vevo Pending', 'subtext' => $stats['vevo_approved'] . ' approved, ' . $stats['vevo_pending'] . ' pending', 'icon' => '▶️', 'route' => 'admin.vevo-accounts', 'bg' => 'from-rose-500/10 to-rose-600/5'],
-            ['value' => $stats['pending_concerts'], 'label' => 'Concerts Pending', 'subtext' => 'pending requests', 'icon' => '🎤', 'route' => 'admin.live-requests', 'bg' => 'from-orange-500/10 to-orange-600/5'],
-            ['value' => $stats['pending_playlists'], 'label' => 'Playlists Pending', 'subtext' => 'pending subscriptions', 'icon' => '📑', 'route' => 'admin.editorial-playlists', 'bg' => 'from-pink-500/10 to-pink-600/5'],
-            ['value' => $stats['radio_published'], 'label' => 'Radio Promo', 'subtext' => ' Radio Pending ' . $stats['pending_radio'], 'icon' => '📻', 'route' => 'admin.radio-requests', 'bg' => 'from-blue-500/10 to-blue-600/5'],
-            ['value' => $stats['released_singles'] + $stats['released_albums'], 'label' => 'Total Released', 'subtext' => $stats['released_singles'] . ' single(s), ' . $stats['released_albums'] . ' album(s)', 'icon' => '🎵', 'route' => 'admin.track-submissions', 'bg' => 'from-purple-500/10 to-purple-600/5'],
-            ['value' => $stats['approved_playlists'], 'label' => 'Approved Playlists', 'subtext' => 'successfully published', 'subtext_class' => 'text-emerald-400', 'icon' => '✅', 'route' => 'admin.editorial-playlists', 'bg' => 'from-emerald-500/10 to-emerald-600/5'],
-            ['value' => $stats['approved_concerts'], 'label' => 'Approved Live Concerts', 'subtext' => 'approved requests', 'subtext_class' => 'text-emerald-400', 'icon' => '✅', 'route' => 'admin.live-requests', 'bg' => 'from-emerald-500/10 to-emerald-600/5'],
-            ['value' => $stats['total_users'], 'label' => 'Total Users', 'subtext' => '+' . $stats['admin_users'] . ' admin users', 'subtext_class' => 'text-emerald-400', 'icon' => '👥', 'route' => 'admin.users', 'bg' => 'from-cyan-500/10 to-cyan-600/5'],
-            ['value' => $stats['artist_accounts'], 'label' => 'Artist Accounts', 'subtext' => 'individual artists', 'icon' => '👤', 'route' => 'admin.users', 'bg' => 'from-emerald-500/10 to-emerald-600/5'],
-            ['value' => $stats['company_accounts'], 'label' => 'Company Accounts', 'subtext' => 'company accounts', 'icon' => '🏢', 'route' => 'admin.users', 'bg' => 'from-yellow-500/10 to-yellow-600/5'],
-            ['value' => $stats['tickets_active'], 'label' => 'Support Tickets', 'subtext' => $stats['tickets_in_progress'] . ' tickets in progress', 'subtext2' => 'Total: ' . $stats['tickets_active'] . ' active tickets', 'icon' => '🎫', 'route' => 'admin.support', 'bg' => 'from-cyan-500/10 to-cyan-600/5'],
+            ['value' => $stats['tracks_require_review'] + $stats['tracks_processing'], 'label' => 'Uscite in sospeso', 'subtext' => 'richiedere una revisione: ' . $stats['tracks_require_review'] . '  ', 'subtext2' => 'Elaborazione: ' . $stats['tracks_processing'] . ' ', 'subtext2_class' => 'text-rose-400', 'icon' => '📋', 'route' => 'admin.track-submissions', 'bg' => 'from-yellow-500/10 to-yellow-600/5'],
+            ['value' => $stats['vevo_pending'], 'label' => 'Vevo in attesa', 'subtext' => $stats['vevo_approved'] . ' approvato, ' . $stats['vevo_pending'] . ' in attesa di', 'icon' => '▶️', 'route' => 'admin.vevo-accounts', 'bg' => 'from-rose-500/10 to-rose-600/5'],
+            ['value' => $stats['pending_concerts'], 'label' => 'Concerti in sospeso', 'subtext' => 'richieste pendenti', 'icon' => '🎤', 'route' => 'admin.live-requests', 'bg' => 'from-orange-500/10 to-orange-600/5'],
+            ['value' => $stats['pending_playlists'], 'label' => 'Playlist in attesa', 'subtext' => 'iscrizioni in sospeso', 'icon' => '📑', 'route' => 'admin.editorial-playlists', 'bg' => 'from-pink-500/10 to-pink-600/5'],
+            ['value' => $stats['radio_published'], 'label' => 'Promozione radiofonica', 'subtext' => ' Radio in attesa ' . $stats['pending_radio'], 'icon' => '📻', 'route' => 'admin.radio-requests', 'bg' => 'from-blue-500/10 to-blue-600/5'],
+            ['value' => $stats['released_singles'] + $stats['released_albums'], 'label' => 'Totale rilasciato', 'subtext' => $stats['released_singles'] . ' singolo(i), ' . $stats['released_albums'] . ' album(i)', 'icon' => '🎵', 'route' => 'admin.track-submissions', 'bg' => 'from-purple-500/10 to-purple-600/5'],
+            ['value' => $stats['approved_playlists'], 'label' => 'Playlist approvate', 'subtext' => 'pubblicato con successo', 'subtext_class' => 'text-emerald-400', 'icon' => '✅', 'route' => 'admin.editorial-playlists', 'bg' => 'from-emerald-500/10 to-emerald-600/5'],
+            ['value' => $stats['approved_concerts'], 'label' => 'Concerti dal vivo approvati', 'subtext' => 'richieste approvate', 'subtext_class' => 'text-emerald-400', 'icon' => '✅', 'route' => 'admin.live-requests', 'bg' => 'from-emerald-500/10 to-emerald-600/5'],
+            ['value' => $stats['total_users'], 'label' => 'Utenti totali', 'subtext' => '+' . $stats['admin_users'] . ' utenti amministratori', 'subtext_class' => 'text-emerald-400', 'icon' => '👥', 'route' => 'admin.users', 'bg' => 'from-cyan-500/10 to-cyan-600/5'],
+            ['value' => $stats['artist_accounts'], 'label' => 'Conti degli artisti', 'subtext' => 'singoli artisti', 'icon' => '👤', 'route' => 'admin.users', 'bg' => 'from-emerald-500/10 to-emerald-600/5'],
+            ['value' => $stats['company_accounts'], 'label' => 'Conti aziendali', 'subtext' => 'conti aziendali', 'icon' => '🏢', 'route' => 'admin.users', 'bg' => 'from-yellow-500/10 to-yellow-600/5'],
+            ['value' => $stats['tickets_active'], 'label' => 'Ticket di supporto', 'subtext' => $stats['tickets_in_progress'] . ' biglietti in corso', 'subtext2' => 'Totale: ' . $stats['tickets_active'] . ' biglietti attivi', 'icon' => '🎫', 'route' => 'admin.support', 'bg' => 'from-cyan-500/10 to-cyan-600/5'],
         ];
         @endphp
         @foreach($statCards as $card)
@@ -59,11 +59,11 @@
         <div class="bg-slate-900/80 rounded-2xl border border-slate-800/60 overflow-hidden shadow-xl">
             <div class="p-5 border-b border-slate-800/60 flex items-center justify-between bg-slate-800/40">
                 <div>
-                    <h3 class="font-bold text-white text-lg mb-1">Recent Users</h3>
-                    <p class="text-xs text-slate-400">Latest registered artists</p>
+                    <h3 class="font-bold text-white text-lg mb-1">Utenti recenti</h3>
+                    <p class="text-xs text-slate-400">Ultimi artisti registrati</p>
                 </div>
                 <a href="{{ route('admin.users') }}" class="text-cyan-400 hover:text-cyan-300 text-xs font-semibold transition-colors duration-200 flex items-center space-x-1">
-                    <span>View all</span>
+                    <span>Visualizza tutto</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -86,7 +86,7 @@
                     <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-slate-800/60 flex items-center justify-center">
                         <svg class="w-8 h-8 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                     </div>
-                    <p class="text-slate-500 text-sm">No users yet</p>
+                    <p class="text-slate-500 text-sm">Nessun utente ancora</p>
                 </div>
                 @endforelse
             </div>
@@ -96,11 +96,11 @@
         <div class="bg-slate-900/80 rounded-2xl border border-slate-800/60 overflow-hidden shadow-xl">
             <div class="p-5 border-b border-slate-800/60 flex items-center justify-between bg-slate-800/40">
                 <div>
-                    <h3 class="font-bold text-white text-lg mb-1">Recent Track Submissions</h3>
-                    <p class="text-xs text-slate-400">Latest music submissions</p>
+                    <h3 class="font-bold text-white text-lg mb-1">Invii di brani recenti</h3>
+                    <p class="text-xs text-slate-400">Ultimi contributi musicali</p>
                 </div>
                 <a href="{{ route('admin.track-submissions') }}" class="text-cyan-400 hover:text-cyan-300 text-xs font-semibold transition-colors duration-200 flex items-center space-x-1">
-                    <span>View all</span>
+                    <span>Visualizza tutto</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -125,7 +125,7 @@
                     <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-slate-800/60 flex items-center justify-center">
                         <svg class="w-8 h-8 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/></svg>
                     </div>
-                    <p class="text-slate-500 text-sm">No track submissions yet</p>
+                    <p class="text-slate-500 text-sm">Nessuna traccia inviata ancora</p>
                 </div>
                 @endforelse
             </div>
@@ -135,11 +135,11 @@
         <div class="bg-slate-900/80 rounded-2xl border border-slate-800/60 overflow-hidden shadow-xl">
             <div class="p-5 border-b border-slate-800/60 flex items-center justify-between bg-slate-800/40">
                 <div>
-                    <h3 class="font-bold text-white text-lg mb-1">Pending Payouts</h3>
-                    <p class="text-xs text-slate-400">Requires your attention</p>
+                    <h3 class="font-bold text-white text-lg mb-1">Pagamenti in sospeso</h3>
+                    <p class="text-xs text-slate-400">Richiede la tua attenzione</p>
                 </div>
                 <a href="{{ route('admin.payout-requests') }}" class="text-cyan-400 hover:text-cyan-300 text-xs font-semibold transition-colors duration-200 flex items-center space-x-1">
-                    <span>View all</span>
+                    <span>Visualizza tutto</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -155,14 +155,14 @@
                 <div class="text-right flex-shrink-0">
                     <span class="text-emerald-400 font-bold text-base block">${{ number_format($payout->amount, 2) }}</span>
                 </div>
-                <a href="{{ route('admin.payout-requests') }}" class="text-xs px-3 py-1.5 bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 rounded-lg font-semibold hover:bg-yellow-500/30 transition-colors duration-200 flex-shrink-0">Review</a>
+                <a href="{{ route('admin.payout-requests') }}" class="text-xs px-3 py-1.5 bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 rounded-lg font-semibold hover:bg-yellow-500/30 transition-colors duration-200 flex-shrink-0">Revisione</a>
             </div>
             @empty
             <div class="p-8 text-center">
                 <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-slate-800/60 flex items-center justify-center">
                     <svg class="w-8 h-8 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
-                <p class="text-slate-500 text-sm">No pending payouts</p>
+                <p class="text-slate-500 text-sm">Nessun pagamento in sospeso</p>
             </div>
             @endforelse
         </div>
@@ -171,11 +171,11 @@
         <div class="bg-slate-900/80 rounded-2xl border border-slate-800/60 overflow-hidden shadow-xl">
             <div class="p-5 border-b border-slate-800/60 flex items-center justify-between bg-slate-800/40">
                 <div>
-                    <h3 class="font-bold text-white text-lg mb-1">Open Support Tickets</h3>
-                    <p class="text-xs text-slate-400">Needs response</p>
+                    <h3 class="font-bold text-white text-lg mb-1">Apri ticket di supporto</h3>
+                    <p class="text-xs text-slate-400">Ha bisogno di risposta</p>
                 </div>
                 <a href="{{ route('admin.support') }}" class="text-cyan-400 hover:text-cyan-300 text-xs font-semibold transition-colors duration-200 flex items-center space-x-1">
-                    <span>View all</span>
+                    <span>Visualizza tutto</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -189,14 +189,14 @@
                     <p class="text-slate-400 text-xs truncate">{{ $ticket->user->full_name ?? 'Unknown' }}</p>
                 </div>
                 <span class="text-xs px-3 py-1.5 rounded-full font-semibold flex-shrink-0 {{ $ticket->priority === 'high' ? 'bg-rose-500/20 text-rose-400 border border-rose-500/30' : ($ticket->priority === 'medium' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' : 'bg-slate-700/60 text-slate-400 border border-slate-600/40') }}">{{ ucfirst($ticket->priority) }}</span>
-                <a href="{{ route('admin.support.show', $ticket->id) }}" class="text-slate-400 hover:text-cyan-400 text-xs px-3 py-1.5 bg-slate-800/60 rounded-lg font-semibold hover:bg-slate-800 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-200 flex-shrink-0">Reply</a>
+                <a href="{{ route('admin.support.show', $ticket->id) }}" class="text-slate-400 hover:text-cyan-400 text-xs px-3 py-1.5 bg-slate-800/60 rounded-lg font-semibold hover:bg-slate-800 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-200 flex-shrink-0">Rispondere</a>
             </div>
             @empty
             <div class="p-8 text-center">
                 <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-slate-800/60 flex items-center justify-center">
                     <svg class="w-8 h-8 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                 </div>
-                <p class="text-slate-500 text-sm">No open tickets</p>
+                <p class="text-slate-500 text-sm">Nessun ticket aperto</p>
             </div>
             @endforelse
         </div>

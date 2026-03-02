@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Concert Lives')
-@section('page-title', 'Concert Live Slots')
+@section('title', 'Vite da concerto')
+@section('page-title', 'Slot per concerti dal vivo')
 
 @section('content')
  <div class="space-y-6" x-data="{ showForm: false, editId: null, creating: false }">
@@ -16,39 +16,39 @@
         <button @click="showForm = !showForm; editId = null"
             class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition flex items-center space-x-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-            <span>Add Live Slot</span>
+            <span>Aggiungi slot live</span>
         </button>
     </div>
 
     <!-- Add Form -->
     <div x-show="showForm" x-cloak x-transition class="bg-gray-900 rounded-2xl border border-white/5 p-6">
-        <h3 class="font-semibold text-white mb-4">Add Concert Live Slot</h3>
+        <h3 class="font-semibold text-white mb-4">Aggiungi slot per concerti dal vivo</h3>
         <form method="POST" action="{{ route('admin.concert-lives.store') }}"
               @submit.prevent="creating = true; $event.target.submit();">
             @csrf
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-sm text-gray-400 mb-1.5">Event Name <span class="text-red-400">*</span></label>
+                    <label class="block text-sm text-gray-400 mb-1.5">Nome dell'evento <span class="text-red-400">*</span></label>
                     <input type="text" name="name" required class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
                 </div>
                 <div>
-                    <label class="block text-sm text-gray-400 mb-1.5">Concert date <span class="text-red-400">*</span></label>
+                    <label class="block text-sm text-gray-400 mb-1.5">Data del concerto <span class="text-red-400">*</span></label>
                     <input type="date" name="concert_date" required class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
                 </div>
                 <div>
-                    <label class="block text-sm text-gray-400 mb-1.5">City <span class="text-red-400">*</span></label>
+                    <label class="block text-sm text-gray-400 mb-1.5">Città <span class="text-red-400">*</span></label>
                     <input type="text" name="city" required maxlength="100" class="w-full bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
                 </div>
                 <div>
-                    <label class="block text-sm text-gray-400 mb-1.5">Slots available <span class="text-red-400">*</span></label>
+                    <label class="block text-sm text-gray-400 mb-1.5">Slot disponibili <span class="text-red-400">*</span></label>
                     <input type="number" name="slots_available" min="1" max="1000" required class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
                 </div>
                 <label class="sm:col-span-2 flex items-center gap-2 text-gray-400 text-sm">
-                    <input type="checkbox" name="is_active" value="1" checked class="rounded border-white/20 text-purple-600"> Active
+                    <input type="checkbox" name="is_active" value="1" checked class="rounded border-white/20 text-purple-600"> Attivo
                 </label>
             </div>
             <div class="flex justify-end space-x-3 mt-4">
-                <button type="button" @click="showForm = false" class="px-4 py-2 text-gray-400 hover:text-white text-sm transition">Cancel</button>
+                <button type="button" @click="showForm = false" class="px-4 py-2 text-gray-400 hover:text-white text-sm transition">Cancellare</button>
                 <button type="submit"
                         :disabled="creating"
                         class="px-5 py-2 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-900/40 disabled:cursor-not-allowed text-white text-sm rounded-xl transition inline-flex items-center gap-2">
@@ -67,10 +67,10 @@
         <table class="w-full text-sm min-w-[760px]">
             <thead class="bg-gray-800/50 border-b border-white/5">
                 <tr>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Concert</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Slots</th>
-                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Active</th>
-                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Actions</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Concerto</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Slot</th>
+                    <th class="text-left px-4 py-3 text-gray-400 font-medium">Attivo</th>
+                    <th class="text-right px-4 py-3 text-gray-400 font-medium">Azioni</th>
                 </tr>
             </thead>
             @forelse($concerts as $c)
@@ -81,7 +81,7 @@
                         <div class="text-gray-400 text-xs">{{ $c->city }} • {{ $c->concert_date ? $c->concert_date->format('M d, Y') : '—' }}</div>
                     </td>
                     <td class="px-4 py-3 text-gray-300 hidden md:table-cell">
-                        <div class="text-xs text-gray-400">Booked {{ $c->slots_booked }} / {{ $c->slots_available }} • Remaining {{ $c->slots_remaining }}</div>
+                        <div class="text-xs text-gray-400">Prenotato {{ $c->slots_booked }} / {{ $c->slots_available }} • Rimanente {{ $c->slots_remaining }}</div>
                         <div class="h-1.5 bg-white/10 rounded-full mt-2">
                             <div class="h-full bg-purple-600 rounded-full" style="width: {{ $c->booking_percentage }}%"></div>
                         </div>
@@ -105,34 +105,34 @@
                         <form method="POST" action="{{ route('admin.concert-lives.update', $c->id) }}" class="grid grid-cols-1 md:grid-cols-5 gap-3 items-end">
                             @csrf @method('PUT')
                             <div class="md:col-span-2">
-                                <label class="block text-xs text-gray-400 mb-1">Name</label>
+                                <label class="block text-xs text-gray-400 mb-1">Nome</label>
                                 <input type="text" name="name" value="{{ $c->name }}" required class="w-full bg-gray-800 border border-white/10 text-white px-3 py-2 rounded-lg text-sm">
                             </div>
                             <div>
-                                <label class="block text-xs text-gray-400 mb-1">City</label>
+                                <label class="block text-xs text-gray-400 mb-1">Città</label>
                                 <input type="text" name="city" value="{{ $c->city }}" required class="w-full bg-gray-800 border border-white/10 text-white px-3 py-2 rounded-lg text-sm">
                             </div>
                             <div>
-                                <label class="block text-xs text-gray-400 mb-1">Date</label>
+                                <label class="block text-xs text-gray-400 mb-1">Data</label>
                                 <input type="date" name="concert_date" value="{{ $c->concert_date ? $c->concert_date->format('Y-m-d') : '' }}" required class="w-full bg-gray-800 border border-white/10 text-white px-3 py-2 rounded-lg text-sm">
                             </div>
                             <div>
-                                <label class="block text-xs text-gray-400 mb-1">Slots</label>
+                                <label class="block text-xs text-gray-400 mb-1">Slot</label>
                                 <input type="number" name="slots_available" value="{{ $c->slots_available }}" min="1" max="1000" required class="w-full bg-gray-800 border border-white/10 text-white px-3 py-2 rounded-lg text-sm">
                             </div>
                             <label class="flex items-center gap-2 text-gray-300 text-sm md:col-span-5">
-                                <input type="checkbox" name="is_active" value="1" {{ $c->is_active ? 'checked' : '' }} class="rounded border-white/20 text-purple-600"> Active
+                                <input type="checkbox" name="is_active" value="1" {{ $c->is_active ? 'checked' : '' }} class="rounded border-white/20 text-purple-600"> Attivo
                             </label>
                             <div class="md:col-span-5 flex justify-end gap-2">
-                                <button type="button" @click="open = false" class="px-4 py-2 bg-white/10 hover:bg-white/15 text-gray-300 text-sm rounded-lg transition">Cancel</button>
-                                <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Save</button>
+                                <button type="button" @click="open = false" class="px-4 py-2 bg-white/10 hover:bg-white/15 text-gray-300 text-sm rounded-lg transition">Cancellare</button>
+                                <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition">Salva</button>
                             </div>
                         </form>
                     </td>
                 </tr>
             </tbody>
             @empty
-            <tbody><tr><td colspan="4" class="px-4 py-12 text-center text-gray-500">No concerts created yet.</td></tr></tbody>
+            <tbody><tr><td colspan="4" class="px-4 py-12 text-center text-gray-500">Nessun concerto creato ancora.</td></tr></tbody>
             @endforelse
         </table>
     </div>

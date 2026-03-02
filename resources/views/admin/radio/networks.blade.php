@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('title', 'Radio Networks')
-@section('page-title', 'Radio Networks')
+@section('title', 'Reti radiofoniche')
+@section('page-title', 'Reti radiofoniche')
 
 @section('content')
 <div class="space-y-6" x-data="{ showForm: false, editId: null, editName: '', editIsActive: true }">
@@ -10,7 +10,7 @@
         <button @click="showForm = !showForm; editId = null; editName = ''; editIsActive = true"
             class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition flex items-center space-x-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-            <span>Add Network</span>
+            <span>Aggiungi rete</span>
         </button>
     </div>
 
@@ -22,10 +22,10 @@
             <input type="hidden" name="_method" :value="editId ? 'PUT' : 'POST'">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-sm text-gray-400 mb-1.5">Nome network <span class="text-red-400">*</span></label>
+                    <label class="block text-sm text-gray-400 mb-1.5">Nome rete <span class="text-red-400">*</span></label>
                     <input type="text" name="name" x-model="editName" required
                         class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm"
-                        placeholder="Es. Radio Hits Network">
+                        placeholder="Es. Radio Hits rete">
                 </div>
                 <div>
                     <label class="block text-sm text-gray-400 mb-1.5">Logo / immagine</label>
@@ -85,7 +85,7 @@
             </div>
         </div>
         @empty
-        <div class="sm:col-span-2 lg:col-span-3 py-12 text-center text-gray-500">No radio networks yet.</div>
+        <div class="sm:col-span-2 lg:col-span-3 py-12 text-center text-gray-500">Ancora nessuna rete radiofonica.</div>
         @endforelse
     </div>
 </div>

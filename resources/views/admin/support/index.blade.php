@@ -1,27 +1,27 @@
 @extends('layouts.admin')
 
-@section('title', 'Support Tickets')
-@section('page-title', 'Support Tickets')
+@section('title', 'Ticket di supporto')
+@section('page-title', 'Ticket di supporto')
 
 @section('content')
 <div class="space-y-6" x-data="{ searchQuery: '' }">
     {{-- Filters --}}
     <form method="GET" class="flex flex-wrap gap-3">
-        <input type="text" x-model="searchQuery" placeholder="Search by subject or user..."
+        <input type="text" x-model="searchQuery" placeholder="Cerca per argomento o utente..."
             class="flex-1 min-w-48 bg-gray-900 border border-white/10 text-white px-4 py-2 rounded-xl text-sm focus:outline-none focus:border-purple-500">
         <select name="status" class="bg-gray-900 border border-white/10 text-white px-4 py-2 rounded-xl text-sm focus:outline-none">
-            <option value="">All Status</option>
+            <option value="">Tutti gli stati</option>
             @foreach(['open','in_progress','resolved','closed'] as $s)
                 <option value="{{ $s }}" {{ request('status')==$s?'selected':'' }}>{{ ucfirst(str_replace('_',' ',$s)) }}</option>
             @endforeach
         </select>
         <select name="priority" class="bg-gray-900 border border-white/10 text-white px-4 py-2 rounded-xl text-sm focus:outline-none">
-            <option value="">All Priority</option>
+            <option value="">Tutta la priorità</option>
             @foreach(['low','medium','high','urgent'] as $p)
                 <option value="{{ $p }}" {{ request('priority')==$p?'selected':'' }}>{{ ucfirst($p) }}</option>
             @endforeach
         </select>
-        <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Filter</button>
+        <button type="submit" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-xl transition">Filtro</button>
         <a href="{{ route('admin.support') }}" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-sm rounded-xl border border-white/10 transition">Reset</a>
     </form>
 
@@ -34,13 +34,13 @@
             <thead class="bg-white/5 text-gray-400">
                 <tr>
                     <th class="px-4 py-3 text-left">#</th>
-                    <th class="px-4 py-3 text-left">User</th>
-                    <th class="px-4 py-3 text-left">Subject</th>
-                    <th class="px-4 py-3 text-left">Priority</th>
-                    <th class="px-4 py-3 text-left">Status</th>
-                    <th class="px-4 py-3 text-left">Replies</th>
-                    <th class="px-4 py-3 text-left">Created</th>
-                    <th class="px-4 py-3 text-left">Action</th>
+                    <th class="px-4 py-3 text-left">Utente</th>
+                    <th class="px-4 py-3 text-left">Soggetto</th>
+                    <th class="px-4 py-3 text-left">Priorità</th>
+                    <th class="px-4 py-3 text-left">Stato</th>
+                    <th class="px-4 py-3 text-left">Risposte</th>
+                    <th class="px-4 py-3 text-left">Creato</th>
+                    <th class="px-4 py-3 text-left">Azione</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-white/5">
@@ -81,11 +81,11 @@
                     <td class="px-4 py-3 text-gray-400">{{ $ticket->replies_count ?? 0 }}</td>
                     <td class="px-4 py-3 text-gray-400">{{ $ticket->created_at->diffForHumans() }}</td>
                     <td class="px-4 py-3">
-                        <a href="{{ route('admin.support.show', $ticket->id) }}" class="text-purple-400 hover:text-purple-300 transition text-xs">View</a>
+                        <a href="{{ route('admin.support.show', $ticket->id) }}" class="text-purple-400 hover:text-purple-300 transition text-xs">Visualizzazione</a>
                     </td>
                 </tr>
                 @empty
-                <tr><td colspan="8" class="px-4 py-12 text-center text-gray-400">No tickets found.</td></tr>
+                <tr><td colspan="8" class="px-4 py-12 text-center text-gray-400">Nessun biglietto trovato.</td></tr>
                 @endforelse
             </tbody>
         </table>

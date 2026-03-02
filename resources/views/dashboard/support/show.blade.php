@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title', $ticket->subject)
-@section('page-title', 'Support Ticket')
+@section('page-title', 'Biglietto di supporto')
 @section('page-subtitle', '#' . $ticket->id . ' · ' . $ticket->subject)
 
 @section('content')
@@ -10,7 +10,7 @@
     <div class="flex items-center justify-between">
         <a href="{{ route('dashboard.support') }}" class="flex items-center space-x-2 text-gray-400 hover:text-white transition text-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-            <span>Back to Support</span>
+            <span>Torna al supporto</span>
         </a>
         <div class="flex items-center space-x-2">
             <span class="px-2.5 py-1 rounded-full text-xs font-medium
@@ -22,7 +22,7 @@
             <span class="px-2.5 py-1 rounded-full text-xs font-medium
                 {{ $ticket->priority === 'high' ? 'bg-red-900/50 text-red-400' :
                    ($ticket->priority === 'medium' ? 'bg-yellow-900/50 text-yellow-400' : 'bg-gray-700/50 text-gray-400') }}">
-                {{ ucfirst($ticket->priority ?? 'low') }} Priority
+                {{ ucfirst($ticket->priority ?? 'low') }} Priorità
             </span>
         </div>
     </div>
@@ -112,7 +112,7 @@
         x-data="{ loading: false }"
         @submit="loading = true">
         @csrf
-        <h4 class="text-white font-medium text-sm">Add Reply</h4>
+        <h4 class="text-white font-medium text-sm">Aggiungi risposta</h4>
         <textarea name="message" rows="4" required placeholder="Type your reply..."
             class="w-full bg-gray-800 border border-white/10 text-white placeholder-gray-500 px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm resize-none"></textarea>
         <div>
@@ -130,7 +130,7 @@
     </form>
     @else
     <div class="bg-gray-800/50 rounded-2xl border border-white/5 p-4 text-center">
-        <p class="text-gray-500 text-sm">This ticket has been closed.</p>
+        <p class="text-gray-500 text-sm">Questo ticket è stato chiuso.</p>
     </div>
     @endif
 </div>

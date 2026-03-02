@@ -6,22 +6,22 @@
 <section class="pt-32 pb-24 px-4">
     <div class="max-w-3xl mx-auto">
         <div class="mb-10">
-            <h1 class="text-4xl font-bold text-white mb-2">Privacy Policy</h1>
-            <p class="text-gray-400 text-sm">Last updated: January 1, 2024</p>
+            <h1 class="text-4xl font-bold text-white mb-2">politica sulla riservatezza</h1>
+            <p class="text-gray-400 text-sm">Ultimo aggiornamento: 1 gennaio 2024</p>
         </div>
         <div class="glass rounded-2xl p-8 border border-white/5 space-y-8 text-gray-300 text-sm leading-relaxed">
             @foreach([
-                ['1. Information We Collect','We collect information you provide directly, such as your name, email address, payment information, and uploaded content. We also collect usage data, device information, and cookies to improve our service.'],
-                ['2. How We Use Your Information','We use your information to provide and improve our services, process payments, send important notifications, personalize your experience, and comply with legal obligations. We do not sell your personal data to third parties.'],
-                ['3. Data Sharing','We share your information with trusted third-party services necessary to operate our platform, including payment processors (Stripe, PayPal), cloud storage providers, and digital streaming platforms for distribution purposes.'],
-                ['4. Data Security','We implement industry-standard security measures including SSL encryption, secure data storage, and regular security audits to protect your personal information.'],
-                ['5. Cookies','We use cookies and similar tracking technologies to enhance your experience. You can control cookie settings through your browser preferences. Disabling cookies may affect some features.'],
-                ['6. Your Rights','You have the right to access, correct, or delete your personal data. You can request a copy of your data, opt out of marketing communications, and request data portability. Contact us to exercise these rights.'],
-                ['7. Data Retention','We retain your data for as long as your account is active and as required by law. You can request deletion of your account and associated data at any time.'],
-                ['8. Children\'s Privacy','Our service is not directed to children under 13. We do not knowingly collect personal information from children under 13.'],
-                ['9. International Transfers','Your data may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.'],
-                ['10. Changes to This Policy','We may update this privacy policy periodically. We will notify you of significant changes via email or a prominent notice on our website.'],
-                ['11. Contact Us','For privacy-related questions or requests, contact our Data Protection Officer at privacy@beatmusic.com'],
+                ['1. Informazioni che raccogliamo', 'Raccogliamo le informazioni che fornisci direttamente, come nome, indirizzo email, informazioni di pagamento e contenuti caricati. Raccogliamo inoltre dati di utilizzo, informazioni sul dispositivo e cookie per migliorare il nostro servizio.'],
+                ['2. Come utilizziamo le tue informazioni','Utilizziamo le tue informazioni per fornire e migliorare i nostri servizi, elaborare pagamenti, inviare notifiche importanti, personalizzare la tua esperienza e rispettare gli obblighi di legge. Non vendiamo i tuoi dati personali a terzi.'],
+                ['3. Condivisione dei dati','Condividiamo le tue informazioni con servizi di terze parti affidabili necessari per gestire la nostra piattaforma, inclusi processori di pagamento (Stripe, PayPal), fornitori di archiviazione cloud e piattaforme di streaming digitale per scopi di distribuzione.'],
+                ['4. Sicurezza dei dati','Implementiamo misure di sicurezza standard del settore, tra cui crittografia SSL, archiviazione sicura dei dati e controlli di sicurezza regolari per proteggere le tue informazioni personali.'],
+                ['5. Cookie','Utilizziamo cookie e tecnologie di tracciamento simili per migliorare la tua esperienza. Puoi controllare le impostazioni dei cookie tramite le preferenze del tuo browser. La disabilitazione dei cookie potrebbe influire su alcune funzionalità.'],
+                ['6. I tuoi diritti', 'Hai il diritto di accedere, correggere o cancellare i tuoi dati personali. Puoi richiedere una copia dei tuoi dati, annullare liscrizione alle comunicazioni di marketing e richiedere la portabilità dei dati. Contattaci per esercitare questi diritti.'],
+                ['7. Conservazione dei dati','Conserviamo i tuoi dati per tutto il tempo in cui il tuo account è attivo e come richiesto dalla legge. Puoi richiedere la cancellazione del tuo account e dei dati associati in qualsiasi momento.'],
+                ['8. Privacy dei bambini','Il nostro servizio non è rivolto a bambini di età inferiore a 13 anni. Non raccogliamo consapevolmente informazioni personali da bambini di età inferiore a 13 anni.'],
+                ['9. Trasferimenti internazionali','I tuoi dati potrebbero essere trasferiti ed elaborati in Paesi diversi dal tuo. Garantiamo che siano in atto adeguate garanzie per tali trasferimenti.'],
+                ['10. Modifiche alla presente Informativa','Potremmo aggiornare periodicamente la presente informativa sulla privacy. Ti informeremo di eventuali modifiche significative tramite e-mail o tramite un avviso ben visibile sul nostro sito web.'],
+                ['11. Contattaci','Per domande o richieste relative alla privacy, contatta il nostro responsabile della protezione dei dati allindirizzo privacy@beatmusic.com'],
             ] as [$title, $content])
             <div>
                 <h2 class="text-white font-semibold text-base mb-2">{{ $title }}</h2>

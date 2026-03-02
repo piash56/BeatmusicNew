@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Profile')
-@section('page-title', 'My Profile')
+@section('title', 'Profilo')
+@section('page-title', 'Il mio profilo')
 
 @section('content')
 <div class="max-w-2xl mx-auto space-y-6">
@@ -16,7 +16,7 @@
 
     <!-- Profile Picture -->
     <div class="bg-gray-900 rounded-2xl border border-white/5 p-6">
-        <h3 class="font-semibold text-white mb-4">Profile Picture</h3>
+        <h3 class="font-semibold text-white mb-4">Immagine del profilo</h3>
         <div class="flex items-center space-x-5">
             @if(auth()->user()->profile_picture)
                 <img src="{{ asset('storage/'.auth()->user()->profile_picture) }}" class="w-20 h-20 rounded-full object-cover">
@@ -30,7 +30,7 @@
                     @csrf
                     <label class="cursor-pointer">
                         <input type="file" name="profile_picture" accept="image/*" class="hidden" onchange="this.form.submit()">
-                        <span class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-sm rounded-xl border border-white/10 transition">Change Photo</span>
+                        <span class="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-sm rounded-xl border border-white/10 transition">Cambia foto</span>
                     </label>
                 </form>
                 <p class="text-xs text-gray-500 mt-2">JPG or PNG. Max 2MB.</p>
@@ -42,41 +42,41 @@
     <form method="POST" action="{{ route('dashboard.profile.update') }}" class="bg-gray-900 rounded-2xl border border-white/5 p-6 space-y-5"
         x-data="{ loading: false }" @submit="loading = true">
         @csrf @method('PUT')
-        <h3 class="font-semibold text-white">Personal Information</h3>
+        <h3 class="font-semibold text-white">Informazioni personali</h3>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-                <label class="block text-sm text-gray-400 mb-1.5">Full Name</label>
+                <label class="block text-sm text-gray-400 mb-1.5">Nome e cognome</label>
                 <input type="text" name="full_name" value="{{ old('full_name', auth()->user()->full_name) }}"
                     class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
             </div>
             <div>
-                <label class="block text-sm text-gray-400 mb-1.5">Phone</label>
+                <label class="block text-sm text-gray-400 mb-1.5">Telefono</label>
                 <input type="tel" name="phone" value="{{ old('phone', auth()->user()->phone) }}"
                     class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
             </div>
             <div class="sm:col-span-2">
-                <label class="block text-sm text-gray-400 mb-1.5">Email <span class="text-gray-600 text-xs">(Cannot be changed here)</span></label>
+                <label class="block text-sm text-gray-400 mb-1.5">E-mail <span class="text-gray-600 text-xs">(Non può essere modificato qui)</span></label>
                 <input type="email" value="{{ auth()->user()->email }}" disabled
                     class="w-full bg-gray-800/50 border border-white/5 text-gray-500 px-4 py-2.5 rounded-xl text-sm cursor-not-allowed">
             </div>
             <div>
-                <label class="block text-sm text-gray-400 mb-1.5">Country</label>
+                <label class="block text-sm text-gray-400 mb-1.5">Paese</label>
                 <input type="text" name="country" value="{{ old('country', auth()->user()->country) }}"
                     class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
             </div>
             <div>
-                <label class="block text-sm text-gray-400 mb-1.5">City</label>
+                <label class="block text-sm text-gray-400 mb-1.5">Città</label>
                 <input type="text" name="city" value="{{ old('city', auth()->user()->city) }}"
                     class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
             </div>
             <div>
-                <label class="block text-sm text-gray-400 mb-1.5">State</label>
+                <label class="block text-sm text-gray-400 mb-1.5">Stato</label>
                 <input type="text" name="state" value="{{ old('state', auth()->user()->state) }}"
                     class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
             </div>
             <div>
-                <label class="block text-sm text-gray-400 mb-1.5">Zip Code</label>
+                <label class="block text-sm text-gray-400 mb-1.5">Cap</label>
                 <input type="text" name="zip" value="{{ old('zip', auth()->user()->zip) }}"
                     class="w-full bg-gray-800 border border-white/10 text-white px-4 py-2.5 rounded-xl focus:outline-none focus:border-purple-500 text-sm">
             </div>
@@ -88,7 +88,7 @@
         </div>
 
         <div class="border-t border-white/5 pt-4">
-            <h4 class="text-sm font-medium text-gray-400 mb-3">Social Links</h4>
+            <h4 class="text-sm font-medium text-gray-400 mb-3">Collegamenti sociali</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                     <label class="block text-xs text-gray-500 mb-1">Facebook</label>
