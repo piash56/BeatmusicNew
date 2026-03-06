@@ -29,6 +29,11 @@
                 {{ session('success') }}
             </div>
         @endif
+        @if(session('info'))
+            <div class="rounded-xl border border-amber-500/30 bg-amber-900/30 px-4 py-3 text-sm text-amber-200 shadow-xl">
+                {{ session('info') }}
+            </div>
+        @endif
         @if(session('error'))
             <div class="rounded-xl border border-rose-500/30 bg-rose-900/30 px-4 py-3 text-sm text-rose-200 shadow-xl">
                 {{ session('error') }}

@@ -119,13 +119,21 @@ class PreSaveController extends Controller
 
             $track = $this->findPublicTrack($trackId);
 
-            $preSave = PreSave::updateOrCreate(
+            $existingPreSave = PreSave::where('spotify_user_id', $profile['id'])
+                ->where('track_id', $trackId)
+                ->where('platform', 'spotify')
+                ->first();
+
+            if ($existingPreSave) {
+                return redirect()->route('presave.show', $trackId)
+                    ->with('info', 'This Spotify account already pre-saved this track. Try another release.');
+            }
+
+            $preSave = PreSave::create(
                 [
                     'spotify_user_id' => $profile['id'],
                     'track_id' => $trackId,
                     'platform' => 'spotify',
-                ],
-                [
                     'user_id' => Auth::id(),
                     'access_token' => $tokenData['access_token'],
                     'refresh_token' => $tokenData['refresh_token'] ?? null,
@@ -140,9 +148,7 @@ class PreSaveController extends Controller
                 ]
             );
 
-            if ($preSave->wasRecentlyCreated) {
-                $track->increment('pre_save_count');
-            }
+            $track->increment('pre_save_count');
 
             return redirect()->route('presave.success')
                 ->with('presave_success_track_id', $trackId)

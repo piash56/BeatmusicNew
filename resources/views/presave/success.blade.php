@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public-clean')
 
 @section('title', 'Pre-Save Success')
 
