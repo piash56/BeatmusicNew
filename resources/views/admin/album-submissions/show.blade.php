@@ -59,6 +59,40 @@
         </div>
 
         <div class="lg:col-span-2 space-y-4">
+            @if($track->status === 'Released')
+            <div class="rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-slate-950 to-cyan-950/40 p-5" x-data="{ copied: false }">
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Pre-Save Link</h3>
+                        <p class="mt-1 max-w-2xl text-sm text-slate-400">Share this public page with fans. Opening the link starts the Spotify pre-save flow.</p>
+                    </div>
+                    <div class="text-sm text-slate-400">
+                        <span class="font-semibold text-white">{{ number_format($preSaves->total()) }}</span> pre-saves
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+                    <a href="{{ route('presave.show', $track->id) }}" target="_blank" rel="noopener noreferrer"
+                        class="flex-1 truncate rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-purple-300 underline underline-offset-2 transition hover:bg-white/10">
+                        {{ route('presave.show', $track->id) }}
+                    </a>
+                    <button type="button"
+                        @click="navigator.clipboard.writeText('{{ route('presave.show', $track->id) }}').then(() => { copied = true; setTimeout(() => copied = false, 2000); })"
+                        class="rounded-2xl bg-slate-800 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">
+                        <span x-show="!copied">Copy Link</span>
+                        <span x-show="copied" x-cloak>Copied</span>
+                    </button>
+                </div>
+
+                @if($track->release_date)
+                <div class="mt-3 flex items-center gap-5 text-xs text-slate-400">
+                    <span>Release: {{ $track->release_date->format('n/j/Y') }}</span>
+                    <span>Spotify only for now</span>
+                </div>
+                @endif
+            </div>
+            @endif
+
             @if($track->user)
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-5">
                 <h3 class="font-semibold text-white mb-3">Artista (utente)</h3>

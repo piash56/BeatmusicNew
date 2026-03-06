@@ -82,10 +82,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 | Pre-save Routes (Public)
 |--------------------------------------------------------------------------
 */
-Route::get('/presave/{trackId}', [PreSaveController::class, 'show'])->name('presave.show');
-Route::get('/presave/{trackId}/spotify', [PreSaveController::class, 'spotifyAuthRedirect'])->name('presave.spotify');
 Route::get('/presave/spotify/callback', [PreSaveController::class, 'spotifyCallback'])->name('presave.callback');
 Route::get('/presave/success', [PreSaveController::class, 'success'])->name('presave.success');
+Route::get('/presave/{trackId}', [PreSaveController::class, 'show'])->whereNumber('trackId')->name('presave.show');
+Route::get('/presave/{trackId}/spotify', [PreSaveController::class, 'spotifyAuthRedirect'])->whereNumber('trackId')->name('presave.spotify');
 
 /*
 |--------------------------------------------------------------------------

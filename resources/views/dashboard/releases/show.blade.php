@@ -145,6 +145,40 @@
         <!-- Details -->
         <div class="lg:col-span-2 space-y-4">
 
+            <!-- Pre-save Link -->
+            @if($track->status === 'Released')
+            <div class="rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-slate-950 to-cyan-950/40 p-5" x-data="{ copied: false }">
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Pre-Save Link</h3>
+                        <p class="mt-1 max-w-2xl text-sm text-slate-400">Share this public page with your fans. Opening the link starts the Spotify pre-save or opens Spotify directly when the release is already live.</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+                    <a href="{{ route('presave.show', $track->id) }}" target="_blank" rel="noopener noreferrer"
+                        class="flex-1 truncate rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-purple-300 underline underline-offset-2 transition hover:bg-white/10">
+                        {{ route('presave.show', $track->id) }}
+                    </a>
+                    <button type="button"
+                        @click="navigator.clipboard.writeText('{{ route('presave.show', $track->id) }}').then(() => { copied = true; setTimeout(() => copied = false, 2000); })"
+                        class="rounded-2xl bg-slate-800 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">
+                        <span x-show="!copied">Copy Link</span>
+                        <span x-show="copied" x-cloak>Copied</span>
+                    </button>
+                </div>
+
+                @if($track->release_date)
+                <div class="mt-3 flex items-center gap-5 text-xs text-slate-400">
+                    <div class="text-sm text-slate-400">
+                        <span class="text-white font-semibold">{{ number_format($preSaves) }}</span> pre-saves
+                    </div>
+                    <span>Release: {{ $track->release_date->format('n/j/Y') }}</span>
+                </div>
+                @endif
+            </div>
+            @endif
+
             <!-- Audio Player (if released) -->
             @if($track->release_type === 'single' && $track->audio_file && $track->status === 'Released')
             <div class="bg-gray-900 rounded-2xl border border-white/5 p-4">
@@ -276,20 +310,6 @@
                         <svg class="w-3 h-3 text-gray-500 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                     </a>
                     @endif
-                </div>
-            </div>
-            @endif
-
-            <!-- Pre-save Link -->
-            @if($track->status === 'On Request' || $track->status === 'On Process')
-            <div class="bg-gradient-to-br from-purple-900/30 to-indigo-900/30 rounded-2xl border border-purple-500/20 p-4">
-                <h3 class="text-sm font-semibold text-white mb-2">Pre-save Campaign</h3>
-                <p class="text-gray-400 text-xs mb-3">Condividi questo link con i tuoi fan in modo che possano salvare in anteprima la tua uscita su Spotify.</p>
-                <div class="flex items-center space-x-2">
-                    <input type="text" value="{{ url('/presave/'.$track->id) }}" readonly
-                        class="flex-1 bg-white/5 border border-white/10 text-gray-300 text-xs px-3 py-2 rounded-lg font-mono">
-                    <button onclick="navigator.clipboard.writeText('{{ url('/presave/'.$track->id) }}')"
-                        class="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs rounded-lg transition">Copia</button>
                 </div>
             </div>
             @endif
